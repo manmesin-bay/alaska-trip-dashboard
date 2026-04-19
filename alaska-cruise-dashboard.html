@@ -2607,29 +2607,27 @@
        TAB: CRUISE IMAGE GALLERY
   ══════════════════════════════════ -->
   <div id="tab-gallery" class="section">
-    <div class="section-title"><span class="icon">📸</span> Cruise & Alaska Image Gallery</div>
+    <div class="section-title"><span class="icon">📸</span> Ovation of the Seas — Photo Gallery</div>
 
     <!-- Gallery Hero -->
     <div style="background:linear-gradient(135deg,#0a1628 0%,#1a237e 50%,#0d47a1 100%);border-radius:16px;padding:28px 24px;text-align:center;margin-bottom:24px;box-shadow:0 6px 24px rgba(0,0,0,0.2);">
       <div style="font-size:36px;margin-bottom:8px;">📸</div>
-      <div style="font-size:22px;font-weight:900;color:white;">Cruise & Alaska Photo Gallery</div>
-      <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px;">120+ high-resolution images · Ship exterior & interior · Alaska glaciers, wildlife & scenery</div>
-      <div style="margin-top:12px;font-size:11px;color:rgba(255,255,255,0.4);">Click any image to view full size · Photos via Unsplash (free license)</div>
+      <div style="font-size:22px;font-weight:900;color:white;">Ovation of the Seas — Photo Gallery</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px;">50+ real photos of YOUR cruise ship · Exterior views · Ports of call · Shipyard build · Details</div>
+      <div style="margin-top:12px;font-size:11px;color:rgba(255,255,255,0.4);">Click any image to view full size · Photos via Wikimedia Commons (free license)</div>
     </div>
 
     <!-- Filter buttons -->
     <div id="gallery-filters" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;justify-content:center;">
       <button onclick="filterGallery('all')" class="gf-btn gf-active" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:#1a237e;color:white;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">All Photos</button>
-      <button onclick="filterGallery('ship')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🚢 Ship Exterior</button>
-      <button onclick="filterGallery('interior')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🛳️ Ship Interior</button>
-      <button onclick="filterGallery('glacier')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🏔️ Glaciers</button>
-      <button onclick="filterGallery('scenery')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🌲 Alaska Scenery</button>
-      <button onclick="filterGallery('wildlife')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🦅 Wildlife</button>
-      <button onclick="filterGallery('pool')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🏊 Pool & Deck</button>
+      <button onclick="filterGallery('exterior')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🚢 Ship Exterior</button>
+      <button onclick="filterGallery('port')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">⚓ Ports of Call</button>
+      <button onclick="filterGallery('build')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🏗️ Shipyard Build</button>
+      <button onclick="filterGallery('detail')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🔍 Ship Details</button>
     </div>
 
     <!-- Image count -->
-    <div id="gallery-count" style="text-align:center;font-size:12px;color:var(--muted);margin-bottom:16px;">Showing 120 photos</div>
+    <div id="gallery-count" style="text-align:center;font-size:12px;color:var(--muted);margin-bottom:16px;">Showing 54 photos</div>
 
     <!-- Gallery grid (populated by JS) -->
     <div id="gallery-grid" style="columns:3;column-gap:10px;"></div>
@@ -2637,7 +2635,7 @@
     <!-- External gallery links -->
     <div style="margin-top:28px;background:linear-gradient(135deg,rgba(26,35,126,0.04),rgba(13,71,161,0.06));border:1px solid rgba(26,35,126,0.15);border-radius:14px;padding:20px 24px;text-align:center;">
       <div style="font-size:15px;font-weight:800;color:#1a237e;margin-bottom:12px;">Want More Photos?</div>
-      <div style="font-size:12px;color:var(--muted);margin-bottom:16px;">Browse 700+ community-contributed photos on CruiseCritic and official press images from Royal Caribbean</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:16px;">Browse 700+ Ovation of the Seas photos on CruiseCritic and official press images from Royal Caribbean</div>
       <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
         <a href="https://www.cruisecritic.com/cruise/royal-caribbean/ovation-of-the-seas/photos" target="_blank" rel="noopener noreferrer" style="padding:10px 20px;background:#1a237e;color:white;border-radius:10px;text-decoration:none;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;">⭐ CruiseCritic Gallery (700+ photos)</a>
         <a href="https://www.royalcaribbeanpresscenter.com/ship/28/ovation-of-the-seas/2/images/" target="_blank" rel="noopener noreferrer" style="padding:10px 20px;background:#0d47a1;color:white;border-radius:10px;text-decoration:none;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;">🛳️ Official RC Press Photos (140+)</a>
@@ -3060,110 +3058,60 @@
 
   /* ═══ GALLERY DATA & LOGIC ═══ */
   var galleryPhotos = [
-    {id:'1511316695145-4992006ffddb',cat:'ship',t:'Cruise ship at sea'},
-    {id:'1504986760686-def829959a20',cat:'ship',t:'White cruise ship on open water'},
-    {id:'1576814485347-8b4e9861e74d',cat:'ship',t:'Cruise ship during daytime'},
-    {id:'1572957424485-4afac5b029a9',cat:'ship',t:'Cruise ship in icy ocean'},
-    {id:'1517633350975-9444b4a80782',cat:'ship',t:'Cruise ship at night illuminated'},
-    {id:'1641228581153-27bba8b2e410',cat:'ship',t:'Large cruise ship docked at pier'},
-    {id:'1563829467124-e97ae7f229fd',cat:'ship',t:'Overlooking ship port at daytime'},
-    {id:'1588736204096-6de489208da5',cat:'ship',t:'Large cruise ship docked'},
-    {id:'1605978208410-c3deb0fab40d',cat:'ship',t:'Ship near snow covered mountains'},
-    {id:'1664303342182-ad5e58e6c714',cat:'ship',t:'Cruise vessel at sunset'},
-    {id:'1664304524857-9b2e2c6ed3c7',cat:'ship',t:'Cruise ship bow view'},
-    {id:'1614054145339-4a25fd7673a4',cat:'ship',t:'Alaska port town with mountains'},
-    {id:'1708435073412-6f6ae8e3f9c6',cat:'ship',t:'Ship in Alaskan waters'},
-    {id:'1661823662989-daa96d78ad4d',cat:'ship',t:'Cruise ship aerial perspective'},
-    {id:'1661871430238-16c5b0ca5fb9',cat:'ship',t:'Ship in scenic waters'},
-    {id:'1562624569-0f59ccd5a93e',cat:'ship',t:'Photographing icebergs from ship'},
-    {id:'1599700548547-07b7e1a4b8d8',cat:'pool',t:'Cruise ship pool deck'},
-    {id:'1579592672790-04783f38bb0d',cat:'pool',t:'Pool area on cruise ship'},
-    {id:'1562672753-07116bcc42e1',cat:'pool',t:'Swimming pool on deck'},
-    {id:'1661676082295-ebf60c98af89',cat:'pool',t:'Pool deck with ocean view'},
-    {id:'1661676056771-35a44b8a7a82',cat:'pool',t:'Cruise pool area'},
-    {id:'1590761397801-9c7c46c5e22a',cat:'pool',t:'Deck chairs by the pool'},
-    {id:'1661677878527-30a1b8efc79c',cat:'pool',t:'Pool and hot tub area'},
-    {id:'1562672752-0d7e63f78e62',cat:'pool',t:'Open deck swimming pool'},
-    {id:'1575109807020-dd5bd6e22a9d',cat:'pool',t:'Sun deck relaxation area'},
-    {id:'1745491168535-fb2a19bf0ce1',cat:'pool',t:'Pool deck panorama'},
-    {id:'1763451293272-3c1bd7c0a0e1',cat:'pool',t:'Cruise deck during sunset'},
-    {id:'1655042490871-d24ee3e25a30',cat:'pool',t:'Waterslide and pool complex'},
-    {id:'1700597312989-37847add2f00',cat:'pool',t:'Top deck with ocean view'},
-    {id:'1663099806610-45a7e0b27e1f',cat:'pool',t:'Evening deck ambiance'},
-    {id:'1589144406947-e43e26aba5e8',cat:'pool',t:'Cruise ship pool at dawn'},
-    {id:'1661923743277-8dd6d2e1a72e',cat:'interior',t:'Cruise ship interior hall'},
-    {id:'1726384679079-0c0e0e0e0e0e',cat:'interior',t:'Elegant ship corridor'},
-    {id:'1667604963377-4e4a8b6e0e0e',cat:'interior',t:'Dining room on ship'},
-    {id:'1701596438044-6d6e6e0e0e0e',cat:'interior',t:'Ship lounge area'},
-    {id:'1677676123594-7e7a7e0e0e0e',cat:'interior',t:'Cruise ship bar and lounge'},
-    {id:'1667604987970-8e8a8e0e0e0e',cat:'interior',t:'Ship restaurant interior'},
-    {id:'1667604946733-9e9a9e0e0e0e',cat:'interior',t:'Buffet area on cruise'},
-    {id:'1770049452214-ae0a0e0e0e0e',cat:'interior',t:'Modern ship atrium'},
-    {id:'1677440260333-be0b0e0e0e0e',cat:'interior',t:'Luxury ship staircase'},
-    {id:'1770049452215-ce0c0e0e0e0e',cat:'interior',t:'Ship promenade deck'},
-    {id:'1670499709068-de0d0e0e0e0e',cat:'interior',t:'Entertainment venue on ship'},
-    {id:'1770049452340-ee0e0e0e0e0e',cat:'interior',t:'Casino and gaming area'},
-    {id:'1733940560917-fe0f0e0e0e0e',cat:'interior',t:'Ship spa and wellness'},
-    {id:'1761953035303-0f0a0e0e0e0e',cat:'interior',t:'Cruise ship theater'},
-    {id:'1764654372283-1e1a1e0e0e0e',cat:'interior',t:'Ship cabin balcony view'},
-    {id:'1683033480759-2e2a2e0e0e0e',cat:'interior',t:'Fitness center onboard'},
-    {id:'1733873203770-3e3a3e0e0e0e',cat:'interior',t:'Kids club area'},
-    {id:'1767021916471-4e4a4e0e0e0e',cat:'interior',t:'Specialty restaurant'},
-    {id:'1767133166759-5e5a5e0e0e0e',cat:'interior',t:'Ship library and lounge'},
-    {id:'1633084071043-6e6a6e0e0e0e',cat:'interior',t:'Ship lobby and reception'},
-    {id:'1709606770667-7e7a7e0e0e0e',cat:'glacier',t:'Alaskan glacier panorama'},
-    {id:'1673114819432-8e8a8e0e0e0e',cat:'glacier',t:'Blue glacier ice close-up'},
-    {id:'1690053712268-9e9a9e0e0e0e',cat:'glacier',t:'Glacier calving into ocean'},
-    {id:'1709606770108-ae0a0e0e0e0e',cat:'glacier',t:'Hubbard Glacier aerial view'},
-    {id:'1605415465800-be0b0e0e0e0e',cat:'glacier',t:'Ice field stretching to horizon'},
-    {id:'1694475381293-ce0c0e0e0e0e',cat:'glacier',t:'Glacier bay waters'},
-    {id:'1657682899797-de0d0e0e0e0e',cat:'glacier',t:'Massive glacier wall'},
-    {id:'1690053711998-ee0e0e0e0e0e',cat:'glacier',t:'Glacial landscape panorama'},
-    {id:'1713190307131-fe0f0e0e0e0e',cat:'glacier',t:'Turquoise glacial waters'},
-    {id:'1690053712746-0f0a1e0e0e0e',cat:'glacier',t:'Glacier and mountain peaks'},
-    {id:'1577673875702-1e1a2e0e0e0e',cat:'glacier',t:'Snow-capped peaks and ice'},
-    {id:'1549402214-c7e4f0f10d0d',cat:'glacier',t:'Exit Glacier close-up'},
-    {id:'1652661230083-3e3a4e0e0e0e',cat:'glacier',t:'Glacial blue ice formations'},
-    {id:'1690982951685-4e4a5e0e0e0e',cat:'glacier',t:'Mountain glacier descent'},
-    {id:'1690982952696-5e5a6e0e0e0e',cat:'glacier',t:'Glacier meeting the sea'},
-    {id:'1593326101816-dd0c165b3ef1',cat:'glacier',t:'Lake near snowy mountains'},
-    {id:'1605978221138-0be1cae9204b',cat:'glacier',t:'Mountains near water'},
-    {id:'1709606770736-6e6a7e0e0e0e',cat:'scenery',t:'Alaska mountain range panorama'},
-    {id:'1654835608149-7e7a8e0e0e0e',cat:'scenery',t:'Alpine meadow with wildflowers'},
-    {id:'1666414161383-8e8a9e0e0e0e',cat:'scenery',t:'Alaska forest and river'},
-    {id:'1666414466847-9e9aae0e0e0e',cat:'scenery',t:'Misty mountain morning'},
-    {id:'1709606770263-ae0abe0e0e0e',cat:'scenery',t:'Denali and the Alaska Range'},
-    {id:'1666414340830-be0bce0e0e0e',cat:'scenery',t:'Coastal Alaska village'},
-    {id:'1643325169762-ce0cde0e0e0e',cat:'scenery',t:'Sunset over Alaska fjord'},
-    {id:'1701789304588-de0dee0e0e0e',cat:'scenery',t:'Kenai Peninsula landscape'},
-    {id:'1701789302093-ee0efe0e0e0e',cat:'scenery',t:'Homer spit coastline'},
-    {id:'1761432325388-fe0f0f1e0e0e',cat:'scenery',t:'Seward harbor at dusk'},
-    {id:'1654654405366-0f1a1e1e0e0e',cat:'scenery',t:'Resurrection Bay waters'},
-    {id:'1709606770641-1e2a2e1e0e0e',cat:'scenery',t:'Eagle perched on mountain'},
-    {id:'1701789236824-2e3a3e1e0e0e',cat:'scenery',t:'Railroad through Alaska'},
-    {id:'1701789249285-3e4a4e1e0e0e',cat:'scenery',t:'Alaska river reflections'},
-    {id:'1701789253329-4e5a5e1e0e0e',cat:'scenery',t:'Wildflower field Alaska'},
-    {id:'1701789296323-5e6a6e1e0e0e',cat:'scenery',t:'Autumn colors in Alaska'},
-    {id:'1755532189321-6e7a7e1e0e0e',cat:'scenery',t:'Inside Passage waterway'},
-    {id:'1761432325152-7e8a8e1e0e0e',cat:'scenery',t:'Mountain lake reflection'},
-    {id:'1661963528518-8e9a9e1e0e0e',cat:'wildlife',t:'Bald eagle soaring'},
-    {id:'1718130408584-9eaaae1e0e0e',cat:'wildlife',t:'Humpback whale tail fluke'},
-    {id:'1576727431698-aebbce1e0e0e',cat:'wildlife',t:'Orca pod in Alaska waters'},
-    {id:'1744790405138-beccde1e0e0e',cat:'wildlife',t:'Alaska brown bear fishing'},
-    {id:'1579513408962-cedeee1e0e0e',cat:'wildlife',t:'Sea otter floating'},
-    {id:'1744790402105-deefff1e0e0e',cat:'wildlife',t:'Moose in the wild'},
-    {id:'1651766601876-ef0a0e2e0e0e',cat:'wildlife',t:'Seal on ice floe'},
-    {id:'1709606770874-0f1b1e2e0e0e',cat:'wildlife',t:'Eagle fishing in river'},
-    {id:'1744790405193-1e2c2e2e0e0e',cat:'wildlife',t:'Bear and cubs on shore'},
-    {id:'1561404075-c7e9f8c0d0d0',cat:'wildlife',t:'Dolphins alongside ship'},
-    {id:'1744790402177-3e4d4e2e0e0e',cat:'wildlife',t:'Mountain goats on cliff'},
-    {id:'1661945186161-4e5e5e2e0e0e',cat:'wildlife',t:'Puffins on coastal rock'},
-    {id:'1693506917889-5e6f6e2e0e0e',cat:'wildlife',t:'Salmon jumping upstream'},
-    {id:'1741158878026-6e7a7e2e0e0e',cat:'wildlife',t:'Fox in Alaska tundra'},
-    {id:'1744790402799-7e8b8e2e0e0e',cat:'wildlife',t:'Caribou herd migration'},
-    {id:'1661944861055-8e9c9e2e0e0e',cat:'wildlife',t:'Harbor seals resting'},
-    {id:'1633967920376-33b2d94f091f',cat:'wildlife',t:'Sea otters swimming'},
-    {id:'1517103068540-6a70e8c0022f',cat:'wildlife',t:'Bear on seashore'}
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg/800px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg',cat:'exterior',t:'Side view at Fremantle, 2016'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ovation_of_the_Seas._%2852703786433%29.jpg/800px-Ovation_of_the_Seas._%2852703786433%29.jpg',cat:'exterior',t:'Majestic view at sea'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ovation_Of_The_Seas_Front.jpg/800px-Ovation_Of_The_Seas_Front.jpg',cat:'exterior',t:'Front bow view, Sydney'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ovation_of_the_Seas%2C_dominating_Sydney_Harbour.jpg/800px-Ovation_of_the_Seas%2C_dominating_Sydney_Harbour.jpg',cat:'exterior',t:'Dominating Sydney Harbour skyline'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ovation_Of_The_Seas_Rear.jpg/800px-Ovation_Of_The_Seas_Rear.jpg',cat:'exterior',t:'Rear stern view, Sydney'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Ovation_Of_The_Seas_Dawes_Point.jpg/800px-Ovation_Of_The_Seas_Dawes_Point.jpg',cat:'exterior',t:'Viewed from Dawes Point, Sydney'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ovation_of_the_Seas._%2852601326758%29.jpg/800px-Ovation_of_the_Seas._%2852601326758%29.jpg',cat:'exterior',t:'Full profile at sea'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ovation_of_the_Seas_at_Sydney.jpg/800px-Ovation_of_the_Seas_at_Sydney.jpg',cat:'exterior',t:'Docked at Sydney Harbour'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Ovation_Of_The_Seas_Front%2C_December_2024.jpg/800px-Ovation_Of_The_Seas_Front%2C_December_2024.jpg',cat:'exterior',t:'Front view, Sydney Dec 2024'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/2025-02-23_Ovation_of_the_Seas_in_Sydney.jpg/800px-2025-02-23_Ovation_of_the_Seas_in_Sydney.jpg',cat:'exterior',t:'Panoramic view, Sydney Feb 2025'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_03.jpg/800px-Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_03.jpg',cat:'exterior',t:'Sydney visit, March 2023'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_02.jpg/800px-Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_02.jpg',cat:'exterior',t:'Sydney Harbour, March 2023'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_01.jpg/800px-Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_01.jpg',cat:'exterior',t:'Arriving Sydney, March 2023'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2802%29.jpg/800px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2802%29.jpg',cat:'exterior',t:'Panoramic at Fremantle'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2803%29.jpg/800px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2803%29.jpg',cat:'exterior',t:'Distant view at Fremantle'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ovation_of_the_Seas_%2831783700662%29.jpg/800px-Ovation_of_the_Seas_%2831783700662%29.jpg',cat:'exterior',t:'Docked in Auckland harbour'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Ovation_of_the_Seas_%2832740294245%29.jpg/800px-Ovation_of_the_Seas_%2832740294245%29.jpg',cat:'exterior',t:'Auckland harbour panoramic'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas_%2852933210658%29.jpg/800px-Ovation_of_the_Seas_%2852933210658%29.jpg',cat:'exterior',t:'At Lyttelton, New Zealand'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ovation_of_the_Seas._%2852592447201%29.jpg/800px-Ovation_of_the_Seas._%2852592447201%29.jpg',cat:'exterior',t:'Lyttelton harbour view'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ovation_of_the_Seas.jpg/800px-Ovation_of_the_Seas.jpg',cat:'exterior',t:'Classic side view, Rotterdam'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Aratere_and_Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg/800px-Aratere_and_Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg',cat:'port',t:'Alongside Aratere ferry, Picton NZ'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Ovation_of_the_Seas_at_port_of_hakata.jpg/800px-Ovation_of_the_Seas_at_port_of_hakata.jpg',cat:'port',t:'Docked at Port of Hakata, Japan'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Ovation_of_the_seas_in_Bremerhaven_.jpg/800px-Ovation_of_the_seas_in_Bremerhaven_.jpg',cat:'port',t:'At port in Bremerhaven, Germany'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ovation_of_the_seas_%C3%A0_Tahiti_2019.jpg/800px-Ovation_of_the_seas_%C3%A0_Tahiti_2019.jpg',cat:'port',t:'Visiting Tahiti, 2019'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg/800px-Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg',cat:'port',t:'Docked at Picton, New Zealand'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Ovation_of_the_Seas%2C_Picton_NZL%2C_6_Jan_2019.jpg/800px-Ovation_of_the_Seas%2C_Picton_NZL%2C_6_Jan_2019.jpg',cat:'port',t:'Another angle at Picton, NZ'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/OV_docked_at_Mount_Maunganui%2C_Bay_of_Plenty%2C_New_Zealand.jpg/800px-OV_docked_at_Mount_Maunganui%2C_Bay_of_Plenty%2C_New_Zealand.jpg',cat:'port',t:'Docked at Mount Maunganui, NZ'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Ovation_of_the_Seas_%2825840165433%29.jpg/800px-Ovation_of_the_Seas_%2825840165433%29.jpg',cat:'port',t:'In Rotterdam harbour'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Ovation_of_the_Seas_%2826170152260%29.jpg/800px-Ovation_of_the_Seas_%2826170152260%29.jpg',cat:'port',t:'Passing through Rotterdam'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ovation_of_the_Seas_%2826376810481%29.jpg/800px-Ovation_of_the_Seas_%2826376810481%29.jpg',cat:'port',t:'Rotterdam close-up view'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ovation_of_the_Seas_%28ship%2C_2016%29_001.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_001.jpg',cat:'port',t:'Rotterdam broadside view'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ovation_of_the_Seas_%28ship%2C_2016%29_002.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_002.jpg',cat:'port',t:'Rotterdam with city backdrop'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Ovation_of_the_Seas_%28ship%2C_2016%29_003.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_003.jpg',cat:'port',t:'Rotterdam with tugboats'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Ovation_of_the_Seas_%28ship%2C_2016%29_004.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_004.jpg',cat:'port',t:'Rotterdam departure view'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Ovation_of_the_Seas_%28ship%2C_2016%29_005.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_005.jpg',cat:'port',t:'Rotterdam distant view'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825843859904%29.jpg/800px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825843859904%29.jpg',cat:'port',t:'On Nieuwe Maas river, Rotterdam'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825844149464%29.jpg/800px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825844149464%29.jpg',cat:'port',t:'Nieuwe Maas, Rotterdam'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2826175354380%29.jpg/800px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2826175354380%29.jpg',cat:'port',t:'Nieuwe Maas river view'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2826175888100%29.jpg/800px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2826175888100%29.jpg',cat:'port',t:'Departing Rotterdam'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hundeverein-2715.jpg/800px-Hundeverein-2715.jpg',cat:'build',t:'Under construction at Meyer Werft'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hundeverein-2746.jpg/800px-Hundeverein-2746.jpg',cat:'build',t:'Construction progress at Meyer Werft'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hundeverein-2750.jpg/800px-Hundeverein-2750.jpg',cat:'build',t:'Hull nearing completion'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Hundeverein-2765.jpg/800px-Hundeverein-2765.jpg',cat:'build',t:'Close to launch at Meyer Werft'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ovation_of_The_Seas-msu-2766.jpg/800px-Ovation_of_The_Seas-msu-2766.jpg',cat:'build',t:'At Meyer Werft shipyard'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Ovation_of_the_Seas_01.JPG/800px-Ovation_of_the_Seas_01.JPG',cat:'build',t:'Meyer Werft shipyard (1)'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ovation_of_the_Seas_02.JPG/800px-Ovation_of_the_Seas_02.JPG',cat:'build',t:'Meyer Werft shipyard (2)'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Ovation_of_the_Seas_03.JPG/800px-Ovation_of_the_Seas_03.JPG',cat:'build',t:'Meyer Werft shipyard (3)'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ovation_of_the_Seas_04.JPG/800px-Ovation_of_the_Seas_04.JPG',cat:'build',t:'Meyer Werft shipyard (4)'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ovation_of_the_Seas_05.JPG/800px-Ovation_of_the_Seas_05.JPG',cat:'build',t:'Meyer Werft shipyard (5)'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ovation_of_the_Seas_06.JPG/800px-Ovation_of_the_Seas_06.JPG',cat:'build',t:'Meyer Werft shipyard (6)'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ovation_of_the_Seas_07.JPG/800px-Ovation_of_the_Seas_07.JPG',cat:'build',t:'Meyer Werft shipyard (7)'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ovation_of_the_Seas_08.JPG/800px-Ovation_of_the_Seas_08.JPG',cat:'build',t:'Bow close-up at Meyer Werft'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Ovation_of_the_Seas_09.JPG/800px-Ovation_of_the_Seas_09.JPG',cat:'build',t:'Night view at Meyer Werft'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Square_Cabins_-_Flickr_-_mikecogh.jpg/800px-Square_Cabins_-_Flickr_-_mikecogh.jpg',cat:'detail',t:'Balcony cabin exterior close-up'}
   ];
 
   var currentFilter = 'all';
@@ -3179,7 +3127,7 @@
     filteredPhotos.forEach(function(p, i) {
       var h = [200, 240, 280, 220, 260, 300][i % 6];
       html += '<div class="gal-item" style="break-inside:avoid;margin-bottom:10px;border-radius:10px;overflow:hidden;cursor:pointer;position:relative;" onclick="openLightbox(' + i + ')">';
-      html += '<img loading="lazy" src="https://images.unsplash.com/photo-' + p.id + '?w=600&q=75&auto=format&fit=crop&h=' + h + '" alt="' + p.t + '" style="width:100%;display:block;transition:transform 0.3s;" onmouseover="this.style.transform=\'scale(1.03)\'" onmouseout="this.style.transform=\'scale(1)\'">';
+      html += '<img loading="lazy" src="' + p.url + '" alt="' + p.t + '" style="width:100%;display:block;transition:transform 0.3s;" onmouseover="this.style.transform=\'scale(1.03)\'" onmouseout="this.style.transform=\'scale(1)\'">';
       html += '<div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));padding:8px 10px;"><span style="color:white;font-size:11px;">' + p.t + '</span></div>';
       html += '</div>';
     });
@@ -3203,7 +3151,7 @@
     var img = document.getElementById('lightbox-img');
     var cap = document.getElementById('lightbox-caption');
     var p = filteredPhotos[idx];
-    img.src = 'https://images.unsplash.com/photo-' + p.id + '?w=1600&q=85&auto=format';
+    img.src = p.url.replace('/800px-', '/1600px-');
     cap.textContent = p.t + ' (' + (idx + 1) + '/' + filteredPhotos.length + ')';
     lb.style.display = 'flex';
     document.body.style.overflow = 'hidden';
