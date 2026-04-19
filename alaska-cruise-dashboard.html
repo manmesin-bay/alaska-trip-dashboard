@@ -3241,8 +3241,9 @@
     filteredPhotos = galleryPhotos;
     var html = '';
     filteredPhotos.forEach(function(p, i) {
-      html += '<div style="border-radius:12px;overflow:hidden;cursor:pointer;position:relative;box-shadow:0 2px 12px rgba(0,0,0,0.12);" onclick="openLightbox(' + i + ')">';
-      html += '<img loading="lazy" src="' + p.url + '" alt="' + p.t + '" style="width:100%;display:block;aspect-ratio:16/10;object-fit:cover;transition:transform 0.3s;" onmouseover="this.style.transform=\'scale(1.03)\'" onmouseout="this.style.transform=\'scale(1)\'">';
+      var thumbUrl = p.url.replace('/1200px-', '/800px-');
+      html += '<div id="gal-' + i + '" style="border-radius:12px;overflow:hidden;cursor:pointer;position:relative;box-shadow:0 2px 12px rgba(0,0,0,0.12);" onclick="openLightbox(' + i + ')">';
+      html += '<img loading="lazy" src="' + thumbUrl + '" alt="' + p.t + '" style="width:100%;display:block;aspect-ratio:16/10;object-fit:cover;background:#1a1a2e;transition:transform 0.3s;" onmouseover="this.style.transform=\'scale(1.03)\'" onmouseout="this.style.transform=\'scale(1)\'" onerror="this.onerror=null;this.src=\'' + p.url + '\'">';
       html += '<div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));padding:10px 12px;"><span style="color:white;font-size:12px;font-weight:600;">' + p.t + '</span></div>';
       html += '</div>';
     });
@@ -3298,9 +3299,13 @@
     event.target.classList.add('active');
     if (name === 'gallery' && document.getElementById('gallery-grid').innerHTML === '') buildGallery();
     var img = document.getElementById('hero-img');
-    if (heroImages[name] && img.src !== heroImages[name]) {
+    if (heroImages[name]) {
       img.style.opacity = '0';
       setTimeout(function() {
+        img.onerror = function() {
+          this.onerror = null;
+          this.src = heroImages['overview'];
+        };
         img.src = heroImages[name];
         img.style.opacity = '1';
       }, 300);
