@@ -476,21 +476,60 @@
     .budget-row.total { background: var(--glacier); padding: 12px 14px; border-radius: 8px; margin-top: 8px; }
     .budget-row.total .amount { font-size: 20px; color: var(--teal); }
 
-    /* ── RESPONSIVE ── */
+    /* ── RESPONSIVE: TABLET ── */
+    @media (max-width: 768px) {
+      .hero { min-height: 480px !important; }
+      .hero img { height: 480px !important; }
+      .hero h1 { font-size: 52px !important; }
+      .tab-btn { padding: 10px 14px; font-size: 12px; }
+      .main { padding: 24px 16px 48px; }
+      .mob-1col { grid-template-columns: 1fr !important; }
+      .mob-stack { flex-direction: column !important; }
+      .expense-hero-total { font-size: 40px !important; }
+      .expense-cats { flex-wrap: wrap !important; gap: 16px !important; }
+      .expense-cats > div:not([style*="width:1px"]) { flex: 1 1 120px !important; }
+      .expense-cats > div[style*="width:1px"] { display: none !important; }
+      .rc-banner-btn { padding: 6px 14px !important; font-size: 11px !important; }
+    }
+
+    /* ── RESPONSIVE: MOBILE ── */
     @media (max-width: 640px) {
-      .hero { min-height: 440px !important; }
-      .hero img { height: 440px !important; }
-      .hero h1 { font-size: 48px !important; letter-spacing: -1px !important; }
-      .main { padding: 20px 12px 48px; }
+      .hero { min-height: 340px !important; }
+      .hero img { height: 340px !important; }
+      .hero h1 { font-size: 32px !important; letter-spacing: -1px !important; }
+      .hero p { font-size: 13px !important; }
+      .tab-bar { padding: 10px 12px; gap: 2px; }
+      .tab-btn { padding: 8px 10px; font-size: 11px; border-radius: 6px; }
+      .main { padding: 16px 10px 48px; }
+      .section-title { font-size: 20px; }
+      .section-title .icon { font-size: 22px; }
+      .card { padding: 16px; }
       .review-pros-cons { grid-template-columns: 1fr; }
-      #countdown-display { gap: 4px !important; }
-      #countdown-display > div { min-width: 40px !important; padding: 6px 6px !important; }
-      #countdown-display > div > div:first-child { font-size: 20px !important; }
+      #countdown-display { gap: 4px !important; padding: 8px 10px !important; }
+      #countdown-display > div { min-width: 36px !important; padding: 5px 4px !important; }
+      #countdown-display > div > div:first-child { font-size: 18px !important; }
+      #countdown-display > div > div:last-child { font-size: 7px !important; }
       .grid-2, .grid-3 { grid-template-columns: 1fr; }
       .crew-grid { grid-template-columns: 1fr !important; }
       .crew-grid > div { border-right: none !important; border-bottom: 1px solid rgba(0,0,0,0.06); }
       .crew-grid > div:last-child { border-bottom: none !important; }
       #gallery-grid { grid-template-columns: 1fr !important; }
+      .mob-1col { grid-template-columns: 1fr !important; }
+      .mob-stack { flex-direction: column !important; align-items: stretch !important; }
+      .expense-hero-total { font-size: 32px !important; }
+      .expense-cats { flex-direction: column !important; align-items: center !important; gap: 12px !important; }
+      .expense-cats > div[style*="width:1px"] { display: none !important; }
+      .filter-bar { gap: 4px; }
+      .filter-btn { padding: 6px 10px; font-size: 11px; }
+      .rc-banner-title { font-size: 14px !important; }
+      .rc-banner-sub { font-size: 11px !important; }
+      .rc-banner-btn { padding: 6px 12px !important; font-size: 10px !important; }
+      .rc-banner-icon { width: 28px !important; height: 28px !important; }
+      .day-card { padding: 16px !important; }
+      .alert { padding: 12px 14px; font-size: 12px; }
+      .fb-form { gap: 8px !important; }
+      .fb-form input, .fb-form textarea { min-width: 0 !important; flex: 1 1 100% !important; }
+      .fb-form .fb-label { flex: 1 1 100% !important; text-align: center; }
     }
 
     /* ── SCROLL ANIMATION ── */
@@ -935,7 +974,7 @@
       <div style="background:#e8e8e8;border-radius:8px;height:10px;overflow:hidden;margin-bottom:16px;">
         <div style="background:linear-gradient(90deg,#2e7d32,#4caf50);height:100%;width:64%;border-radius:8px;"></div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12.5px;">
+      <div class="mob-1col" style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12.5px;">
         <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> Cruise cabins (all 3 families)</div>
         <div style="display:flex;align-items:center;gap:6px;"><span style="color:#e67e22;">⏳</span> Cruise port excursions</div>
         <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> Pre-cruise stay (Amit's home)</div>
@@ -2088,9 +2127,9 @@
       <div style="position:absolute;bottom:-40px;left:-20px;width:160px;height:160px;background:rgba(255,255,255,0.02);border-radius:50%;"></div>
       <div style="font-size:11px;font-weight:700;color:#64b5f6;text-transform:uppercase;letter-spacing:3px;margin-bottom:4px;">Group Total So Far</div>
       <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:12px;">Excluding Cruise</div>
-      <div style="font-size:52px;font-weight:900;color:white;line-height:1;">$13,057</div>
+      <div class="expense-hero-total" style="font-size:52px;font-weight:900;color:white;line-height:1;">$13,057</div>
       <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:8px;">for 9 travelers · 5 nights · 4-day van · heli + dog sled</div>
-      <div style="display:flex;justify-content:center;gap:24px;margin-top:20px;">
+      <div class="expense-cats" style="display:flex;justify-content:center;gap:24px;margin-top:20px;">
         <div style="text-align:center;">
           <div style="font-size:22px;font-weight:800;color:#81c784;">$4,990</div>
           <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;">🏠 Accommodation</div>
@@ -2515,7 +2554,7 @@
       </div>
 
       <!-- Contact & Emergency -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+      <div class="mob-1col" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
         <div style="background:var(--ice);border-radius:10px;padding:14px;">
           <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">📞 Owner & Contacts</div>
           <div style="font-size:12px;color:var(--muted);line-height:1.8;">
@@ -2541,7 +2580,7 @@
       <!-- Things to Do Near the House -->
       <div style="background:linear-gradient(135deg,#1b5e20,#388e3c);border-radius:12px;padding:18px;color:white;margin-bottom:16px;">
         <div style="font-size:14px;font-weight:800;margin-bottom:12px;">🌲 Things to Do Near the House — Owner's Picks</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12.5px;">
+        <div class="mob-1col" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12.5px;">
           <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
             <strong>🥾 Hike across the road</strong> (owner's property)<br>
             Walk west to the canyon edge — wildflowers, mountain & glacier views. Be careful at the edge!
@@ -2603,7 +2642,7 @@
       <!-- House Rules -->
       <details style="margin-bottom:16px;">
         <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);padding:8px 0;">⚠️ House Rules & Do's / Don'ts (click to expand)</summary>
-        <div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
+        <div class="mob-1col" style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
           <div style="background:#ffebee;border-radius:8px;padding:10px;border-left:3px solid #c62828;">
             <strong style="color:#c62828;">🚫 DO NOT</strong>
             <ul style="margin:6px 0 0 14px;color:var(--muted);line-height:1.7;">
@@ -2816,12 +2855,12 @@
       <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/royal-amplified/ovation-of-the-seas-northstar-aerial.jpg?$1920x1080$" alt="Ovation of the Seas — Royal Caribbean" style="width:100%;display:block;aspect-ratio:16/7;object-fit:cover;" loading="lazy">
       <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.4) 60%,transparent 100%);padding:28px 24px 20px;">
         <div style="display:flex;align-items:center;gap:12px;">
-          <img src="https://www.royalcaribbean.com/content/dam/royal/resources/icons/favicon-196x196.png" alt="RC" style="width:36px;height:36px;border-radius:8px;background:white;padding:2px;" onerror="this.style.display='none'">
-          <div style="flex:1;">
-            <div style="font-size:18px;font-weight:900;color:white;text-shadow:0 1px 4px rgba(0,0,0,0.4);">Royal Caribbean — Ovation of the Seas</div>
-            <div style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:3px;">royalcaribbean.com · Deck plans, staterooms, dining, entertainment & more</div>
+          <img class="rc-banner-icon" src="https://www.royalcaribbean.com/content/dam/royal/resources/icons/favicon-196x196.png" alt="RC" style="width:36px;height:36px;border-radius:8px;background:white;padding:2px;" onerror="this.style.display='none'">
+          <div style="flex:1;min-width:0;">
+            <div class="rc-banner-title" style="font-size:18px;font-weight:900;color:white;text-shadow:0 1px 4px rgba(0,0,0,0.4);">Royal Caribbean — Ovation of the Seas</div>
+            <div class="rc-banner-sub" style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:3px;">royalcaribbean.com · Deck plans, staterooms, dining, entertainment & more</div>
           </div>
-          <div style="background:white;color:#0d47a1;font-size:12px;font-weight:800;padding:8px 18px;border-radius:8px;white-space:nowrap;">Visit Page →</div>
+          <div class="rc-banner-btn" style="background:white;color:#0d47a1;font-size:12px;font-weight:800;padding:8px 18px;border-radius:8px;white-space:nowrap;">Visit Page →</div>
         </div>
       </div>
     </a>
@@ -3155,8 +3194,8 @@
        FEEDBACK (compact)
   ══════════════════════════════════ -->
   <div style="margin-top:24px;background:linear-gradient(135deg,#0a1628,#1a237e);border-radius:14px;padding:18px 22px;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
-    <form id="feedback-form" onsubmit="sendFeedback(event)" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-      <div style="font-size:13px;font-weight:700;color:white;white-space:nowrap;">💬 Got ideas or feedback?</div>
+    <form id="feedback-form" class="fb-form" onsubmit="sendFeedback(event)" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+      <div class="fb-label" style="font-size:13px;font-weight:700;color:white;white-space:nowrap;">💬 Got ideas or feedback?</div>
       <input type="text" id="fb-name" placeholder="Your name" required style="flex:1;min-width:100px;padding:9px 14px;border:1px solid rgba(255,255,255,0.15);border-radius:8px;background:rgba(255,255,255,0.08);color:white;font-size:13px;box-sizing:border-box;outline:none;" onfocus="this.style.borderColor='#22a39f'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
       <textarea id="fb-message" placeholder="What excursion, idea, or feedback?" required rows="1" style="flex:3;min-width:180px;padding:9px 14px;border:1px solid rgba(255,255,255,0.15);border-radius:8px;background:rgba(255,255,255,0.08);color:white;font-size:13px;box-sizing:border-box;outline:none;resize:none;font-family:inherit;" onfocus="this.style.borderColor='#22a39f'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'"></textarea>
       <button type="submit" style="padding:9px 20px;background:linear-gradient(135deg,#22a39f,#1a9a8a);color:white;font-size:13px;font-weight:700;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform=''">Send →</button>
