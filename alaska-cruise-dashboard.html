@@ -827,11 +827,11 @@
 <nav class="tab-bar">
   <button class="tab-btn active" onclick="showTab('overview',this)">🏠 Overview</button>
   <button class="tab-btn" onclick="showTab('cruise',this)">🗓️ Itinerary</button>
+  <button class="tab-btn" onclick="showTab('hotels',this)">🏨 Stays</button>
   <button class="tab-btn" onclick="showTab('reviews',this)">⭐ Reviews</button>
   <button class="tab-btn" onclick="showTab('budget',this)">💰 Expenses</button>
   <button class="tab-btn" onclick="showTab('packing',this)">🎒 Packing</button>
   <button class="tab-btn" onclick="showTab('checklist',this)">✅ Checklist</button>
-  <button class="tab-btn" onclick="showTab('hotels',this)">🏨 Stays</button>
   <button class="tab-btn" onclick="showTab('gallery',this)">📸 Cruise Gallery</button>
   <button class="tab-btn" onclick="showTab('knowmore',this)">🛳️ Ovation of the Seas</button>
 </nav>
@@ -2020,6 +2020,387 @@
 
 
   <!-- ══════════════════════════════════
+       TAB: HOTELS
+  ══════════════════════════════════ -->
+  <div id="tab-hotels" class="section">
+    <div class="section-title"><span class="icon">🏨</span> Accommodation — All Booked!</div>
+
+    <div class="alert" style="background:#e6f9f0;border-color:#2e7d32;"><span class="alert-icon">✅</span><div>All 5 nights are <strong>booked and confirmed</strong>: <strong><a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Summit Lake Lodge</a></strong> (Jul 3–5, Moose Pass) + <strong><a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">"Unique Sense of Place"</a></strong> (Jul 5–7, Homer) + <strong><a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Downtown Anchorage Grand</a></strong> (Jul 7–8). Total accommodation: <strong>$4,990.32</strong> + $1,500 refundable deposit.</div></div>
+
+    <!-- SEWARD / MOOSE PASS — BOOKED -->
+    <div class="town-header">
+      <div class="town-icon" style="background:#2e7d32;">✅</div>
+      <div><h3>Moose Pass (Seward Area) — 2 Nights · BOOKED</h3><p>Days 8–9 (Jul 3–5) · Mile 45.5 Seward Highway · 🌡️ Avg July: 55–62°F (13–17°C)</p></div>
+    </div>
+    <div class="grid-3">
+      <div class="hotel-card" data-hotel-town="seward" style="border:2px solid #2e7d32;box-shadow:0 4px 20px rgba(46,125,50,0.25);">
+        <div class="hotel-img" style="position:relative;overflow:hidden;">
+          <img src="https://static.wixstatic.com/media/60acc7_5fbbb207ed21437e8104cef955884c98~mv2.jpg/v1/fill/w_480,h_320,al_c,q_80,enc_avif,quality_auto/MariaLamb492_edited.jpg" alt="Summit Lake Lodge" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          <span class="hotel-badge" style="background:#2e7d32;position:absolute;top:10px;right:10px;">BOOKED</span>
+        </div>
+        <div class="hotel-info">
+          <h4>Summit Lake Lodge</h4>
+          <div class="hotel-loc">📍 Mile 45.5 Seward Hwy, Moose Pass, AK 99631 · <a href="https://www.summitlakelodge.com/overview" target="_blank" rel="noopener noreferrer">Website</a> · <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
+          <div class="hotel-price">$2,193.90 <span>total (3 rooms × 2 nights)</span></div>
+          <div class="hotel-rating"><span class="stars">★★★★★</span><span class="score">9.8/10</span> (171 reviews)</div>
+          <div class="hotel-features">
+            <span class="hotel-feat">Lakefront cabins</span>
+            <span class="hotel-feat">Free breakfast</span>
+            <span class="hotel-feat">Kayaking/canoeing</span>
+            <span class="hotel-feat">Restaurant + bar</span>
+          </div>
+          <p style="margin-top:10px;">Historic 1950s log lodge on Summit Lake in Chugach National Forest. Individual cabins with mountain views. Free made-to-order breakfast daily. On-site kayaking, canoeing, fishing, hiking.</p>
+          <div style="margin-top:10px;padding:12px;background:rgba(46,125,50,0.08);border-radius:8px;font-size:13px;">
+            <strong style="color:#2e7d32;">Booking Details:</strong><br>
+            <strong>Room 1:</strong> Classic Cabin, 2 Queen Beds — Amandeep Singh Walia, 2 adults · Conf: <code>2441158645_RN</code><br>
+            <strong>Room 2:</strong> Classic Cabin, 2 Queen Beds — Amit Koshal, 2 adults + 2 children · Conf: <code>2441158648_RN</code><br>
+            <strong>Room 3:</strong> Classic Cabin, 2 Queen Beds — Manmeet Singh, 2 adults + 1 child · Conf: <code>2441158650_RN</code><br>
+            <strong>Expedia Itinerary:</strong> 73423955882466<br>
+            <strong>Check-in:</strong> Fri Jul 3, 4:00 PM – 10:30 PM · <strong>Check-out:</strong> Sun Jul 5, 11:00 AM<br>
+            <strong>Payment:</strong> Deposit paid $548.49 · Balance $1,645.41 due Jul 3
+          </div>
+          <div style="margin-top:6px;padding:10px;background:rgba(255,152,0,0.08);border-radius:8px;font-size:13px;">
+            <strong style="color:#e65100;">Remember:</strong> 45 min from Seward port — plan transport on disembark day (Jul 3). Van pickup is Jul 4 in Seward. Front desk closes 10:30 PM. No cell service except AT&T/GCI.
+          </div>
+          <div style="margin-top:6px;padding:10px;background:rgba(200,0,0,0.06);border-radius:8px;font-size:13px;">
+            <strong style="color:#c62828;">Cancellation:</strong> Before Jun 3, 6 PM — 30% fee. After Jun 3, 6 PM — 100% non-refundable.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Homer Stay — BOOKED -->
+    <div class="town-header" style="margin-top:36px;">
+      <div class="town-icon" style="background:#2e7d32;">✅</div>
+      <div><h3>Homer — 2 Nights (Entire House Rental) · BOOKED</h3><p>Days 10–11 (Jul 5–7) · "End of the Road" on Kachemak Bay · 🌡️ Avg July: 52–62°F (11–17°C) · All 9 people under one roof!</p></div>
+    </div>
+
+    <div class="grid-3">
+      <div class="hotel-card" data-hotel-town="homer" style="border:2px solid #2e7d32;box-shadow:0 4px 20px rgba(46,125,50,0.25);">
+        <div class="hotel-img" style="position:relative;overflow:hidden;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Homer_Alaska_Kachemak_Bay.jpeg/500px-Homer_Alaska_Kachemak_Bay.jpeg" alt="Homer, Kachemak Bay" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          <span class="hotel-badge" style="background:#2e7d32;position:absolute;top:10px;right:10px;">BOOKED</span>
+        </div>
+        <div class="hotel-info">
+          <h4>Unique Sense of Place — Quiet Stunning Beauty</h4>
+          <div class="hotel-loc">📍 ~19 mi from Homer · <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
+          <div class="hotel-price">~$1,816 <span>/ 2 nights total (all 9 people)</span></div>
+          <div class="hotel-rating"><span class="stars">★★★★★</span><span class="score">9.9/10</span> (143 reviews on Trivago)</div>
+          <div class="hotel-features">
+            <span class="hotel-feat">Entire private house</span>
+            <span class="hotel-feat">9.9/10 rating</span>
+            <span class="hotel-feat">Full kitchen + grill</span>
+            <span class="hotel-feat">Fireplace</span>
+            <span class="hotel-feat">Washer/dryer</span>
+            <span class="hotel-feat">Dishwasher</span>
+          </div>
+          <p style="margin-top:10px;">Entire private house with near-perfect 9.9/10 rating from 143 reviews — one of the highest-rated properties in the Homer area. Full kitchen, fireplace, outdoor BBQ grill, washing machine, dryer, dishwasher. Quiet, stunning natural surroundings designed for decompression. All 9 of you under one roof with total privacy — no shared spaces, no fixed meal times, complete flexibility.</p>
+          <div style="margin-top:10px;padding:10px;background:rgba(0,128,0,0.06);border-radius:8px;font-size:13px;">
+            <strong style="color:#2e7d32;">Why we chose this:</strong><br>
+            ✅ <strong>9.9/10 from 143 reviews</strong> — near-perfect, rare at this scale<br>
+            ✅ <strong>Entire private house</strong> — all 3 families together, total privacy, no strangers<br>
+            ✅ <strong>Full kitchen + outdoor grill</strong> — cook family BBQ dinners, save $200–$300 on meals<br>
+            ✅ <strong>Washer + dryer</strong> — do laundry on Day 11 of a 13-day trip before heading to Anchorage<br>
+            ✅ <strong>Fireplace</strong> — cozy Alaska evenings with the kids<br>
+            ✅ <strong>Flexible schedule</strong> — no fixed breakfast times, eat when you want
+          </div>
+          <div style="margin-top:6px;padding:10px;background:rgba(255,152,0,0.08);border-radius:8px;font-size:13px;">
+            <strong style="color:#e65100;">Things to know:</strong><br>
+            📍 19 miles from Homer Spit — 30-min drive each way to charters, restaurants, and Spit activities<br>
+            🛏️ <strong>Confirm bedroom count with host</strong> before booking — verify it fits 6 adults + 3 kids comfortably<br>
+            📶 Cell service may be limited at this distance from Homer<br>
+            🚗 You'll need the rental car for all outings — stock up groceries on arrival
+          </div>
+          <div style="margin-top:6px;padding:12px;background:rgba(46,125,50,0.08);border-radius:8px;font-size:13px;">
+            <strong style="color:#2e7d32;">Booking Details:</strong><br>
+            <strong>Vrbo ID:</strong> <code>HA-76J1KK</code> · Expedia Itinerary: 73423971832423<br>
+            <strong>Address:</strong> 48144 Basargin Rd, Homer, AK 99603<br>
+            <strong>Reserved for:</strong> Manmeet Singh, 6 adults + 3 children<br>
+            <strong>Check-in:</strong> Sun Jul 5, 4:00 PM · <strong>Check-out:</strong> Tue Jul 7, 11:00 AM<br>
+            <strong>Cost:</strong> $1,190 (2 nights) + $360 cleaning + $219 service fee + $46.50 tax = <strong>$1,815.50</strong><br>
+            <strong>Refundable damage deposit:</strong> $1,500.00 · <strong>Total charged:</strong> $3,315.50<br>
+            <strong>Cancellation:</strong> Free before Jun 5, 9 AM. After: 100% non-refundable.<br>
+            <strong>Per person:</strong> ~$101/person/night (accommodation only)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Homer House Handbook — Owner's Guide -->
+    <div class="card" style="margin-top:16px;border-top:4px solid #689f38;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="font-size:36px;">📖</div>
+        <div>
+          <h3 style="font-size:18px;font-weight:900;color:var(--navy);margin:0;">Homer House Handbook — Owner's Guide</h3>
+          <div style="font-size:13px;color:var(--muted);">From Robert Chew (owner) · Essential info for your stay at "Unique Sense of Place"</div>
+        </div>
+      </div>
+
+      <!-- Contact & Emergency -->
+      <div class="mob-1col" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+        <div style="background:var(--ice);border-radius:10px;padding:14px;">
+          <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">📞 Owner & Contacts</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.8;">
+            <strong>Robert Chew</strong> (Boulder, CO)<br>
+            robert.chew@cagents.com<br>
+            +1 317 710 1530<br>
+            <strong>Property Mgr:</strong> Domnica Kalugin 907 299 5891<br>
+            <strong>Neighbors:</strong> Nick & Stephanie Basargin 907 399 3066
+          </div>
+        </div>
+        <div style="background:#fff3e0;border-radius:10px;padding:14px;">
+          <div style="font-size:12px;font-weight:800;color:#e65100;margin-bottom:8px;">🚨 Emergency & Access</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.8;">
+            <strong>Emergency:</strong> 911<br>
+            <strong>Fire:</strong> 907 235 3155 · <strong>Police:</strong> 907 235 3150<br>
+            <strong>Lockbox code:</strong> 27183 (press Clear → code → Open)<br>
+            <strong>Cell:</strong> Verizon works, AT&T does NOT<br>
+            <strong>WiFi:</strong> No password needed (satellite, may drop briefly)
+          </div>
+        </div>
+      </div>
+
+      <!-- Things to Do Near the House -->
+      <div style="background:linear-gradient(135deg,#1b5e20,#388e3c);border-radius:12px;padding:18px;color:white;margin-bottom:16px;">
+        <div style="font-size:14px;font-weight:800;margin-bottom:12px;">🌲 Things to Do Near the House — Owner's Picks</div>
+        <div class="mob-1col" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12.5px;">
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
+            <strong>🥾 Hike across the road</strong> (owner's property)<br>
+            Walk west to the canyon edge — wildflowers, mountain & glacier views. Be careful at the edge!
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
+            <strong>🏔️ Caribou Lake hike</strong> (10 km)<br>
+            Walk ¾ mile up Willards Road to trailhead. Can be wet/muddy — wear boots. Beautiful wilderness.
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
+            <strong>🐟 Fishing — Cook Inlet</strong><br>
+            Charter a boat for halibut or salmon. Fly fishing available in Kenai Peninsula rivers.
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
+            <strong>🐻 Bear viewing by floatplane</strong><br>
+            Fly to Katmai or Lake Clark NP. Brooks Lodge, Kulik Lodge, Grosvenor Lodge options.
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
+            <strong>🚤 Kachemak Bay by boat/plane</strong><br>
+            Take a float plane or water taxi across the bay for hiking. Book on the bay has details.
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
+            <strong>✈️ Harding Icefield flightseeing</strong><br>
+            Charter a light plane for a flight over the Harding Icefield. Breathtaking aerial views.
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
+            <strong>⚓ Homer Spit exploration</strong><br>
+            4.5-mile road into the ocean. Shops, art galleries, seafood, Salty Dawg Saloon (30-min drive).
+          </div>
+          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
+            <strong>🦅 Islands & Oceans Visitor Center</strong><br>
+            Wildlife refuge center in Homer — free, educational, great for kids.
+          </div>
+        </div>
+      </div>
+
+      <!-- Owner's Dining Picks -->
+      <div style="background:var(--ice);border-radius:10px;padding:14px;margin-bottom:16px;">
+        <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">🍽️ Owner's Restaurant Picks</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.8;">
+          <strong>Captain Pattie's</strong> — Homer Spit, owner's favorite (summer only)<br>
+          <strong>Fresh Catch Café</strong> — Good seafood (summer only)<br>
+          <strong>Land's End Resort</strong> — End of the Spit, stunning deck view, open year-round<br>
+          <strong>Salty Dawg Saloon</strong> — World-famous, sign a dollar bill!<br>
+          <strong>🦀 Coal Point Trading Company</strong> — Homer Spit, "THE BEST king crab EVER!" per owner. Also king salmon & seafood to cook at home.
+        </div>
+      </div>
+
+      <!-- Shopping & Supplies -->
+      <div style="background:var(--ice);border-radius:10px;padding:14px;margin-bottom:16px;">
+        <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">🛒 Shopping & Supplies (stock up on arrival!)</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.8;">
+          <strong>Safeway / Save-U-More</strong> — Homer, groceries<br>
+          <strong>Grog Shop</strong> — Center of Homer, wine & spirits<br>
+          <strong>Ulmer's Drug Store / True Value Hardware</strong> — Homer, everything non-food<br>
+          <strong>Gear Shed</strong> — East End Road, rain gear & warm clothing
+        </div>
+      </div>
+
+      <!-- House Rules -->
+      <details style="margin-bottom:16px;">
+        <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);padding:8px 0;">⚠️ House Rules & Do's / Don'ts (click to expand)</summary>
+        <div class="mob-1col" style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
+          <div style="background:#ffebee;border-radius:8px;padding:10px;border-left:3px solid #c62828;">
+            <strong style="color:#c62828;">🚫 DO NOT</strong>
+            <ul style="margin:6px 0 0 14px;color:var(--muted);line-height:1.7;">
+              <li>Leave ANY trash outside (attracts bears!)</li>
+              <li>Cook outside (attracts wildlife)</li>
+              <li>Cut directly on wood countertops — ALWAYS use cutting board</li>
+              <li>Place hot items on wood surfaces</li>
+              <li>Open windows more than a few inches (sudden wind can rip them off)</li>
+              <li>Wander outside alone without bear spray</li>
+              <li>Bring pets (strict rule)</li>
+              <li>Use candles or open flames (except fireplace & bathtub area candles)</li>
+              <li>Smoke on deck (covered porch only)</li>
+              <li>Flush anything except TP (feminine products → trash)</li>
+              <li>Let kids near pool table unsupervised (protect the felt!)</li>
+              <li>Put drinks on pool table rim (use side tables)</li>
+            </ul>
+          </div>
+          <div style="background:#e8f5e9;border-radius:8px;padding:10px;border-left:3px solid #2e7d32;">
+            <strong style="color:#2e7d32;">✅ DO</strong>
+            <ul style="margin:6px 0 0 14px;color:var(--muted);line-height:1.7;">
+              <li>Keep fireplace vent slider all the way RIGHT (prevents soot buildup)</li>
+              <li>Use placemats & coasters on dining table</li>
+              <li>Clean outdoor grill after each use + bring grease catch inside</li>
+              <li>Use wine from cooler (replace with similar quality)</li>
+              <li>Take trash to dump near McNeil Canyon Elementary School</li>
+              <li>Enjoy the pool table, Smart TV (streaming), chess, Scrabble, puzzles</li>
+              <li>Use Coleman cooler & rain ponchos from basement storage</li>
+              <li>Use binoculars from upstairs bookshelf (3 available)</li>
+              <li>Try all 3 coffee methods: drip, French press, espresso pot</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- Driving Directions -->
+      <details style="margin-bottom:16px;">
+        <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);padding:8px 0;">🗺️ Driving Directions to the House (click to expand)</summary>
+        <div style="margin-top:10px;font-size:12.5px;color:var(--muted);line-height:1.8;padding:12px;background:var(--ice);border-radius:10px;">
+          <div style="background:#fff3e0;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-weight:700;color:#e65100;">⚠️ Last 15 minutes of the journey: NO CELL SERVICE. Save these directions offline!</div>
+          1. Drive out <strong>East End Road</strong> from center of Homer (Pioneer becomes East End heading east).<br>
+          2. After ~13–14 mi, pass McNeil Canyon Elementary School on left (this is where you dump trash).<br>
+          3. Cell service drops around milepost 15.<br>
+          4. After milepost 18, heading uphill away from the bay.<br>
+          5. Just after the crest, <strong>wide dirt road to the left = Basargin Road</strong>. If you pass milepost 19, you've gone too far.<br>
+          6. Drive <strong>3.6 miles</strong> on Basargin Road (dirt). Pass Totem Pole (0.9 mi), unmarked road (1.5 mi), Willards Road (3.5 mi).<br>
+          7. After Willards Road, drive 250 yards to crest — <strong>glaciers straight ahead</strong>. Driveway on left.<br>
+          8. <strong>Lockbox on front door:</strong> Press Clear → 27183 → Open. Lift door handle slightly to turn key.
+        </div>
+      </details>
+
+      <!-- Departure Checklist -->
+      <details>
+        <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);padding:8px 0;">🧹 Departure Checklist (click to expand)</summary>
+        <div style="margin-top:10px;font-size:12.5px;color:var(--muted);line-height:2;padding:12px;background:var(--ice);border-radius:10px;">
+          ☐ All windows latched shut<br>
+          ☐ All dishes rinsed and in dishwasher — run regular cycle<br>
+          ☐ All used beds stripped — first set of sheets into washer<br>
+          ☐ Toilets flushed<br>
+          ☐ Fridge cleared of items that might spoil<br>
+          ☐ Garbage & wastebaskets emptied (take to dump near McNeil Canyon Elementary)<br>
+          ☐ All lights off<br>
+          ☐ Doors locked, keys in lockbox<br>
+          ☐ Take your garbage to dump
+        </div>
+      </details>
+
+      <!-- Attachments -->
+      <div style="margin-top:16px;padding:14px;background:var(--ice);border-radius:10px;">
+        <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">📎 Owner's Documents</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://github.com/manmesin-bay/alaska-trip-dashboard/raw/main/Homer-%20Home%20handbook.docx" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;padding:10px 16px;background:white;border:1px solid #ddd;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;color:var(--navy);">
+            📄 Home Handbook.docx
+          </a>
+          <a href="https://github.com/manmesin-bay/alaska-trip-dashboard/raw/main/Homer-%20Home%20handbook%20Checklists.xlsx" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;padding:10px 16px;background:white;border:1px solid #ddd;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;color:var(--navy);">
+            📊 Checklists.xlsx
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Homer options considered (collapsed) -->
+    <details style="margin-top:16px;">
+      <summary style="cursor:pointer;font-size:14px;font-weight:700;color:var(--muted);padding:10px 0;">Other Homer options we considered (3 properties)...</summary>
+      <div class="grid-3" style="margin-top:12px;">
+        <div class="hotel-card" data-hotel-town="homer" style="opacity:0.7;">
+          <div class="hotel-img" style="background:linear-gradient(135deg,#00695c,#26a69a);">🏡</div>
+          <div class="hotel-info">
+            <h4>Mountain View Retreat — Entire House</h4>
+            <div class="hotel-loc">📍 Homer area · <a href="https://www.expedia.com/Homer-Hotels-Mountain-View-Retreat-In-Homer-Entire-House-Bright.h123815585.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
+            <div class="hotel-price">~$1,493 <span>/ 2 nights</span></div>
+            <div class="hotel-rating"><span class="stars">★★★★</span><span class="score">—</span> Limited reviews</div>
+            <p style="margin-top:8px;font-size:12px;color:var(--muted);">Entire home, mountain views, full kitchen. Cheapest house option but too few reviews to trust for a group of 9.</p>
+          </div>
+        </div>
+        <div class="hotel-card" data-hotel-town="homer" style="opacity:0.7;">
+          <div class="hotel-img" style="background:linear-gradient(135deg,#004d40,#00897b);">🦅</div>
+          <div class="hotel-info">
+            <h4>Crane's Rest — B&B</h4>
+            <div class="hotel-loc">📍 7 mi from Homer · <a href="https://www.expedia.com/Homer-Hotels-Cranes-Rest-Near-And-Dear-To-Downtown-Homer.h94737395.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
+            <div class="hotel-price">~$1,336 <span>/ 2 nights</span></div>
+            <div class="hotel-rating"><span class="stars">★★★★★</span><span class="score">9.6/10</span> (94 reviews)</div>
+            <p style="margin-top:8px;font-size:12px;color:var(--muted);">Cheapest option. Great hosts, homemade breakfast. But it's a B&B with 4 separate rooms and shared spaces — not an entire private house. 7 mi from Homer (not 1.5 mi as listed). Fixed breakfast time.</p>
+          </div>
+        </div>
+        <div class="hotel-card" data-hotel-town="homer" style="opacity:0.7;">
+          <div class="hotel-img" style="background:linear-gradient(135deg,#1b5e20,#43a047);">🌲</div>
+          <div class="hotel-info">
+            <h4>Uniquely Alaska — Log Cabin</h4>
+            <div class="hotel-loc">📍 Anchor Point (~15 mi south) · <a href="https://www.expedia.com/Anchor-Point-Hotels-Uniquely-Alaska.h18978910.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
+            <div class="hotel-price">~$1,703 <span>/ 2 nights</span></div>
+            <div class="hotel-rating"><span class="stars">★★★★½</span><span class="score">~9.6/10</span></div>
+            <p style="margin-top:8px;font-size:12px;color:var(--muted);">Authentic log cabin on 14-acre homestead. Amazing Alaska vibe. But listed as 1 bedroom — almost certainly too small for 9 people. Very isolated.</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <!-- Anchorage Stays Section -->
+    <div class="town-header" style="margin-top:36px;">
+      <div class="town-icon" style="background:#2e7d32;">✅</div>
+      <div><h3>Anchorage — 1 Night (Whole-House Rental) · BOOKED</h3><p>Day 12 (Jul 7–8) · Alaska's largest city · 🌡️ Avg July: 58–68°F (14–20°C) · Near airport for Day 13 departure</p></div>
+    </div>
+    <div class="grid-3">
+      <div class="hotel-card" data-hotel-town="anchorage" style="border:2px solid #2e7d32;box-shadow:0 4px 20px rgba(46,125,50,0.25);">
+        <div class="hotel-img" style="position:relative;overflow:hidden;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Downtown_Anchorage%2C_Alaska_from_Delaney_Park.jpg/500px-Downtown_Anchorage%2C_Alaska_from_Delaney_Park.jpg" alt="Downtown Anchorage" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          <span class="hotel-badge" style="background:#2e7d32;position:absolute;top:10px;right:10px;">BOOKED</span>
+        </div>
+        <div class="hotel-info">
+          <h4>The Downtown Anchorage Grand — 4 Bedroom</h4>
+          <div class="hotel-loc">📍 Downtown Anchorage · <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
+          <div class="hotel-price">~$981 <span>/ 1 night total (all 9 people)</span></div>
+          <div class="hotel-rating"><span class="stars">★★★★★</span><span class="score">4.95/5</span> Casa Rentals Alaska</div>
+          <div class="hotel-features">
+            <span class="hotel-feat">4 bedrooms</span>
+            <span class="hotel-feat">3 bathrooms</span>
+            <span class="hotel-feat">~3,000 sq ft</span>
+            <span class="hotel-feat">Sleeps 12</span>
+            <span class="hotel-feat">Downtown walking</span>
+          </div>
+          <p style="margin-top:10px;">Upscale 4-bedroom, 3-bathroom entire house (~3,000 sq ft) right in downtown Anchorage. Sleeps up to 12 guests — perfect for your group of 9. Luxury setup with woodsy feel. Walking distance to parks, trails, Anchorage Museum, 4th Ave shops, and restaurants. Full kitchen, free WiFi, A/C, washer/dryer. Children welcome.</p>
+          <div style="margin-top:10px;padding:10px;background:rgba(0,128,0,0.06);border-radius:8px;font-size:13px;">
+            <strong style="color:#2e7d32;">Pros:</strong> 4 bedrooms + 3 bathrooms — easily fits 9 people with room to spare · 3,000 sq ft of space · Downtown location = walk to everything (museum, restaurants, shops, Coastal Trail) · Full kitchen for morning before flight · Washer/dryer for laundry before going home · Kids welcome · 4.95/5 rating · One house instead of 3 hotel rooms = everyone together for farewell night
+          </div>
+          <div style="margin-top:6px;padding:10px;background:rgba(200,0,0,0.06);border-radius:8px;font-size:13px;">
+            <strong style="color:#c62828;">Cons:</strong> $981 for 1 night is steep (but compare: 3 hotel rooms × $200 = $600, and you get way less space) · Street parking only (no garage) · 20-min drive to ANC airport on Day 13 · No hotel amenities (concierge, room service) · Cancellation: 100% refund only 30+ days out; 50% at 14+ days · No pets
+          </div>
+          <div style="margin-top:6px;padding:12px;background:rgba(46,125,50,0.08);border-radius:8px;font-size:13px;">
+            <strong style="color:#2e7d32;">Booking Details:</strong><br>
+            <strong>Vrbo ID:</strong> <code>766f0184-61c7-4a65-a801-4e14705436d0</code> · Expedia Itinerary: 73423961702645<br>
+            <strong>Address:</strong> 816 West 16th Avenue, Anchorage, AK 99501<br>
+            <strong>Reserved for:</strong> Manmeet Singh, 6 adults + 3 children<br>
+            <strong>Check-in:</strong> Tue Jul 7, 4:00 PM · <strong>Check-out:</strong> Wed Jul 8, 10:00 AM<br>
+            <strong>Total:</strong> $980.92 · <strong>Cancellation:</strong> Free before Jun 23, 9 AM. After: 100% non-refundable.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overall Budget Summary -->
+    <div style="margin-top:24px;padding:20px;background:linear-gradient(135deg,rgba(46,125,50,0.08),rgba(27,94,32,0.08));border:2px solid rgba(46,125,50,0.25);border-radius:14px;">
+      <h3 style="margin:0 0 12px;">📊 Total Accommodation — All Confirmed</h3>
+      <table style="width:100%;font-size:13px;border-collapse:collapse;">
+        <tr style="background:rgba(0,0,0,0.04);"><td style="padding:8px;width:40%;"><strong>Stay</strong></td><td style="padding:8px;"><strong>Property</strong></td><td style="padding:8px;text-align:right;"><strong>Cost</strong></td><td style="padding:8px;text-align:center;"><strong>Status</strong></td></tr>
+        <tr><td style="padding:8px;">Moose Pass · 2 nights (Jul 3–5)</td><td style="padding:8px;">Summit Lake Lodge (3 cabins)</td><td style="padding:8px;text-align:right;">$2,193.90</td><td style="padding:8px;text-align:center;"><span style="background:#2e7d32;color:white;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;">BOOKED</span></td></tr>
+        <tr style="background:rgba(0,0,0,0.04);"><td style="padding:8px;">Homer · 2 nights (Jul 5–7)</td><td style="padding:8px;">Unique Sense of Place (whole house)</td><td style="padding:8px;text-align:right;">$1,815.50</td><td style="padding:8px;text-align:center;"><span style="background:#2e7d32;color:white;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;">BOOKED</span></td></tr>
+        <tr><td style="padding:8px;">Anchorage · 1 night (Jul 7–8)</td><td style="padding:8px;">Downtown Anchorage Grand 4BR (whole house)</td><td style="padding:8px;text-align:right;">$980.92</td><td style="padding:8px;text-align:center;"><span style="background:#2e7d32;color:white;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;">BOOKED</span></td></tr>
+        <tr style="background:rgba(46,125,50,0.08);"><td style="padding:8px;">Homer refundable deposit</td><td style="padding:8px;">(returned after checkout if no damage)</td><td style="padding:8px;text-align:right;">$1,500.00</td><td style="padding:8px;text-align:center;"><span style="background:#ff9800;color:white;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;">DEPOSIT</span></td></tr>
+        <tr style="background:rgba(46,125,50,0.12);"><td style="padding:8px;" colspan="2"><strong>ACCOMMODATION TOTAL (5 nights, all 9 people)</strong></td><td style="padding:8px;text-align:right;"><strong>$4,990.32</strong></td><td></td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:12px;color:var(--muted);">All booked and confirmed via Expedia/Vrbo. Homer & Anchorage are whole-house rentals for all 9 people. Seward/Moose Pass is 3 cabins (1 per family).</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
        TAB: REVIEWS
   ══════════════════════════════════ -->
   <div id="tab-reviews" class="section">
@@ -2139,8 +2520,7 @@
     <div style="background:linear-gradient(135deg,#0a1628 0%,#1a237e 50%,#0d47a1 100%);border-radius:16px;padding:32px 28px;text-align:center;margin-bottom:24px;box-shadow:0 8px 32px rgba(0,0,0,0.25);position:relative;overflow:hidden;">
       <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:rgba(255,255,255,0.03);border-radius:50%;"></div>
       <div style="position:absolute;bottom:-40px;left:-20px;width:160px;height:160px;background:rgba(255,255,255,0.02);border-radius:50%;"></div>
-      <div style="font-size:11px;font-weight:700;color:#64b5f6;text-transform:uppercase;letter-spacing:3px;margin-bottom:4px;">Group Total (Excluding Cruise)</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:12px;">Excluding Cruise</div>
+      <div style="font-size:11px;font-weight:700;color:#64b5f6;text-transform:uppercase;letter-spacing:3px;margin-bottom:12px;">Group Total (Excluding Cruise)</div>
       <div class="expense-hero-total" style="font-size:52px;font-weight:900;color:white;line-height:1;">$13,057</div>
       <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:8px;">for 9 travelers · 5 nights · 4-day van · heli + dog sled</div>
       <div class="expense-cats" style="display:flex;justify-content:center;gap:24px;margin-top:20px;">
@@ -2449,384 +2829,6 @@
           <div class="checklist-item"><input type="checkbox" id="c47"><label for="c47">Watch Vancouver departure from the top deck at 11 PM — so beautiful!</label></div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════
-       TAB: HOTELS
-  ══════════════════════════════════ -->
-  <div id="tab-hotels" class="section">
-    <div class="section-title"><span class="icon">🏨</span> Accommodation — All Booked!</div>
-
-    <div class="alert" style="background:#e6f9f0;border-color:#2e7d32;"><span class="alert-icon">✅</span><div>All 5 nights are <strong>booked and confirmed</strong>: <strong><a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Summit Lake Lodge</a></strong> (Jul 3–5, Moose Pass) + <strong><a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">"Unique Sense of Place"</a></strong> (Jul 5–7, Homer) + <strong><a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Downtown Anchorage Grand</a></strong> (Jul 7–8). Total accommodation: <strong>$4,990.32</strong> + $1,500 refundable deposit.</div></div>
-
-    <!-- SEWARD / MOOSE PASS — BOOKED -->
-    <div class="town-header">
-      <div class="town-icon" style="background:#2e7d32;">✅</div>
-      <div><h3>Moose Pass (Seward Area) — 2 Nights · BOOKED</h3><p>Days 8–9 (Jul 3–5) · Mile 45.5 Seward Highway · 🌡️ Avg July: 55–62°F (13–17°C)</p></div>
-    </div>
-    <div class="grid-3">
-      <div class="hotel-card" data-hotel-town="seward" style="border:2px solid #2e7d32;box-shadow:0 4px 20px rgba(46,125,50,0.25);">
-        <div class="hotel-img" style="background:linear-gradient(135deg,#004d40,#00897b);">🏔️
-          <span class="hotel-badge" style="background:#2e7d32;">BOOKED</span>
-        </div>
-        <div class="hotel-info">
-          <h4>Summit Lake Lodge</h4>
-          <div class="hotel-loc">📍 Mile 45.5 Seward Hwy, Moose Pass, AK 99631 · <a href="https://www.summitlakelodge.com/overview" target="_blank" rel="noopener noreferrer">Website</a> · <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
-          <div class="hotel-price">$2,193.90 <span>total (3 rooms × 2 nights)</span></div>
-          <div class="hotel-rating"><span class="stars">★★★★★</span><span class="score">9.8/10</span> (171 reviews)</div>
-          <div class="hotel-features">
-            <span class="hotel-feat">Lakefront cabins</span>
-            <span class="hotel-feat">Free breakfast</span>
-            <span class="hotel-feat">Kayaking/canoeing</span>
-            <span class="hotel-feat">Restaurant + bar</span>
-          </div>
-          <p style="margin-top:10px;">Historic 1950s log lodge on Summit Lake in Chugach National Forest. Individual cabins with mountain views. Free made-to-order breakfast daily. On-site kayaking, canoeing, fishing, hiking.</p>
-          <div style="margin-top:10px;padding:12px;background:rgba(46,125,50,0.08);border-radius:8px;font-size:13px;">
-            <strong style="color:#2e7d32;">Booking Details:</strong><br>
-            <strong>Room 1:</strong> Classic Cabin, 2 Queen Beds — Amandeep Singh Walia, 2 adults · Conf: <code>2441158645_RN</code><br>
-            <strong>Room 2:</strong> Classic Cabin, 2 Queen Beds — Amit Koshal, 2 adults + 2 children · Conf: <code>2441158648_RN</code><br>
-            <strong>Room 3:</strong> Classic Cabin, 2 Queen Beds — Manmeet Singh, 2 adults + 1 child · Conf: <code>2441158650_RN</code><br>
-            <strong>Expedia Itinerary:</strong> 73423955882466<br>
-            <strong>Check-in:</strong> Fri Jul 3, 4:00 PM – 10:30 PM · <strong>Check-out:</strong> Sun Jul 5, 11:00 AM<br>
-            <strong>Payment:</strong> Deposit paid $548.49 · Balance $1,645.41 due Jul 3
-          </div>
-          <div style="margin-top:6px;padding:10px;background:rgba(255,152,0,0.08);border-radius:8px;font-size:13px;">
-            <strong style="color:#e65100;">Remember:</strong> 45 min from Seward port — plan transport on disembark day (Jul 3). Van pickup is Jul 4 in Seward. Front desk closes 10:30 PM. No cell service except AT&T/GCI.
-          </div>
-          <div style="margin-top:6px;padding:10px;background:rgba(200,0,0,0.06);border-radius:8px;font-size:13px;">
-            <strong style="color:#c62828;">Cancellation:</strong> Before Jun 3, 6 PM — 30% fee. After Jun 3, 6 PM — 100% non-refundable.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Homer Stay — BOOKED -->
-    <div class="town-header" style="margin-top:36px;">
-      <div class="town-icon" style="background:#2e7d32;">✅</div>
-      <div><h3>Homer — 2 Nights (Entire House Rental) · BOOKED</h3><p>Days 10–11 (Jul 5–7) · "End of the Road" on Kachemak Bay · 🌡️ Avg July: 52–62°F (11–17°C) · All 9 people under one roof!</p></div>
-    </div>
-
-    <div class="grid-3">
-      <div class="hotel-card" data-hotel-town="homer" style="border:2px solid #2e7d32;box-shadow:0 4px 20px rgba(46,125,50,0.25);">
-        <div class="hotel-img" style="background:linear-gradient(135deg,#33691e,#689f38);">🌄
-          <span class="hotel-badge" style="background:#2e7d32;">BOOKED</span>
-        </div>
-        <div class="hotel-info">
-          <h4>Unique Sense of Place — Quiet Stunning Beauty</h4>
-          <div class="hotel-loc">📍 ~19 mi from Homer · <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
-          <div class="hotel-price">~$1,816 <span>/ 2 nights total (all 9 people)</span></div>
-          <div class="hotel-rating"><span class="stars">★★★★★</span><span class="score">9.9/10</span> (143 reviews on Trivago)</div>
-          <div class="hotel-features">
-            <span class="hotel-feat">Entire private house</span>
-            <span class="hotel-feat">9.9/10 rating</span>
-            <span class="hotel-feat">Full kitchen + grill</span>
-            <span class="hotel-feat">Fireplace</span>
-            <span class="hotel-feat">Washer/dryer</span>
-            <span class="hotel-feat">Dishwasher</span>
-          </div>
-          <p style="margin-top:10px;">Entire private house with near-perfect 9.9/10 rating from 143 reviews — one of the highest-rated properties in the Homer area. Full kitchen, fireplace, outdoor BBQ grill, washing machine, dryer, dishwasher. Quiet, stunning natural surroundings designed for decompression. All 9 of you under one roof with total privacy — no shared spaces, no fixed meal times, complete flexibility.</p>
-          <div style="margin-top:10px;padding:10px;background:rgba(0,128,0,0.06);border-radius:8px;font-size:13px;">
-            <strong style="color:#2e7d32;">Why we chose this:</strong><br>
-            ✅ <strong>9.9/10 from 143 reviews</strong> — near-perfect, rare at this scale<br>
-            ✅ <strong>Entire private house</strong> — all 3 families together, total privacy, no strangers<br>
-            ✅ <strong>Full kitchen + outdoor grill</strong> — cook family BBQ dinners, save $200–$300 on meals<br>
-            ✅ <strong>Washer + dryer</strong> — do laundry on Day 11 of a 13-day trip before heading to Anchorage<br>
-            ✅ <strong>Fireplace</strong> — cozy Alaska evenings with the kids<br>
-            ✅ <strong>Flexible schedule</strong> — no fixed breakfast times, eat when you want
-          </div>
-          <div style="margin-top:6px;padding:10px;background:rgba(255,152,0,0.08);border-radius:8px;font-size:13px;">
-            <strong style="color:#e65100;">Things to know:</strong><br>
-            📍 19 miles from Homer Spit — 30-min drive each way to charters, restaurants, and Spit activities<br>
-            🛏️ <strong>Confirm bedroom count with host</strong> before booking — verify it fits 6 adults + 3 kids comfortably<br>
-            📶 Cell service may be limited at this distance from Homer<br>
-            🚗 You'll need the rental car for all outings — stock up groceries on arrival
-          </div>
-          <div style="margin-top:6px;padding:12px;background:rgba(46,125,50,0.08);border-radius:8px;font-size:13px;">
-            <strong style="color:#2e7d32;">Booking Details:</strong><br>
-            <strong>Vrbo ID:</strong> <code>HA-76J1KK</code> · Expedia Itinerary: 73423971832423<br>
-            <strong>Address:</strong> 48144 Basargin Rd, Homer, AK 99603<br>
-            <strong>Reserved for:</strong> Manmeet Singh, 6 adults + 3 children<br>
-            <strong>Check-in:</strong> Sun Jul 5, 4:00 PM · <strong>Check-out:</strong> Tue Jul 7, 11:00 AM<br>
-            <strong>Cost:</strong> $1,190 (2 nights) + $360 cleaning + $219 service fee + $46.50 tax = <strong>$1,815.50</strong><br>
-            <strong>Refundable damage deposit:</strong> $1,500.00 · <strong>Total charged:</strong> $3,315.50<br>
-            <strong>Cancellation:</strong> Free before Jun 5, 9 AM. After: 100% non-refundable.<br>
-            <strong>Per person:</strong> ~$101/person/night (accommodation only)
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Homer House Handbook — Owner's Guide -->
-    <div class="card" style="margin-top:16px;border-top:4px solid #689f38;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
-        <div style="font-size:36px;">📖</div>
-        <div>
-          <h3 style="font-size:18px;font-weight:900;color:var(--navy);margin:0;">Homer House Handbook — Owner's Guide</h3>
-          <div style="font-size:13px;color:var(--muted);">From Robert Chew (owner) · Essential info for your stay at "Unique Sense of Place"</div>
-        </div>
-      </div>
-
-      <!-- Contact & Emergency -->
-      <div class="mob-1col" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
-        <div style="background:var(--ice);border-radius:10px;padding:14px;">
-          <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">📞 Owner & Contacts</div>
-          <div style="font-size:12px;color:var(--muted);line-height:1.8;">
-            <strong>Robert Chew</strong> (Boulder, CO)<br>
-            robert.chew@cagents.com<br>
-            +1 317 710 1530<br>
-            <strong>Property Mgr:</strong> Domnica Kalugin 907 299 5891<br>
-            <strong>Neighbors:</strong> Nick & Stephanie Basargin 907 399 3066
-          </div>
-        </div>
-        <div style="background:#fff3e0;border-radius:10px;padding:14px;">
-          <div style="font-size:12px;font-weight:800;color:#e65100;margin-bottom:8px;">🚨 Emergency & Access</div>
-          <div style="font-size:12px;color:var(--muted);line-height:1.8;">
-            <strong>Emergency:</strong> 911<br>
-            <strong>Fire:</strong> 907 235 3155 · <strong>Police:</strong> 907 235 3150<br>
-            <strong>Lockbox code:</strong> 27183 (press Clear → code → Open)<br>
-            <strong>Cell:</strong> Verizon works, AT&T does NOT<br>
-            <strong>WiFi:</strong> No password needed (satellite, may drop briefly)
-          </div>
-        </div>
-      </div>
-
-      <!-- Things to Do Near the House -->
-      <div style="background:linear-gradient(135deg,#1b5e20,#388e3c);border-radius:12px;padding:18px;color:white;margin-bottom:16px;">
-        <div style="font-size:14px;font-weight:800;margin-bottom:12px;">🌲 Things to Do Near the House — Owner's Picks</div>
-        <div class="mob-1col" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12.5px;">
-          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
-            <strong>🥾 Hike across the road</strong> (owner's property)<br>
-            Walk west to the canyon edge — wildflowers, mountain & glacier views. Be careful at the edge!
-          </div>
-          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
-            <strong>🏔️ Caribou Lake hike</strong> (10 km)<br>
-            Walk ¾ mile up Willards Road to trailhead. Can be wet/muddy — wear boots. Beautiful wilderness.
-          </div>
-          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
-            <strong>🐟 Fishing — Cook Inlet</strong><br>
-            Charter a boat for halibut or salmon. Fly fishing available in Kenai Peninsula rivers.
-          </div>
-          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
-            <strong>🐻 Bear viewing by floatplane</strong><br>
-            Fly to Katmai or Lake Clark NP. Brooks Lodge, Kulik Lodge, Grosvenor Lodge options.
-          </div>
-          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
-            <strong>🚤 Kachemak Bay by boat/plane</strong><br>
-            Take a float plane or water taxi across the bay for hiking. Book on the bay has details.
-          </div>
-          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
-            <strong>✈️ Harding Icefield flightseeing</strong><br>
-            Charter a light plane for a flight over the Harding Icefield. Breathtaking aerial views.
-          </div>
-          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
-            <strong>⚓ Homer Spit exploration</strong><br>
-            4.5-mile road into the ocean. Shops, art galleries, seafood, Salty Dawg Saloon (30-min drive).
-          </div>
-          <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:10px;">
-            <strong>🦅 Islands & Oceans Visitor Center</strong><br>
-            Wildlife refuge center in Homer — free, educational, great for kids.
-          </div>
-        </div>
-      </div>
-
-      <!-- Owner's Dining Picks -->
-      <div style="background:var(--ice);border-radius:10px;padding:14px;margin-bottom:16px;">
-        <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">🍽️ Owner's Restaurant Picks</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.8;">
-          <strong>Captain Pattie's</strong> — Homer Spit, owner's favorite (summer only)<br>
-          <strong>Fresh Catch Café</strong> — Good seafood (summer only)<br>
-          <strong>Land's End Resort</strong> — End of the Spit, stunning deck view, open year-round<br>
-          <strong>Salty Dawg Saloon</strong> — World-famous, sign a dollar bill!<br>
-          <strong>🦀 Coal Point Trading Company</strong> — Homer Spit, "THE BEST king crab EVER!" per owner. Also king salmon & seafood to cook at home.
-        </div>
-      </div>
-
-      <!-- Shopping & Supplies -->
-      <div style="background:var(--ice);border-radius:10px;padding:14px;margin-bottom:16px;">
-        <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">🛒 Shopping & Supplies (stock up on arrival!)</div>
-        <div style="font-size:12.5px;color:var(--muted);line-height:1.8;">
-          <strong>Safeway / Save-U-More</strong> — Homer, groceries<br>
-          <strong>Grog Shop</strong> — Center of Homer, wine & spirits<br>
-          <strong>Ulmer's Drug Store / True Value Hardware</strong> — Homer, everything non-food<br>
-          <strong>Gear Shed</strong> — East End Road, rain gear & warm clothing
-        </div>
-      </div>
-
-      <!-- House Rules -->
-      <details style="margin-bottom:16px;">
-        <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);padding:8px 0;">⚠️ House Rules & Do's / Don'ts (click to expand)</summary>
-        <div class="mob-1col" style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
-          <div style="background:#ffebee;border-radius:8px;padding:10px;border-left:3px solid #c62828;">
-            <strong style="color:#c62828;">🚫 DO NOT</strong>
-            <ul style="margin:6px 0 0 14px;color:var(--muted);line-height:1.7;">
-              <li>Leave ANY trash outside (attracts bears!)</li>
-              <li>Cook outside (attracts wildlife)</li>
-              <li>Cut directly on wood countertops — ALWAYS use cutting board</li>
-              <li>Place hot items on wood surfaces</li>
-              <li>Open windows more than a few inches (sudden wind can rip them off)</li>
-              <li>Wander outside alone without bear spray</li>
-              <li>Bring pets (strict rule)</li>
-              <li>Use candles or open flames (except fireplace & bathtub area candles)</li>
-              <li>Smoke on deck (covered porch only)</li>
-              <li>Flush anything except TP (feminine products → trash)</li>
-              <li>Let kids near pool table unsupervised (protect the felt!)</li>
-              <li>Put drinks on pool table rim (use side tables)</li>
-            </ul>
-          </div>
-          <div style="background:#e8f5e9;border-radius:8px;padding:10px;border-left:3px solid #2e7d32;">
-            <strong style="color:#2e7d32;">✅ DO</strong>
-            <ul style="margin:6px 0 0 14px;color:var(--muted);line-height:1.7;">
-              <li>Keep fireplace vent slider all the way RIGHT (prevents soot buildup)</li>
-              <li>Use placemats & coasters on dining table</li>
-              <li>Clean outdoor grill after each use + bring grease catch inside</li>
-              <li>Use wine from cooler (replace with similar quality)</li>
-              <li>Take trash to dump near McNeil Canyon Elementary School</li>
-              <li>Enjoy the pool table, Smart TV (streaming), chess, Scrabble, puzzles</li>
-              <li>Use Coleman cooler & rain ponchos from basement storage</li>
-              <li>Use binoculars from upstairs bookshelf (3 available)</li>
-              <li>Try all 3 coffee methods: drip, French press, espresso pot</li>
-            </ul>
-          </div>
-        </div>
-      </details>
-
-      <!-- Driving Directions -->
-      <details style="margin-bottom:16px;">
-        <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);padding:8px 0;">🗺️ Driving Directions to the House (click to expand)</summary>
-        <div style="margin-top:10px;font-size:12.5px;color:var(--muted);line-height:1.8;padding:12px;background:var(--ice);border-radius:10px;">
-          <div style="background:#fff3e0;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-weight:700;color:#e65100;">⚠️ Last 15 minutes of the journey: NO CELL SERVICE. Save these directions offline!</div>
-          1. Drive out <strong>East End Road</strong> from center of Homer (Pioneer becomes East End heading east).<br>
-          2. After ~13–14 mi, pass McNeil Canyon Elementary School on left (this is where you dump trash).<br>
-          3. Cell service drops around milepost 15.<br>
-          4. After milepost 18, heading uphill away from the bay.<br>
-          5. Just after the crest, <strong>wide dirt road to the left = Basargin Road</strong>. If you pass milepost 19, you've gone too far.<br>
-          6. Drive <strong>3.6 miles</strong> on Basargin Road (dirt). Pass Totem Pole (0.9 mi), unmarked road (1.5 mi), Willards Road (3.5 mi).<br>
-          7. After Willards Road, drive 250 yards to crest — <strong>glaciers straight ahead</strong>. Driveway on left.<br>
-          8. <strong>Lockbox on front door:</strong> Press Clear → 27183 → Open. Lift door handle slightly to turn key.
-        </div>
-      </details>
-
-      <!-- Departure Checklist -->
-      <details>
-        <summary style="cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);padding:8px 0;">🧹 Departure Checklist (click to expand)</summary>
-        <div style="margin-top:10px;font-size:12.5px;color:var(--muted);line-height:2;padding:12px;background:var(--ice);border-radius:10px;">
-          ☐ All windows latched shut<br>
-          ☐ All dishes rinsed and in dishwasher — run regular cycle<br>
-          ☐ All used beds stripped — first set of sheets into washer<br>
-          ☐ Toilets flushed<br>
-          ☐ Fridge cleared of items that might spoil<br>
-          ☐ Garbage & wastebaskets emptied (take to dump near McNeil Canyon Elementary)<br>
-          ☐ All lights off<br>
-          ☐ Doors locked, keys in lockbox<br>
-          ☐ Take your garbage to dump
-        </div>
-      </details>
-
-      <!-- Attachments -->
-      <div style="margin-top:16px;padding:14px;background:var(--ice);border-radius:10px;">
-        <div style="font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;">📎 Owner's Documents</div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://github.com/manmesin-bay/alaska-trip-dashboard/raw/main/Homer-%20Home%20handbook.docx" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;padding:10px 16px;background:white;border:1px solid #ddd;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;color:var(--navy);">
-            📄 Home Handbook.docx
-          </a>
-          <a href="https://github.com/manmesin-bay/alaska-trip-dashboard/raw/main/Homer-%20Home%20handbook%20Checklists.xlsx" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:8px;padding:10px 16px;background:white;border:1px solid #ddd;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600;color:var(--navy);">
-            📊 Checklists.xlsx
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Other Homer options considered (collapsed) -->
-    <details style="margin-top:16px;">
-      <summary style="cursor:pointer;font-size:14px;font-weight:700;color:var(--muted);padding:10px 0;">Other Homer options we considered (3 properties)...</summary>
-      <div class="grid-3" style="margin-top:12px;">
-        <div class="hotel-card" data-hotel-town="homer" style="opacity:0.7;">
-          <div class="hotel-img" style="background:linear-gradient(135deg,#00695c,#26a69a);">🏡</div>
-          <div class="hotel-info">
-            <h4>Mountain View Retreat — Entire House</h4>
-            <div class="hotel-loc">📍 Homer area · <a href="https://www.expedia.com/Homer-Hotels-Mountain-View-Retreat-In-Homer-Entire-House-Bright.h123815585.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
-            <div class="hotel-price">~$1,493 <span>/ 2 nights</span></div>
-            <div class="hotel-rating"><span class="stars">★★★★</span><span class="score">—</span> Limited reviews</div>
-            <p style="margin-top:8px;font-size:12px;color:var(--muted);">Entire home, mountain views, full kitchen. Cheapest house option but too few reviews to trust for a group of 9.</p>
-          </div>
-        </div>
-        <div class="hotel-card" data-hotel-town="homer" style="opacity:0.7;">
-          <div class="hotel-img" style="background:linear-gradient(135deg,#004d40,#00897b);">🦅</div>
-          <div class="hotel-info">
-            <h4>Crane's Rest — B&B</h4>
-            <div class="hotel-loc">📍 7 mi from Homer · <a href="https://www.expedia.com/Homer-Hotels-Cranes-Rest-Near-And-Dear-To-Downtown-Homer.h94737395.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
-            <div class="hotel-price">~$1,336 <span>/ 2 nights</span></div>
-            <div class="hotel-rating"><span class="stars">★★★★★</span><span class="score">9.6/10</span> (94 reviews)</div>
-            <p style="margin-top:8px;font-size:12px;color:var(--muted);">Cheapest option. Great hosts, homemade breakfast. But it's a B&B with 4 separate rooms and shared spaces — not an entire private house. 7 mi from Homer (not 1.5 mi as listed). Fixed breakfast time.</p>
-          </div>
-        </div>
-        <div class="hotel-card" data-hotel-town="homer" style="opacity:0.7;">
-          <div class="hotel-img" style="background:linear-gradient(135deg,#1b5e20,#43a047);">🌲</div>
-          <div class="hotel-info">
-            <h4>Uniquely Alaska — Log Cabin</h4>
-            <div class="hotel-loc">📍 Anchor Point (~15 mi south) · <a href="https://www.expedia.com/Anchor-Point-Hotels-Uniquely-Alaska.h18978910.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
-            <div class="hotel-price">~$1,703 <span>/ 2 nights</span></div>
-            <div class="hotel-rating"><span class="stars">★★★★½</span><span class="score">~9.6/10</span></div>
-            <p style="margin-top:8px;font-size:12px;color:var(--muted);">Authentic log cabin on 14-acre homestead. Amazing Alaska vibe. But listed as 1 bedroom — almost certainly too small for 9 people. Very isolated.</p>
-          </div>
-        </div>
-      </div>
-    </details>
-
-    <!-- Anchorage Stays Section -->
-    <div class="town-header" style="margin-top:36px;">
-      <div class="town-icon" style="background:#2e7d32;">✅</div>
-      <div><h3>Anchorage — 1 Night (Whole-House Rental) · BOOKED</h3><p>Day 12 (Jul 7–8) · Alaska's largest city · 🌡️ Avg July: 58–68°F (14–20°C) · Near airport for Day 13 departure</p></div>
-    </div>
-    <div class="grid-3">
-      <div class="hotel-card" data-hotel-town="anchorage" style="border:2px solid #2e7d32;box-shadow:0 4px 20px rgba(46,125,50,0.25);">
-        <div class="hotel-img" style="background:linear-gradient(135deg,#1565c0,#42a5f5);">🏠
-          <span class="hotel-badge" style="background:#2e7d32;">BOOKED</span>
-        </div>
-        <div class="hotel-info">
-          <h4>The Downtown Anchorage Grand — 4 Bedroom</h4>
-          <div class="hotel-loc">📍 Downtown Anchorage · <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Expedia</a></div>
-          <div class="hotel-price">~$981 <span>/ 1 night total (all 9 people)</span></div>
-          <div class="hotel-rating"><span class="stars">★★★★★</span><span class="score">4.95/5</span> Casa Rentals Alaska</div>
-          <div class="hotel-features">
-            <span class="hotel-feat">4 bedrooms</span>
-            <span class="hotel-feat">3 bathrooms</span>
-            <span class="hotel-feat">~3,000 sq ft</span>
-            <span class="hotel-feat">Sleeps 12</span>
-            <span class="hotel-feat">Downtown walking</span>
-          </div>
-          <p style="margin-top:10px;">Upscale 4-bedroom, 3-bathroom entire house (~3,000 sq ft) right in downtown Anchorage. Sleeps up to 12 guests — perfect for your group of 9. Luxury setup with woodsy feel. Walking distance to parks, trails, Anchorage Museum, 4th Ave shops, and restaurants. Full kitchen, free WiFi, A/C, washer/dryer. Children welcome.</p>
-          <div style="margin-top:10px;padding:10px;background:rgba(0,128,0,0.06);border-radius:8px;font-size:13px;">
-            <strong style="color:#2e7d32;">Pros:</strong> 4 bedrooms + 3 bathrooms — easily fits 9 people with room to spare · 3,000 sq ft of space · Downtown location = walk to everything (museum, restaurants, shops, Coastal Trail) · Full kitchen for morning before flight · Washer/dryer for laundry before going home · Kids welcome · 4.95/5 rating · One house instead of 3 hotel rooms = everyone together for farewell night
-          </div>
-          <div style="margin-top:6px;padding:10px;background:rgba(200,0,0,0.06);border-radius:8px;font-size:13px;">
-            <strong style="color:#c62828;">Cons:</strong> $981 for 1 night is steep (but compare: 3 hotel rooms × $200 = $600, and you get way less space) · Street parking only (no garage) · 20-min drive to ANC airport on Day 13 · No hotel amenities (concierge, room service) · Cancellation: 100% refund only 30+ days out; 50% at 14+ days · No pets
-          </div>
-          <div style="margin-top:6px;padding:12px;background:rgba(46,125,50,0.08);border-radius:8px;font-size:13px;">
-            <strong style="color:#2e7d32;">Booking Details:</strong><br>
-            <strong>Vrbo ID:</strong> <code>766f0184-61c7-4a65-a801-4e14705436d0</code> · Expedia Itinerary: 73423961702645<br>
-            <strong>Address:</strong> 816 West 16th Avenue, Anchorage, AK 99501<br>
-            <strong>Reserved for:</strong> Manmeet Singh, 6 adults + 3 children<br>
-            <strong>Check-in:</strong> Tue Jul 7, 4:00 PM · <strong>Check-out:</strong> Wed Jul 8, 10:00 AM<br>
-            <strong>Total:</strong> $980.92 · <strong>Cancellation:</strong> Free before Jun 23, 9 AM. After: 100% non-refundable.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Overall Budget Summary -->
-    <div style="margin-top:24px;padding:20px;background:linear-gradient(135deg,rgba(46,125,50,0.08),rgba(27,94,32,0.08));border:2px solid rgba(46,125,50,0.25);border-radius:14px;">
-      <h3 style="margin:0 0 12px;">📊 Total Accommodation — All Confirmed</h3>
-      <table style="width:100%;font-size:13px;border-collapse:collapse;">
-        <tr style="background:rgba(0,0,0,0.04);"><td style="padding:8px;width:40%;"><strong>Stay</strong></td><td style="padding:8px;"><strong>Property</strong></td><td style="padding:8px;text-align:right;"><strong>Cost</strong></td><td style="padding:8px;text-align:center;"><strong>Status</strong></td></tr>
-        <tr><td style="padding:8px;">Moose Pass · 2 nights (Jul 3–5)</td><td style="padding:8px;">Summit Lake Lodge (3 cabins)</td><td style="padding:8px;text-align:right;">$2,193.90</td><td style="padding:8px;text-align:center;"><span style="background:#2e7d32;color:white;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;">BOOKED</span></td></tr>
-        <tr style="background:rgba(0,0,0,0.04);"><td style="padding:8px;">Homer · 2 nights (Jul 5–7)</td><td style="padding:8px;">Unique Sense of Place (whole house)</td><td style="padding:8px;text-align:right;">$1,815.50</td><td style="padding:8px;text-align:center;"><span style="background:#2e7d32;color:white;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;">BOOKED</span></td></tr>
-        <tr><td style="padding:8px;">Anchorage · 1 night (Jul 7–8)</td><td style="padding:8px;">Downtown Anchorage Grand 4BR (whole house)</td><td style="padding:8px;text-align:right;">$980.92</td><td style="padding:8px;text-align:center;"><span style="background:#2e7d32;color:white;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;">BOOKED</span></td></tr>
-        <tr style="background:rgba(46,125,50,0.08);"><td style="padding:8px;">Homer refundable deposit</td><td style="padding:8px;">(returned after checkout if no damage)</td><td style="padding:8px;text-align:right;">$1,500.00</td><td style="padding:8px;text-align:center;"><span style="background:#ff9800;color:white;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;">DEPOSIT</span></td></tr>
-        <tr style="background:rgba(46,125,50,0.12);"><td style="padding:8px;" colspan="2"><strong>ACCOMMODATION TOTAL (5 nights, all 9 people)</strong></td><td style="padding:8px;text-align:right;"><strong>$4,990.32</strong></td><td></td></tr>
-      </table>
-      <p style="margin-top:10px;font-size:12px;color:var(--muted);">All booked and confirmed via Expedia/Vrbo. Homer & Anchorage are whole-house rentals for all 9 people. Seward/Moose Pass is 3 cabins (1 per family).</p>
     </div>
   </div>
 
