@@ -483,7 +483,9 @@
       .hero h1 { font-size: 48px !important; letter-spacing: -1px !important; }
       .main { padding: 20px 12px 48px; }
       .review-pros-cons { grid-template-columns: 1fr; }
-      .countdown-num { font-size: 36px; }
+      #countdown-display { gap: 4px !important; }
+      #countdown-display > div { min-width: 40px !important; padding: 6px 6px !important; }
+      #countdown-display > div > div:first-child { font-size: 20px !important; }
       .grid-2, .grid-3 { grid-template-columns: 1fr; }
       .crew-grid { grid-template-columns: 1fr !important; }
       .crew-grid > div { border-right: none !important; border-bottom: 1px solid rgba(0,0,0,0.06); }
@@ -752,8 +754,14 @@
 <div class="hero" style="padding:0;overflow:hidden;position:relative;min-height:600px;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg/1920px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg" onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ovation_of_the_Seas._%2852703786433%29.jpg/1920px-Ovation_of_the_Seas._%2852703786433%29.jpg';" style="width:100%;height:600px;display:block;object-fit:cover;object-position:center 30%;" alt="Ovation of the Seas">
   <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(2,6,23,0.95) 0%,rgba(2,6,23,0.55) 35%,rgba(2,6,23,0.1) 60%,transparent 100%);"></div>
-  <div style="position:absolute;top:20px;right:24px;">
+  <div style="position:absolute;top:20px;right:24px;display:flex;flex-direction:column;align-items:flex-end;gap:10px;">
     <div style="background:rgba(0,0,0,0.4);backdrop-filter:blur(12px);border:1px solid rgba(34,209,238,0.3);padding:10px 22px;border-radius:28px;letter-spacing:5px;text-transform:uppercase;font-size:15px;font-weight:700;color:#22d1ee;">June 26th – July 8th</div>
+    <div id="countdown-display" style="display:flex;gap:6px;">
+      <div style="text-align:center;background:rgba(0,0,0,0.45);backdrop-filter:blur(10px);border-radius:10px;padding:8px 10px;min-width:52px;border:1px solid rgba(255,255,255,0.08);"><div id="cd-days" style="font-size:26px;font-weight:900;color:#22a39f;line-height:1;">—</div><div style="font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-top:3px;">Days</div></div>
+      <div style="text-align:center;background:rgba(0,0,0,0.45);backdrop-filter:blur(10px);border-radius:10px;padding:8px 10px;min-width:52px;border:1px solid rgba(255,255,255,0.08);"><div id="cd-hours" style="font-size:26px;font-weight:900;color:#22a39f;line-height:1;">—</div><div style="font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-top:3px;">Hrs</div></div>
+      <div style="text-align:center;background:rgba(0,0,0,0.45);backdrop-filter:blur(10px);border-radius:10px;padding:8px 10px;min-width:52px;border:1px solid rgba(255,255,255,0.08);"><div id="cd-mins" style="font-size:26px;font-weight:900;color:#22a39f;line-height:1;">—</div><div style="font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-top:3px;">Min</div></div>
+      <div style="text-align:center;background:rgba(0,0,0,0.45);backdrop-filter:blur(10px);border-radius:10px;padding:8px 10px;min-width:52px;border:1px solid rgba(255,255,255,0.08);"><div id="cd-secs" style="font-size:26px;font-weight:900;color:#22a39f;line-height:1;">—</div><div style="font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);margin-top:3px;">Sec</div></div>
+    </div>
   </div>
   <div style="position:absolute;bottom:0;left:0;right:0;padding:0 32px 56px;text-align:center;">
     <h1 style="margin:0 0 6px;font-family:'Playfair Display',serif;font-weight:700;font-style:normal;font-size:clamp(48px,9vw,105px);letter-spacing:-1px;line-height:0.95;color:white;text-shadow:0 4px 40px rgba(0,0,0,0.5);">Rahees Tabbar</h1>
@@ -782,17 +790,6 @@
   ══════════════════════════════════ -->
   <div id="tab-overview" class="section active">
 
-    <!-- Countdown -->
-    <div class="countdown-card" style="margin-bottom:20px;">
-      <h3>⏳ Countdown to Departure</h3>
-      <div class="countdown-numbers" id="countdown-display">
-        <div class="countdown-unit"><div class="countdown-num" id="cd-days">—</div><div class="countdown-label">Days</div></div>
-        <div class="countdown-unit"><div class="countdown-num" id="cd-hours">—</div><div class="countdown-label">Hours</div></div>
-        <div class="countdown-unit"><div class="countdown-num" id="cd-mins">—</div><div class="countdown-label">Minutes</div></div>
-        <div class="countdown-unit"><div class="countdown-num" id="cd-secs">—</div><div class="countdown-label">Seconds</div></div>
-      </div>
-      <p style="margin-top:12px;font-size:13px;opacity:0.7;">Jun 26, 2026 · Vancouver · 11 PM</p>
-    </div>
 
     <!-- ═══ FAMILIES ═══ -->
     <div style="background:white;border-radius:16px;box-shadow:var(--card-shadow);margin-bottom:20px;overflow:hidden;">
@@ -3357,7 +3354,7 @@
     const now = new Date();
     const diff = target - now;
     if (diff <= 0) {
-      document.getElementById('countdown-display').innerHTML = '<div style="font-size:24px;color:#22a39f;">🛳️ The ship has sailed! Bon Voyage!</div>';
+      document.getElementById('countdown-display').innerHTML = '<div style="background:rgba(0,0,0,0.45);backdrop-filter:blur(10px);border-radius:10px;padding:8px 14px;border:1px solid rgba(34,163,159,0.3);font-size:13px;font-weight:700;color:#22a39f;">🛳️ Bon Voyage!</div>';
       return;
     }
     const d = Math.floor(diff / (1000 * 60 * 60 * 24));
