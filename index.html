@@ -752,7 +752,7 @@
 <div class="dashboard-content">
 <!-- ─────────── HERO ─────────── -->
 <div class="hero" style="padding:0;overflow:hidden;position:relative;min-height:600px;">
-  <img id="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg/1920px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg" style="width:100%;height:600px;display:block;object-fit:cover;object-position:center 30%;transition:opacity 0.4s ease;" alt="Ovation of the Seas">
+  <img id="hero-img" src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/royal-amplified/ovation-of-the-seas-northstar-aerial.jpg?$1920x1080$" style="width:100%;height:600px;display:block;object-fit:cover;object-position:center 30%;transition:opacity 0.4s ease;" alt="Ovation of the Seas">
   <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(2,6,23,0.95) 0%,rgba(2,6,23,0.55) 35%,rgba(2,6,23,0.1) 60%,transparent 100%);"></div>
   <div style="position:absolute;top:20px;right:24px;display:flex;flex-direction:column;align-items:flex-end;gap:10px;">
     <div style="background:rgba(0,0,0,0.4);backdrop-filter:blur(12px);border:1px solid rgba(34,209,238,0.3);padding:10px 22px;border-radius:28px;letter-spacing:5px;text-transform:uppercase;font-size:15px;font-weight:700;color:#22d1ee;">June 26th – July 8th</div>
@@ -3209,27 +3209,28 @@
   }
 
   /* ═══ GALLERY DATA & LOGIC ═══ */
+  var rcCdn = 'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/';
   var galleryPhotos = [
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg/1200px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg',t:'Ovation of the Seas — Side View, Fremantle'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ovation_of_the_Seas._%2852703786433%29.jpg/1200px-Ovation_of_the_Seas._%2852703786433%29.jpg',t:'Ovation of the Seas — At Sea'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ovation_Of_The_Seas_Front.jpg/1200px-Ovation_Of_The_Seas_Front.jpg',t:'Ovation of the Seas — Front Bow View'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ovation_of_the_Seas%2C_dominating_Sydney_Harbour.jpg/1200px-Ovation_of_the_Seas%2C_dominating_Sydney_Harbour.jpg',t:'Ovation of the Seas — Sydney Harbour'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ovation_Of_The_Seas_Rear.jpg/1200px-Ovation_Of_The_Seas_Rear.jpg',t:'Ovation of the Seas — Rear Stern View'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Ovation_Of_The_Seas_Dawes_Point.jpg/1200px-Ovation_Of_The_Seas_Dawes_Point.jpg',t:'Ovation of the Seas — Dawes Point, Sydney'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ovation_of_the_Seas._%2852601326758%29.jpg/1200px-Ovation_of_the_Seas._%2852601326758%29.jpg',t:'Ovation of the Seas — Full Profile'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2802%29.jpg/1200px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2802%29.jpg',t:'Ovation of the Seas — Panoramic, Fremantle'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ovation_of_the_Seas_%2831783700662%29.jpg/1200px-Ovation_of_the_Seas_%2831783700662%29.jpg',t:'Ovation of the Seas — Auckland Harbour'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825843859904%29.jpg/1200px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825843859904%29.jpg',t:'Ovation of the Seas — Rotterdam'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/2025-02-23_Ovation_of_the_Seas_in_Sydney.jpg/1200px-2025-02-23_Ovation_of_the_Seas_in_Sydney.jpg',t:'Ovation of the Seas — Sydney Panorama 2025'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Ovation_of_the_Seas_%2832740294245%29.jpg/1200px-Ovation_of_the_Seas_%2832740294245%29.jpg',t:'Ovation of the Seas — Auckland Wide Angle'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Ovation_Of_The_Seas_Front%2C_December_2024.jpg/1200px-Ovation_Of_The_Seas_Front%2C_December_2024.jpg',t:'Ovation of the Seas — Front View, Dec 2024'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_01.jpg/1200px-Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_01.jpg',t:'Ovation of the Seas — Arriving Sydney 2023'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg/1200px-Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg',t:'Ovation of the Seas — Picton, New Zealand'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2803%29.jpg/1200px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2803%29.jpg',t:'Ovation of the Seas — Distant View, Fremantle'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Ovation_of_the_Seas_at_port_of_hakata.jpg/1200px-Ovation_of_the_Seas_at_port_of_hakata.jpg',t:'Ovation of the Seas — Port of Hakata, Japan'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ovation_of_the_Seas_%2826376810481%29.jpg/1200px-Ovation_of_the_Seas_%2826376810481%29.jpg',t:'Ovation of the Seas — Rotterdam Close-up'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas_%2852933210658%29.jpg/1200px-Ovation_of_the_Seas_%2852933210658%29.jpg',t:'Ovation of the Seas — Lyttelton, New Zealand'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Square_Cabins_-_Flickr_-_mikecogh.jpg/1200px-Square_Cabins_-_Flickr_-_mikecogh.jpg',t:'Ovation of the Seas — Balcony Cabins Close-up'}
+    {url:rcCdn+'royal/ships/royal-amplified/ovation-of-the-seas-northstar-aerial.jpg?$800x450$',t:'North Star — Aerial View'},
+    {url:rcCdn+'royal/content/ship/ovation-of-the-seas/overview/ovation-ov-flowrider-alaska-glaciers-view.jpg?$800x450$',t:'FlowRider with Alaska Glaciers'},
+    {url:rcCdn+'royal/ships/royal-amplified/ovation-of-the-seas-man-on-flowrider-2880-1920.jpg?$800x450$',t:'FlowRider — Surfing Onboard'},
+    {url:rcCdn+'royal/data/activity/north-star/north-star-pool-deck-ship-aerial-activity.jpg?$800x450$',t:'North Star & Pool Deck Aerial'},
+    {url:rcCdn+'royal/data/activity/north-star/anthem-of-the-seas-skybar-north-star-cocktails.jpg?$800x450$',t:'North Star — Cocktails at Skybar'},
+    {url:rcCdn+'royal/data/activity/solarium/solarium-sunset-boomer-whirlpool.jpg?$800x450$',t:'Solarium — Sunset Whirlpool'},
+    {url:rcCdn+'royal/data/activity/ripcord-by-ifly/ifly-ripcord-little-girl-flying-instructor.jpg?$800x450$',t:'Ripcord by iFLY — Skydiving Simulator'},
+    {url:rcCdn+'royal/data/activity/seaplex/seaplex-basketball-court-activity.jpg?$800x450$',t:'SeaPlex — Basketball Court'},
+    {url:rcCdn+'royal/west-coast/girl_riding_bumpercar%20_in_playing_zone.jpg?$800x450$',t:'SeaPlex — Bumper Cars'},
+    {url:rcCdn+'royal/data/activity/flowrider/wonder-of-the-seas-flowrider-private-woman-surfing-lessons.jpg?$800x450$',t:'FlowRider — Private Surfing Lessons'},
+    {url:rcCdn+'royal/data/activity/cantilevered-whirlpools/whirlpools-water-pool-deck-night-activity.jpg?$800x450$',t:'Pool Deck — Whirlpools at Night'},
+    {url:rcCdn+'royal/data/activity/outdoor-movie-nights/explorer-of-the-seas-pool-deck-night-time-outdoor-movie.jpg?$800x450$',t:'Outdoor Movie Night — Pool Deck'},
+    {url:rcCdn+'royal/data/dining/bionic-bar/bionic-bar-lounge-area-wide-angle-technology.JPG?$800x450$',t:'Bionic Bar — Robot Bartenders'},
+    {url:rcCdn+'royal/data/dining/izumi/izumi-hibachi-sushi-family.jpg?$800x450$',t:'Izumi — Hibachi & Sushi'},
+    {url:rcCdn+'royal/onboard/food-and-beverage/pesky-parrot/friends-having-drinks-at-pesky-parrot.jpg?$800x450$',t:'Pesky Parrot — Drinks with Friends'},
+    {url:rcCdn+'royal/data/activity/casino-royale/casino-drinks-cocktails-woman-enjoying.jpg?$800x450$',t:'Casino Royale — Cocktails'},
+    {url:rcCdn+'royal/data/activity/entertainment-shows/two70/starwater/image/quantum-starwater-show-acrobats-aerial-performers-entertainment.JPG?$800x450$',t:'Two70 — Starwater Acrobatic Show'},
+    {url:rcCdn+'royal/data/activity/spa/spa-stone-massage-woman-relaxing-activity.jpg?$800x450$',t:'Vitality Spa — Relaxation'},
+    {url:rcCdn+'royal/ships/royal-amplified/couple-standing-rocky-area-looking-up-glacier-alaska-juneau.jpg?$800x450$',t:'Juneau — Mendenhall Glacier'},
+    {url:rcCdn+'royal/ships/royal-amplified/family-running-exiting-north-star.jpg?$800x450$',t:'Family Fun — North Star Exit'}
   ];
 
   var lightboxIdx = 0;
@@ -3241,9 +3242,8 @@
     filteredPhotos = galleryPhotos;
     var html = '';
     filteredPhotos.forEach(function(p, i) {
-      var thumbUrl = p.url.replace('/1200px-', '/800px-');
       html += '<div id="gal-' + i + '" style="border-radius:12px;overflow:hidden;cursor:pointer;position:relative;box-shadow:0 2px 12px rgba(0,0,0,0.12);" onclick="openLightbox(' + i + ')">';
-      html += '<img loading="lazy" src="' + thumbUrl + '" alt="' + p.t + '" style="width:100%;display:block;aspect-ratio:16/10;object-fit:cover;background:#1a1a2e;transition:transform 0.3s;" onmouseover="this.style.transform=\'scale(1.03)\'" onmouseout="this.style.transform=\'scale(1)\'" onerror="this.onerror=null;this.src=\'' + p.url + '\'">';
+      html += '<img loading="lazy" src="' + p.url + '" alt="' + p.t + '" style="width:100%;display:block;aspect-ratio:16/10;object-fit:cover;background:#1a1a2e;transition:transform 0.3s;" onmouseover="this.style.transform=\'scale(1.03)\'" onmouseout="this.style.transform=\'scale(1)\'" onerror="this.parentElement.style.display=\'none\'">';
       html += '<div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));padding:10px 12px;"><span style="color:white;font-size:12px;font-weight:600;">' + p.t + '</span></div>';
       html += '</div>';
     });
@@ -3256,7 +3256,7 @@
     var img = document.getElementById('lightbox-img');
     var cap = document.getElementById('lightbox-caption');
     var p = filteredPhotos[idx];
-    img.src = p.url.replace('/1200px-', '/1920px-');
+    img.src = p.url.replace('$800x450$', '$1920x1080$');
     cap.textContent = p.t + ' (' + (idx + 1) + '/' + filteredPhotos.length + ')';
     lb.style.display = 'flex';
     document.body.style.overflow = 'hidden';
@@ -3281,15 +3281,15 @@
   });
 
   var heroImages = {
-    overview:  'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg/1920px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg',
-    cruise:    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ovation_of_the_Seas._%2852703786433%29.jpg/1920px-Ovation_of_the_Seas._%2852703786433%29.jpg',
-    reviews:   'https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1920&q=80',
-    budget:    'https://images.unsplash.com/photo-1559599746-8823b38544c6?w=1920&q=80',
-    packing:   'https://images.unsplash.com/photo-1548574505-5e239809ee19?w=1920&q=80',
-    checklist: 'https://images.unsplash.com/photo-1580541631950-7282082b53ce?w=1920&q=80',
-    hotels:    'https://images.unsplash.com/photo-1504457047772-27faf1c00561?w=1920&q=80',
-    gallery:   'https://images.unsplash.com/photo-1606567595334-d39972c85dbe?w=1920&q=80',
-    knowmore:  'https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1920&q=80'
+    overview:  'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/royal-amplified/ovation-of-the-seas-northstar-aerial.jpg?$1920x1080$',
+    cruise:    'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/royal-amplified/couple-standing-rocky-area-looking-up-glacier-alaska-juneau.jpg?$1920x1080$',
+    reviews:   'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/royal-amplified/ovation-of-the-seas-man-on-flowrider-2880-1920.jpg?$1920x1080$',
+    budget:    'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/onboard/food-and-beverage/pesky-parrot/friends-having-drinks-at-pesky-parrot.jpg?$1920x1080$',
+    packing:   'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/west-coast/girl_riding_bumpercar%20_in_playing_zone.jpg?$1920x1080$',
+    checklist: 'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/Alaska/family-hiking-mendenhall-glacier-alaska-.jpg?$1920x1080$',
+    hotels:    'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/alaska-cruise-tours/wonder-lake-denali-national-park-mountains-background.jpg?$1920x1080$',
+    gallery:   'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/alaska-whale-watching-and-wildlife/whale-jumping-in-alaska.jpg?$1920x1080$',
+    knowmore:  'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/Alaska/family-snow-helicopter-knik-glacier-alaska-excursion-v2.jpg?$1920x1080$'
   };
 
   function showTab(name) {
