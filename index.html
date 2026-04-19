@@ -483,7 +483,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
-      .hero { padding: 32px 16px 28px; }
+      .hero { min-height: 320px !important; }
+      .hero h1 { font-size: 28px !important; }
       .main { padding: 20px 12px 48px; }
       .review-pros-cons { grid-template-columns: 1fr; }
       .countdown-num { font-size: 36px; }
@@ -752,8 +753,17 @@
 
 <div class="dashboard-content">
 <!-- ─────────── HERO ─────────── -->
-<div class="hero">
-  <h1>Rahees Tabbar chalya<br/><span>ALASKA in CRUISE</span></h1>
+<div class="hero" style="padding:0;overflow:hidden;position:relative;min-height:420px;">
+  <img src="https://images.unsplash.com/photo-1599640842225-85d111c60e6b?w=1800&q=90&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504986760686-def829959a20?w=1800&q=90&auto=format&fit=crop';" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;" alt="Cruise Ship">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,0.85) 0%,rgba(10,22,40,0.35) 40%,rgba(10,22,40,0.1) 70%);"></div>
+  <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-height:420px;padding:0 24px 40px;">
+    <h1 style="margin-bottom:12px;">Rahees Tabbar chalya<br/><span>ALASKA in CRUISE</span></h1>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;">
+      <span style="background:rgba(255,255,255,0.15);backdrop-filter:blur(6px);padding:6px 16px;border-radius:20px;font-size:13px;color:white;font-weight:600;">🛳️ Ovation of the Seas</span>
+      <span style="background:rgba(255,255,255,0.15);backdrop-filter:blur(6px);padding:6px 16px;border-radius:20px;font-size:13px;color:white;font-weight:600;">📅 Jun 26 – Jul 6, 2026</span>
+      <span style="background:rgba(255,255,255,0.15);backdrop-filter:blur(6px);padding:6px 16px;border-radius:20px;font-size:13px;color:white;font-weight:600;">🗺️ Vancouver → Seward</span>
+    </div>
+  </div>
 </div>
 
 <!-- ─────────── TAB NAV ─────────── -->
