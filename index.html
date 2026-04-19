@@ -1965,92 +1965,173 @@
        TAB: BUDGET
   ══════════════════════════════════ -->
   <div id="tab-budget" class="section">
-    <div class="section-title"><span class="icon">💰</span> Trip Budget Estimator</div>
+    <div class="section-title"><span class="icon">💰</span> Trip Budget</div>
 
-    <div class="alert info"><span class="alert-icon">ℹ️</span><div>Cruise is excluded — each family paid individually. Shared expenses are pooled and divided by <strong>9 travelers</strong>. Accommodation has <strong>3 rooms/units</strong> (one per family) so total is divided by <strong>3</strong>. More expenses will be added as they are booked.</div></div>
-
-    <!-- Accommodation ÷ 3 per family -->
-    <div class="price-card" style="margin-bottom:24px;">
-      <div class="price-header" style="background: linear-gradient(135deg, #1a3a1a, #2e7d32);"><h3>🏠 Accommodation — 3 rooms booked, total ÷ 3</h3><p>Each stay has 3 rooms/units (one per family) — total cost divided equally by 3 regardless of family size</p></div>
-      <div class="price-body">
-        <div style="display:grid;grid-template-columns:1fr auto auto;gap:4px 16px;font-size:14px;align-items:center;">
-          <span style="font-weight:600;color:var(--navy);padding:6px 0;border-bottom:2px solid var(--navy);">Stay</span>
-          <span style="font-weight:600;color:var(--navy);text-align:right;padding:6px 0;border-bottom:2px solid var(--navy);">Total Cost</span>
-          <span style="font-weight:600;color:var(--navy);text-align:right;padding:6px 0;border-bottom:2px solid var(--navy);">Per Family (÷3)</span>
-
-          <span>✅ <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Summit Lake Lodge</a> (3 rooms × 2 nights)</span>
-          <span style="text-align:right;">$2,193.90</span>
-          <span style="text-align:right;font-weight:600;">$731</span>
-
-          <span>✅ <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">"Unique Sense of Place"</a> Homer (2 nights, whole house)</span>
-          <span style="text-align:right;">$1,815.50</span>
-          <span style="text-align:right;font-weight:600;">$605</span>
-
-          <span>✅ <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Downtown Anchorage Grand</a> 4BR (1 night, whole house)</span>
-          <span style="text-align:right;">$980.92</span>
-          <span style="text-align:right;font-weight:600;">$327</span>
+    <!-- ═══ HERO: Grand Total ═══ -->
+    <div style="background:linear-gradient(135deg,#0a1628 0%,#1a237e 50%,#0d47a1 100%);border-radius:16px;padding:32px 28px;text-align:center;margin-bottom:24px;box-shadow:0 8px 32px rgba(0,0,0,0.25);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:rgba(255,255,255,0.03);border-radius:50%;"></div>
+      <div style="position:absolute;bottom:-40px;left:-20px;width:160px;height:160px;background:rgba(255,255,255,0.02);border-radius:50%;"></div>
+      <div style="font-size:11px;font-weight:700;color:#64b5f6;text-transform:uppercase;letter-spacing:3px;margin-bottom:4px;">Group Total So Far</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:12px;">Excluding Cruise · Only Confirmed & Paid</div>
+      <div style="font-size:52px;font-weight:900;color:white;line-height:1;">$13,057</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:8px;">for 9 travelers · 5 nights · 4-day van · heli + dog sled</div>
+      <div style="display:flex;justify-content:center;gap:24px;margin-top:20px;">
+        <div style="text-align:center;">
+          <div style="font-size:22px;font-weight:800;color:#81c784;">$4,990</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;">🏠 Accommodation</div>
         </div>
-        <div class="budget-row total" style="margin-top:14px;"><span class="item"><strong>ACCOMMODATION TOTAL</strong></span><span class="amount">$4,990.32</span></div>
-        <div class="budget-row total" style="background:#e6f9f0;"><span class="item"><strong>PER FAMILY (÷3)</strong></span><span class="amount"><strong>$1,663</strong></span></div>
-        <div style="margin-top:10px;font-size:12px;color:var(--muted);padding:8px 12px;background:#f5f0e6;border-radius:8px;">⚠️ Homer "Sense of Place" also has a <strong>$1,500 refundable security deposit</strong> ($500/family) — returned after checkout. Not included in totals above.</div>
+        <div style="width:1px;background:rgba(255,255,255,0.15);"></div>
+        <div style="text-align:center;">
+          <div style="font-size:22px;font-weight:800;color:#64b5f6;">$5,395</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;">🚁 Heli + Dog Sled</div>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.15);"></div>
+        <div style="text-align:center;">
+          <div style="font-size:22px;font-weight:800;color:#ffb74d;">$2,672</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;">🚐 Rental Van</div>
+        </div>
       </div>
     </div>
 
-    <!-- Shared Expenses ÷ 9 (only paid items) -->
-    <div class="price-card" style="margin-bottom:24px;">
-      <div class="price-header"><h3>Shared Group Expenses — Divided by 9 per person</h3><p>Only confirmed & paid expenses shown. More will be added as booked.</p></div>
-      <div class="price-body">
-        <div style="display:grid;grid-template-columns:1fr auto auto;gap:4px 16px;font-size:14px;align-items:center;">
-          <span style="font-weight:600;color:var(--navy);padding:6px 0;border-bottom:2px solid var(--navy);">Expense</span>
-          <span style="font-weight:600;color:var(--navy);text-align:right;padding:6px 0;border-bottom:2px solid var(--navy);">Group Total</span>
-          <span style="font-weight:600;color:var(--navy);text-align:right;padding:6px 0;border-bottom:2px solid var(--navy);">Per Person (÷9)</span>
-
-          <span>🚁 Heli + Glacier Dog Sled (7A + 2C) ✅</span>
-          <span style="text-align:right;">$5,394.50</span>
-          <span style="text-align:right;font-weight:600;">$599</span>
-
-          <span>🚐 12-Passenger Van (4 days, one-way) ✅</span>
-          <span style="text-align:right;">$2,671.76</span>
-          <span style="text-align:right;font-weight:600;">$297</span>
+    <!-- ═══ WHO PAID WHAT ═══ -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px;">
+      <div style="background:white;border-radius:14px;padding:20px;box-shadow:var(--card-shadow);border-left:5px solid #2e7d32;position:relative;">
+        <div style="position:absolute;top:14px;right:14px;background:#e8f5e9;color:#2e7d32;font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:0.5px;">Paid</div>
+        <div style="font-size:13px;font-weight:800;color:var(--navy);margin-bottom:6px;">Manmeet Singh</div>
+        <div style="font-size:28px;font-weight:900;color:#2e7d32;line-height:1;">$10,385</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.8;">
+          🏠 All accommodation — <strong>$4,990</strong><br>
+          🚁 Heli + Glacier Dog Sled — <strong>$5,395</strong>
         </div>
-        <div class="budget-row total" style="margin-top:14px;"><span class="item"><strong>SHARED TOTAL</strong></span><span class="amount">$8,066.26</span></div>
-        <div class="budget-row total" style="background:#e6f9f0;"><span class="item"><strong>PER PERSON (÷9)</strong></span><span class="amount"><strong>$896</strong></span></div>
+      </div>
+      <div style="background:white;border-radius:14px;padding:20px;box-shadow:var(--card-shadow);border-left:5px solid #1565c0;position:relative;">
+        <div style="position:absolute;top:14px;right:14px;background:#e3f2fd;color:#1565c0;font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:0.5px;">Paid</div>
+        <div style="font-size:13px;font-weight:800;color:var(--navy);margin-bottom:6px;">Amit Koshal</div>
+        <div style="font-size:28px;font-weight:900;color:#1565c0;line-height:1;">$2,672</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted);line-height:1.8;">
+          🚐 12-Passenger Van (4 days) — <strong>$2,672</strong>
+        </div>
       </div>
     </div>
 
-    <!-- Grand Summary -->
-    <div class="price-card" style="border-top: 4px solid var(--gold);">
-      <div class="price-header" style="background: linear-gradient(135deg, #2d1a00, #8a5a00);">
-        <h3>🌟 Total So Far — Excluding Cruise</h3><p>Only confirmed & paid expenses (more will be added as booked)</p>
-      </div>
-      <div class="price-body">
-        <div class="budget-row"><span class="item">Shared expenses (per person, ÷9)</span><span class="amount">$896</span></div>
-        <div class="budget-row"><span class="item">Accommodation (per family, ÷3)</span><span class="amount">$1,663</span></div>
-        <div class="budget-row total" style="font-size:16px;"><span class="item"><strong>GROUP TOTAL (excl. cruise)</strong></span><span class="amount">$13,057</span></div>
+    <!-- ═══ EXPENSE BREAKDOWN ═══ -->
+    <div style="font-size:14px;font-weight:800;color:var(--navy);margin-bottom:12px;">📋 Expense Breakdown</div>
 
-        <div style="margin-top:18px;padding:14px;background:var(--ice);border-radius:10px;font-size:13px;color:var(--muted);">
-          <div style="font-weight:700;color:var(--navy);margin-bottom:10px;font-size:14px;">💡 What each family owes so far (excluding cruise):</div>
-          <div style="display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin-bottom:12px;">
-            <span>Shared per person × <strong>your family size</strong></span><span style="text-align:right;">$896 × N</span>
-            <span>Accommodation (÷3, equal per family)</span><span style="text-align:right;">+ $1,663</span>
+    <!-- Accommodation -->
+    <div style="background:white;border-radius:14px;box-shadow:var(--card-shadow);margin-bottom:16px;overflow:hidden;">
+      <div style="background:linear-gradient(135deg,#1b5e20,#388e3c);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;">
+        <div style="color:white;font-size:14px;font-weight:800;">🏠 Accommodation</div>
+        <div style="display:flex;gap:16px;">
+          <div style="text-align:center;"><div style="color:#a5d6a7;font-size:10px;text-transform:uppercase;">Total</div><div style="color:white;font-size:15px;font-weight:800;">$4,990</div></div>
+          <div style="text-align:center;"><div style="color:#a5d6a7;font-size:10px;text-transform:uppercase;">Per Family ÷3</div><div style="color:white;font-size:15px;font-weight:800;">$1,663</div></div>
+        </div>
+      </div>
+      <div style="padding:16px 18px;">
+        <div style="font-size:11px;color:var(--muted);margin-bottom:12px;">3 rooms/units booked (one per family) — total split equally by 3</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--ice);border-radius:10px;">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--navy);">✅ <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Summit Lake Lodge</a></div>
+              <div style="font-size:11px;color:var(--muted);">3 rooms × 2 nights · Moose Pass/Seward</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:14px;font-weight:800;color:var(--navy);">$2,194</div>
+              <div style="font-size:11px;color:#2e7d32;">$731/family</div>
+            </div>
           </div>
-          <div style="padding:10px;background:rgba(255,255,255,0.6);border-radius:8px;margin-bottom:6px;">
-            <strong>MS Family (3 people):</strong> ($896 × 3) + $1,663 = <strong>$4,351</strong>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--ice);border-radius:10px;">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--navy);">✅ <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">"Sense of Place" Homer</a></div>
+              <div style="font-size:11px;color:var(--muted);">Whole house · 2 nights</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:14px;font-weight:800;color:var(--navy);">$1,816</div>
+              <div style="font-size:11px;color:#2e7d32;">$605/family</div>
+            </div>
           </div>
-          <div style="padding:10px;background:rgba(255,255,255,0.6);border-radius:8px;margin-bottom:6px;">
-            <strong>AK Family (4 people):</strong> ($896 × 4) + $1,663 = <strong>$5,247</strong>
-          </div>
-          <div style="padding:10px;background:rgba(255,255,255,0.6);border-radius:8px;margin-bottom:6px;">
-            <strong>AW Family (2 people):</strong> ($896 × 2) + $1,663 = <strong>$3,455</strong>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--ice);border-radius:10px;">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--navy);">✅ <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Anchorage Grand 4BR</a></div>
+              <div style="font-size:11px;color:var(--muted);">Whole house · 1 night</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:14px;font-weight:800;color:var(--navy);">$981</div>
+              <div style="font-size:11px;color:#2e7d32;">$327/family</div>
+            </div>
           </div>
         </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--muted);padding:8px 12px;background:#fff8e1;border-radius:8px;">⚠️ Homer also has a <strong>$1,500 refundable security deposit</strong> ($500/family) — returned after checkout. Not in totals.</div>
+      </div>
+    </div>
 
-        <div style="margin-top:14px;font-size:13px;color:var(--muted);">
-          <strong>💳 Who paid what:</strong>
-          <div style="margin-top:8px;padding:10px;background:rgba(46,125,50,0.08);border-radius:8px;border-left:3px solid #2e7d32;">
-            <strong>Manmeet Singh paid:</strong> Accommodation ($4,990) + Heli + Dog Sled ($5,395) = <strong>$10,385</strong><br>
-            <strong>Amit Koshal paid:</strong> Rental van ($2,672) = <strong>$2,672</strong>
+    <!-- Shared Group Expenses -->
+    <div style="background:white;border-radius:14px;box-shadow:var(--card-shadow);margin-bottom:16px;overflow:hidden;">
+      <div style="background:linear-gradient(135deg,#0d47a1,#1976d2);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;">
+        <div style="color:white;font-size:14px;font-weight:800;">🎯 Shared Group Expenses</div>
+        <div style="display:flex;gap:16px;">
+          <div style="text-align:center;"><div style="color:#90caf9;font-size:10px;text-transform:uppercase;">Total</div><div style="color:white;font-size:15px;font-weight:800;">$8,066</div></div>
+          <div style="text-align:center;"><div style="color:#90caf9;font-size:10px;text-transform:uppercase;">Per Person ÷9</div><div style="color:white;font-size:15px;font-weight:800;">$896</div></div>
+        </div>
+      </div>
+      <div style="padding:16px 18px;">
+        <div style="font-size:11px;color:var(--muted);margin-bottom:12px;">Shared by all 9 travelers equally — only confirmed & paid items</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--ice);border-radius:10px;">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--navy);">🚁 Heli + Glacier Dog Sled</div>
+              <div style="font-size:11px;color:var(--muted);">7 adults + 2 kids · Order #2634861</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:14px;font-weight:800;color:var(--navy);">$5,395</div>
+              <div style="font-size:11px;color:#1565c0;">$599/person</div>
+            </div>
           </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--ice);border-radius:10px;">
+            <div>
+              <div style="font-size:13px;font-weight:700;color:var(--navy);">🚐 12-Passenger Van</div>
+              <div style="font-size:11px;color:var(--muted);">4 days · One-way · Alaskan Car Rental</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:14px;font-weight:800;color:var(--navy);">$2,672</div>
+              <div style="font-size:11px;color:#1565c0;">$297/person</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <div style="text-align:center;font-size:12px;color:var(--muted);margin:20px 0 8px;padding:10px;background:var(--ice);border-radius:10px;">
+      ℹ️ Cruise excluded — each family paid individually at different rates. More shared expenses will be added as booked.
+    </div>
+
+    <!-- ═══ WHAT EACH FAMILY OWES ═══ -->
+    <div style="margin-top:24px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:16px;padding:24px;box-shadow:0 6px 24px rgba(0,0,0,0.2);">
+      <div style="text-align:center;margin-bottom:6px;">
+        <div style="font-size:11px;font-weight:700;color:#ffb74d;text-transform:uppercase;letter-spacing:2px;">What Each Family Owes</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px;">Excluding cruise · Based on confirmed expenses only</div>
+      </div>
+      <div style="text-align:center;font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:18px;">
+        Formula: (shared per person × family size) + accommodation per family ($1,663)
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;">
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px;text-align:center;">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);margin-bottom:2px;">🏙️ MS Family</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:10px;">3 people</div>
+          <div style="font-size:30px;font-weight:900;color:white;">$4,351</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:8px;">($896 × 3) + $1,663</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px;text-align:center;">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);margin-bottom:2px;">🍁 AK Family</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:10px;">4 people</div>
+          <div style="font-size:30px;font-weight:900;color:white;">$5,247</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:8px;">($896 × 4) + $1,663</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:18px;text-align:center;">
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.6);margin-bottom:2px;">🗽 AW Family</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:10px;">2 people</div>
+          <div style="font-size:30px;font-weight:900;color:white;">$3,455</div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:8px;">($896 × 2) + $1,663</div>
         </div>
       </div>
     </div>
