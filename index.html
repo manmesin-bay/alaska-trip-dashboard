@@ -3157,7 +3157,7 @@
   ══════════════════════════════════ -->
   <div style="margin-top:24px;background:linear-gradient(135deg,#0a1628,#1a237e);border-radius:14px;padding:18px 22px;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
     <form id="feedback-form" onsubmit="sendFeedback(event)" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-      <div style="font-size:13px;font-weight:700;color:white;white-space:nowrap;">💬 Got ideas?</div>
+      <div style="font-size:13px;font-weight:700;color:white;white-space:nowrap;">💬 Got ideas or feedback?</div>
       <input type="text" id="fb-name" placeholder="Your name" required style="flex:1;min-width:100px;padding:9px 14px;border:1px solid rgba(255,255,255,0.15);border-radius:8px;background:rgba(255,255,255,0.08);color:white;font-size:13px;box-sizing:border-box;outline:none;" onfocus="this.style.borderColor='#22a39f'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
       <textarea id="fb-message" placeholder="What excursion, idea, or feedback?" required rows="1" style="flex:3;min-width:180px;padding:9px 14px;border:1px solid rgba(255,255,255,0.15);border-radius:8px;background:rgba(255,255,255,0.08);color:white;font-size:13px;box-sizing:border-box;outline:none;resize:none;font-family:inherit;" onfocus="this.style.borderColor='#22a39f'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'"></textarea>
       <button type="submit" style="padding:9px 20px;background:linear-gradient(135deg,#22a39f,#1a9a8a);color:white;font-size:13px;font-weight:700;border:none;border-radius:8px;cursor:pointer;white-space:nowrap;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform=''">Send →</button>
@@ -3403,14 +3403,8 @@
       'From: ' + name + '\n\n' +
       message + '\n\n---\nSent from Alaska Trip Dashboard'
     );
-    var mailto = 'mailto:manmesin@gmail.com?subject=' + subject + '&body=' + body;
-    var a = document.createElement('a');
-    a.href = mailto;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    var gmailUrl = 'https://mail.google.com/mail/?view=cm&to=manmesin@gmail.com&su=' + subject + '&body=' + body;
+    window.open(gmailUrl, '_blank', 'noopener');
   }
 </script>
 </body>
