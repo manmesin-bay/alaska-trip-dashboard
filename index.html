@@ -489,10 +489,7 @@
       .review-pros-cons { grid-template-columns: 1fr; }
       .countdown-num { font-size: 36px; }
       .grid-2, .grid-3 { grid-template-columns: 1fr; }
-      #gallery-grid { columns: 2 !important; }
-    }
-    @media (max-width: 400px) {
-      #gallery-grid { columns: 1 !important; }
+      #gallery-grid { grid-template-columns: 1fr !important; }
     }
 
     /* ── SCROLL ANIMATION ── */
@@ -2590,25 +2587,12 @@
     <!-- Gallery Hero -->
     <div style="background:linear-gradient(135deg,#0a1628 0%,#1a237e 50%,#0d47a1 100%);border-radius:16px;padding:28px 24px;text-align:center;margin-bottom:24px;box-shadow:0 6px 24px rgba(0,0,0,0.2);">
       <div style="font-size:36px;margin-bottom:8px;">📸</div>
-      <div style="font-size:22px;font-weight:900;color:white;">Ovation of the Seas — Photo Gallery</div>
-      <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px;">50+ real photos of YOUR cruise ship · Exterior views · Ports of call · Shipyard build · Details</div>
-      <div style="margin-top:12px;font-size:11px;color:rgba(255,255,255,0.4);">Click any image to view full size · Photos via Wikimedia Commons (free license)</div>
+      <div style="font-size:22px;font-weight:900;color:white;">Ovation of the Seas</div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.6);margin-top:6px;">High-resolution photos of our cruise ship · Click any image to view full size</div>
     </div>
-
-    <!-- Filter buttons -->
-    <div id="gallery-filters" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;justify-content:center;">
-      <button onclick="filterGallery('all')" class="gf-btn gf-active" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:#1a237e;color:white;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">All Photos</button>
-      <button onclick="filterGallery('exterior')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🚢 Ship Exterior</button>
-      <button onclick="filterGallery('port')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">⚓ Ports of Call</button>
-      <button onclick="filterGallery('build')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🏗️ Shipyard Build</button>
-      <button onclick="filterGallery('detail')" class="gf-btn" style="padding:8px 18px;border-radius:20px;border:2px solid #1a237e;background:white;color:#1a237e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;">🔍 Ship Details</button>
-    </div>
-
-    <!-- Image count -->
-    <div id="gallery-count" style="text-align:center;font-size:12px;color:var(--muted);margin-bottom:16px;">Showing 54 photos</div>
 
     <!-- Gallery grid (populated by JS) -->
-    <div id="gallery-grid" style="columns:3;column-gap:10px;"></div>
+    <div id="gallery-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;"></div>
 
     <!-- External gallery links -->
     <div style="margin-top:28px;background:linear-gradient(135deg,rgba(26,35,126,0.04),rgba(13,71,161,0.06));border:1px solid rgba(26,35,126,0.15);border-radius:14px;padding:20px 24px;text-align:center;">
@@ -3036,91 +3020,35 @@
 
   /* ═══ GALLERY DATA & LOGIC ═══ */
   var galleryPhotos = [
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg/800px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg',cat:'exterior',t:'Side view at Fremantle, 2016'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ovation_of_the_Seas._%2852703786433%29.jpg/800px-Ovation_of_the_Seas._%2852703786433%29.jpg',cat:'exterior',t:'Majestic view at sea'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ovation_Of_The_Seas_Front.jpg/800px-Ovation_Of_The_Seas_Front.jpg',cat:'exterior',t:'Front bow view, Sydney'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ovation_of_the_Seas%2C_dominating_Sydney_Harbour.jpg/800px-Ovation_of_the_Seas%2C_dominating_Sydney_Harbour.jpg',cat:'exterior',t:'Dominating Sydney Harbour skyline'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ovation_Of_The_Seas_Rear.jpg/800px-Ovation_Of_The_Seas_Rear.jpg',cat:'exterior',t:'Rear stern view, Sydney'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Ovation_Of_The_Seas_Dawes_Point.jpg/800px-Ovation_Of_The_Seas_Dawes_Point.jpg',cat:'exterior',t:'Viewed from Dawes Point, Sydney'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ovation_of_the_Seas._%2852601326758%29.jpg/800px-Ovation_of_the_Seas._%2852601326758%29.jpg',cat:'exterior',t:'Full profile at sea'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ovation_of_the_Seas_at_Sydney.jpg/800px-Ovation_of_the_Seas_at_Sydney.jpg',cat:'exterior',t:'Docked at Sydney Harbour'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Ovation_Of_The_Seas_Front%2C_December_2024.jpg/800px-Ovation_Of_The_Seas_Front%2C_December_2024.jpg',cat:'exterior',t:'Front view, Sydney Dec 2024'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/2025-02-23_Ovation_of_the_Seas_in_Sydney.jpg/800px-2025-02-23_Ovation_of_the_Seas_in_Sydney.jpg',cat:'exterior',t:'Panoramic view, Sydney Feb 2025'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_03.jpg/800px-Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_03.jpg',cat:'exterior',t:'Sydney visit, March 2023'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_02.jpg/800px-Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_02.jpg',cat:'exterior',t:'Sydney Harbour, March 2023'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_01.jpg/800px-Ovation_of_the_Seas_in_Sydney%2C_March_2023%2C_01.jpg',cat:'exterior',t:'Arriving Sydney, March 2023'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2802%29.jpg/800px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2802%29.jpg',cat:'exterior',t:'Panoramic at Fremantle'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2803%29.jpg/800px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2803%29.jpg',cat:'exterior',t:'Distant view at Fremantle'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ovation_of_the_Seas_%2831783700662%29.jpg/800px-Ovation_of_the_Seas_%2831783700662%29.jpg',cat:'exterior',t:'Docked in Auckland harbour'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Ovation_of_the_Seas_%2832740294245%29.jpg/800px-Ovation_of_the_Seas_%2832740294245%29.jpg',cat:'exterior',t:'Auckland harbour panoramic'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas_%2852933210658%29.jpg/800px-Ovation_of_the_Seas_%2852933210658%29.jpg',cat:'exterior',t:'At Lyttelton, New Zealand'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ovation_of_the_Seas._%2852592447201%29.jpg/800px-Ovation_of_the_Seas._%2852592447201%29.jpg',cat:'exterior',t:'Lyttelton harbour view'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ovation_of_the_Seas.jpg/800px-Ovation_of_the_Seas.jpg',cat:'exterior',t:'Classic side view, Rotterdam'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Aratere_and_Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg/800px-Aratere_and_Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg',cat:'port',t:'Alongside Aratere ferry, Picton NZ'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Ovation_of_the_Seas_at_port_of_hakata.jpg/800px-Ovation_of_the_Seas_at_port_of_hakata.jpg',cat:'port',t:'Docked at Port of Hakata, Japan'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Ovation_of_the_seas_in_Bremerhaven_.jpg/800px-Ovation_of_the_seas_in_Bremerhaven_.jpg',cat:'port',t:'At port in Bremerhaven, Germany'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ovation_of_the_seas_%C3%A0_Tahiti_2019.jpg/800px-Ovation_of_the_seas_%C3%A0_Tahiti_2019.jpg',cat:'port',t:'Visiting Tahiti, 2019'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg/800px-Ovation_of_the_Seas%2C_Picton_NZL%2C_13_Dec_2019.jpg',cat:'port',t:'Docked at Picton, New Zealand'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Ovation_of_the_Seas%2C_Picton_NZL%2C_6_Jan_2019.jpg/800px-Ovation_of_the_Seas%2C_Picton_NZL%2C_6_Jan_2019.jpg',cat:'port',t:'Another angle at Picton, NZ'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/OV_docked_at_Mount_Maunganui%2C_Bay_of_Plenty%2C_New_Zealand.jpg/800px-OV_docked_at_Mount_Maunganui%2C_Bay_of_Plenty%2C_New_Zealand.jpg',cat:'port',t:'Docked at Mount Maunganui, NZ'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Ovation_of_the_Seas_%2825840165433%29.jpg/800px-Ovation_of_the_Seas_%2825840165433%29.jpg',cat:'port',t:'In Rotterdam harbour'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Ovation_of_the_Seas_%2826170152260%29.jpg/800px-Ovation_of_the_Seas_%2826170152260%29.jpg',cat:'port',t:'Passing through Rotterdam'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ovation_of_the_Seas_%2826376810481%29.jpg/800px-Ovation_of_the_Seas_%2826376810481%29.jpg',cat:'port',t:'Rotterdam close-up view'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ovation_of_the_Seas_%28ship%2C_2016%29_001.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_001.jpg',cat:'port',t:'Rotterdam broadside view'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Ovation_of_the_Seas_%28ship%2C_2016%29_002.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_002.jpg',cat:'port',t:'Rotterdam with city backdrop'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Ovation_of_the_Seas_%28ship%2C_2016%29_003.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_003.jpg',cat:'port',t:'Rotterdam with tugboats'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Ovation_of_the_Seas_%28ship%2C_2016%29_004.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_004.jpg',cat:'port',t:'Rotterdam departure view'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Ovation_of_the_Seas_%28ship%2C_2016%29_005.jpg/800px-Ovation_of_the_Seas_%28ship%2C_2016%29_005.jpg',cat:'port',t:'Rotterdam distant view'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825843859904%29.jpg/800px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825843859904%29.jpg',cat:'port',t:'On Nieuwe Maas river, Rotterdam'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825844149464%29.jpg/800px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825844149464%29.jpg',cat:'port',t:'Nieuwe Maas, Rotterdam'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2826175354380%29.jpg/800px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2826175354380%29.jpg',cat:'port',t:'Nieuwe Maas river view'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2826175888100%29.jpg/800px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2826175888100%29.jpg',cat:'port',t:'Departing Rotterdam'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hundeverein-2715.jpg/800px-Hundeverein-2715.jpg',cat:'build',t:'Under construction at Meyer Werft'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hundeverein-2746.jpg/800px-Hundeverein-2746.jpg',cat:'build',t:'Construction progress at Meyer Werft'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hundeverein-2750.jpg/800px-Hundeverein-2750.jpg',cat:'build',t:'Hull nearing completion'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Hundeverein-2765.jpg/800px-Hundeverein-2765.jpg',cat:'build',t:'Close to launch at Meyer Werft'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Ovation_of_The_Seas-msu-2766.jpg/800px-Ovation_of_The_Seas-msu-2766.jpg',cat:'build',t:'At Meyer Werft shipyard'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Ovation_of_the_Seas_01.JPG/800px-Ovation_of_the_Seas_01.JPG',cat:'build',t:'Meyer Werft shipyard (1)'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ovation_of_the_Seas_02.JPG/800px-Ovation_of_the_Seas_02.JPG',cat:'build',t:'Meyer Werft shipyard (2)'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Ovation_of_the_Seas_03.JPG/800px-Ovation_of_the_Seas_03.JPG',cat:'build',t:'Meyer Werft shipyard (3)'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ovation_of_the_Seas_04.JPG/800px-Ovation_of_the_Seas_04.JPG',cat:'build',t:'Meyer Werft shipyard (4)'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ovation_of_the_Seas_05.JPG/800px-Ovation_of_the_Seas_05.JPG',cat:'build',t:'Meyer Werft shipyard (5)'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ovation_of_the_Seas_06.JPG/800px-Ovation_of_the_Seas_06.JPG',cat:'build',t:'Meyer Werft shipyard (6)'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Ovation_of_the_Seas_07.JPG/800px-Ovation_of_the_Seas_07.JPG',cat:'build',t:'Meyer Werft shipyard (7)'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ovation_of_the_Seas_08.JPG/800px-Ovation_of_the_Seas_08.JPG',cat:'build',t:'Bow close-up at Meyer Werft'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Ovation_of_the_Seas_09.JPG/800px-Ovation_of_the_Seas_09.JPG',cat:'build',t:'Night view at Meyer Werft'},
-    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Square_Cabins_-_Flickr_-_mikecogh.jpg/800px-Square_Cabins_-_Flickr_-_mikecogh.jpg',cat:'detail',t:'Balcony cabin exterior close-up'}
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg/1200px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2801%29.jpg',t:'Ovation of the Seas — Side View, Fremantle'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ovation_of_the_Seas._%2852703786433%29.jpg/1200px-Ovation_of_the_Seas._%2852703786433%29.jpg',t:'Ovation of the Seas — At Sea'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Ovation_Of_The_Seas_Front.jpg/1200px-Ovation_Of_The_Seas_Front.jpg',t:'Ovation of the Seas — Front Bow View'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ovation_of_the_Seas%2C_dominating_Sydney_Harbour.jpg/1200px-Ovation_of_the_Seas%2C_dominating_Sydney_Harbour.jpg',t:'Ovation of the Seas — Sydney Harbour'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ovation_Of_The_Seas_Rear.jpg/1200px-Ovation_Of_The_Seas_Rear.jpg',t:'Ovation of the Seas — Rear Stern View'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Ovation_Of_The_Seas_Dawes_Point.jpg/1200px-Ovation_Of_The_Seas_Dawes_Point.jpg',t:'Ovation of the Seas — Dawes Point, Sydney'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ovation_of_the_Seas._%2852601326758%29.jpg/1200px-Ovation_of_the_Seas._%2852601326758%29.jpg',t:'Ovation of the Seas — Full Profile'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2802%29.jpg/1200px-Ovation_of_the_Seas%2C_Fremantle%2C_2016_%2802%29.jpg',t:'Ovation of the Seas — Panoramic, Fremantle'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ovation_of_the_Seas_%2831783700662%29.jpg/1200px-Ovation_of_the_Seas_%2831783700662%29.jpg',t:'Ovation of the Seas — Auckland Harbour'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825843859904%29.jpg/1200px-Ovation_of_the_Seas_-_Nieuwe_Maas_-_Port_of_Rotterdam_%2825843859904%29.jpg',t:'Ovation of the Seas — Rotterdam'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/2025-02-23_Ovation_of_the_Seas_in_Sydney.jpg/1200px-2025-02-23_Ovation_of_the_Seas_in_Sydney.jpg',t:'Ovation of the Seas — Sydney Panorama 2025'},
+    {url:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Square_Cabins_-_Flickr_-_mikecogh.jpg/1200px-Square_Cabins_-_Flickr_-_mikecogh.jpg',t:'Ovation of the Seas — Balcony Cabins Close-up'}
   ];
 
-  var currentFilter = 'all';
   var lightboxIdx = 0;
   var filteredPhotos = galleryPhotos;
 
   function buildGallery() {
     var grid = document.getElementById('gallery-grid');
     if (!grid) return;
-    filteredPhotos = currentFilter === 'all' ? galleryPhotos : galleryPhotos.filter(function(p) { return p.cat === currentFilter; });
-    document.getElementById('gallery-count').textContent = 'Showing ' + filteredPhotos.length + ' photos';
+    filteredPhotos = galleryPhotos;
     var html = '';
     filteredPhotos.forEach(function(p, i) {
-      var h = [200, 240, 280, 220, 260, 300][i % 6];
-      html += '<div class="gal-item" style="break-inside:avoid;margin-bottom:10px;border-radius:10px;overflow:hidden;cursor:pointer;position:relative;" onclick="openLightbox(' + i + ')">';
-      html += '<img loading="lazy" src="' + p.url + '" alt="' + p.t + '" style="width:100%;display:block;transition:transform 0.3s;" onmouseover="this.style.transform=\'scale(1.03)\'" onmouseout="this.style.transform=\'scale(1)\'">';
-      html += '<div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));padding:8px 10px;"><span style="color:white;font-size:11px;">' + p.t + '</span></div>';
+      html += '<div style="border-radius:12px;overflow:hidden;cursor:pointer;position:relative;box-shadow:0 2px 12px rgba(0,0,0,0.12);" onclick="openLightbox(' + i + ')">';
+      html += '<img loading="lazy" src="' + p.url + '" alt="' + p.t + '" style="width:100%;display:block;aspect-ratio:16/10;object-fit:cover;transition:transform 0.3s;" onmouseover="this.style.transform=\'scale(1.03)\'" onmouseout="this.style.transform=\'scale(1)\'">';
+      html += '<div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));padding:10px 12px;"><span style="color:white;font-size:12px;font-weight:600;">' + p.t + '</span></div>';
       html += '</div>';
     });
     grid.innerHTML = html;
-  }
-
-  function filterGallery(cat) {
-    currentFilter = cat;
-    document.querySelectorAll('.gf-btn').forEach(function(b) {
-      b.classList.remove('gf-active');
-      b.style.background = 'white'; b.style.color = '#1a237e';
-    });
-    event.target.classList.add('gf-active');
-    event.target.style.background = '#1a237e'; event.target.style.color = 'white';
-    buildGallery();
   }
 
   function openLightbox(idx) {
@@ -3129,7 +3057,7 @@
     var img = document.getElementById('lightbox-img');
     var cap = document.getElementById('lightbox-caption');
     var p = filteredPhotos[idx];
-    img.src = p.url.replace('/800px-', '/1600px-');
+    img.src = p.url.replace('/1200px-', '/1920px-');
     cap.textContent = p.t + ' (' + (idx + 1) + '/' + filteredPhotos.length + ')';
     lb.style.display = 'flex';
     document.body.style.overflow = 'hidden';
