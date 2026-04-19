@@ -931,6 +931,7 @@
   <button class="tab-btn" onclick="showTab('packing')">🎒 Packing</button>
   <button class="tab-btn" onclick="showTab('checklist')">✅ Checklist</button>
   <button class="tab-btn" onclick="showTab('hotels')">🏨 Stays</button>
+  <button class="tab-btn" onclick="showTab('knowmore')">🎬 Know More</button>
 </nav>
 
 <div class="main">
@@ -940,6 +941,35 @@
   ══════════════════════════════════ -->
   <div id="tab-overview" class="section active">
     <div class="section-title"><span class="icon">🏠</span> Trip Overview</div>
+
+    <!-- Ship Hero Banner -->
+    <div style="position:relative;border-radius:16px;overflow:hidden;margin-bottom:20px;box-shadow:0 8px 30px rgba(0,0,0,0.25);height:280px;background:linear-gradient(135deg,#0a1628 0%,#0d47a1 40%,#1565c0 60%,#0a1628 100%);">
+      <img src="https://www.royalcaribbean.com/content/dam/royal/ships/ovation/ovation-of-the-seas-702702702702702702702702702702702.jpg" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;" alt="Ovation of the Seas">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.3) 40%,rgba(0,0,0,0.05) 70%);"></div>
+      <div style="position:absolute;top:16px;right:16px;display:flex;gap:8px;">
+        <a href="https://www.royalcaribbean.com/account/cruise-planner" target="_blank" rel="noopener noreferrer" style="background:rgba(255,255,255,0.95);color:#0d47a1;font-size:12px;font-weight:800;padding:8px 16px;border-radius:8px;text-decoration:none;backdrop-filter:blur(4px);">🛳️ Manage My Cruise</a>
+        <a href="https://www.royalcaribbean.com/cruise-ships/ovation-of-the-seas" target="_blank" rel="noopener noreferrer" style="background:rgba(255,255,255,0.2);color:white;font-size:12px;font-weight:700;padding:8px 16px;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.3);backdrop-filter:blur(4px);">Ship Details →</a>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 24px;">
+        <div style="font-size:11px;font-weight:700;color:#64b5f6;text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Royal Caribbean International</div>
+        <div style="font-size:28px;font-weight:900;color:white;line-height:1.1;">Ovation of the Seas</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.8);margin-top:6px;display:flex;gap:16px;flex-wrap:wrap;">
+          <span>🚢 Quantum Class · 4,905 Guests</span>
+          <span>📏 1,138 ft · 18 Decks</span>
+          <span>📅 Jun 26 – Jul 3, 2026</span>
+          <span>🗺️ Vancouver → Seward</span>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="background:rgba(255,255,255,0.15);padding:4px 10px;border-radius:6px;font-size:11px;color:white;">iFLY Skydiving</span>
+          <span style="background:rgba(255,255,255,0.15);padding:4px 10px;border-radius:6px;font-size:11px;color:white;">FlowRider</span>
+          <span style="background:rgba(255,255,255,0.15);padding:4px 10px;border-radius:6px;font-size:11px;color:white;">North Star 300ft</span>
+          <span style="background:rgba(255,255,255,0.15);padding:4px 10px;border-radius:6px;font-size:11px;color:white;">SeaPlex</span>
+          <span style="background:rgba(255,255,255,0.15);padding:4px 10px;border-radius:6px;font-size:11px;color:white;">Bumper Cars</span>
+          <span style="background:rgba(255,255,255,0.15);padding:4px 10px;border-radius:6px;font-size:11px;color:white;">Rock Climbing</span>
+          <span style="background:rgba(255,255,255,0.15);padding:4px 10px;border-radius:6px;font-size:11px;color:white;">Two70° Lounge</span>
+        </div>
+      </div>
+    </div>
 
     <!-- Countdown -->
     <div class="countdown-card" style="margin-bottom:20px;">
@@ -2817,6 +2847,338 @@
   🚢 Rahees Tabbar Cruise Trip June 2026 · Travel Dashboard · Built with ❤️ for MS, AK & AW families<br/>
   Prices and availability as of April 2026. Always verify on official booking sites.
 </div>
+
+  <!-- ══════════════════════════════════
+       TAB: KNOW MORE (YouTube Videos)
+  ══════════════════════════════════ -->
+  <div id="tab-knowmore" class="section">
+    <div class="section-title"><span class="icon">🎬</span> Know More — YouTube Videos & Guides</div>
+
+    <div class="alert info"><span class="alert-icon">📺</span><div>Curated YouTube videos with <strong>high view counts and great reviews</strong> for our cruise ship, every port of call, and each post-cruise destination. Watch before you go!</div></div>
+
+    <!-- ═══ SECTION: Ovation of the Seas ═══ -->
+    <div style="margin-bottom:32px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#0d47a1,#1565c0);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:18px;font-weight:900;color:var(--navy);margin:0;">🛳️ Ovation of the Seas — Ship Tours & Reviews</h3>
+          <div style="font-size:12px;color:var(--muted);">Quantum Class · 4,905 guests · Our home for 7 nights</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:16px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/FEueV_HmgR4" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:12px;">
+            <div style="font-size:13px;font-weight:700;color:var(--navy);">Alaska Cruise — Sail Away Day 1</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">Northern Viking Explorer · 42K+ views</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/CUKUJ-5vORc" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:12px;">
+            <div style="font-size:13px;font-weight:700;color:var(--navy);">Get Ready To Sail on Ovation!</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">Which Path Michelle · Ship highlights & features</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/Uc6MvZAxkNk" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:12px;">
+            <div style="font-size:13px;font-weight:700;color:var(--navy);">Dawes Glacier & Juneau — Day 5</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">Northern Viking Explorer · 15K+ views</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/Y2Qu2c3CDm4" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:12px;">
+            <div style="font-size:13px;font-weight:700;color:var(--navy);">Cabin Walkthrough & Review (4K)</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px;">Full cabin tour · Junior Suite types</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);margin:24px 0;"></div>
+    <div style="text-align:center;font-size:16px;font-weight:900;color:var(--navy);margin-bottom:8px;">⚓ Cruise Port Videos</div>
+    <div style="text-align:center;font-size:12px;color:var(--muted);margin-bottom:24px;">Each port we'll visit during our 7-night Alaska cruise</div>
+
+    <!-- ═══ KETCHIKAN ═══ -->
+    <div style="margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#1b5e20,#4caf50);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy);margin:0;">🦅 Ketchikan — "Salmon Capital of the World"</h3>
+          <div style="font-size:12px;color:var(--muted);">Jun 28 · 7 AM – 4 PM · 9 hours in port</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:14px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/yXyv4jcGBI8" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Ketchikan Cruise Port Guide 2025</div>
+            <div style="font-size:11px;color:var(--muted);">The Port Lowdown · 30K+ views</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/Z8iFPI5OffU" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">How to Spend a Great Day in Ketchikan</div>
+            <div style="font-size:11px;color:var(--muted);">Just Ramblin' Around · Full port day guide</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/nJVQiO0BMgE" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Totem Park + Lumberjack Show</div>
+            <div style="font-size:11px;color:var(--muted);">Alaska Cruise vlog · Family-friendly</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ ICY STRAIT POINT ═══ -->
+    <div style="margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#006064,#00acc1);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy);margin:0;">🐋 Icy Strait Point (Hoonah) — Whale Capital</h3>
+          <div style="font-size:12px;color:var(--muted);">Jun 29 · 8 AM – 6 PM · 10 hours in port</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:14px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/3xyhrRVbgOQ" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Incredible Wildlife Encounters!</div>
+            <div style="font-size:11px;color:var(--muted);">The Wanderfull Life · Whales, otters, eagles</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/TpyCDG5iwoM" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Is Icy Strait Point Worth Visiting?</div>
+            <div style="font-size:11px;color:var(--muted);">Zipline, hikes, bear warnings & more</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/37NS_kMN5oo" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Alaska Excursions Guide — Port Tips</div>
+            <div style="font-size:11px;color:var(--muted);">A Cruising Good Time · Budget tips</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SITKA ═══ -->
+    <div style="margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#4a148c,#9c27b0);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy);margin:0;">🦦 Sitka — Russian Heritage & Rainforest</h3>
+          <div style="font-size:12px;color:var(--muted);">Jun 30 · 7 AM – 5 PM · 9 hours in port</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:14px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/3vOQP6J-DnI" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Best Free Things to Do in Sitka (2025)</div>
+            <div style="font-size:11px;color:var(--muted);">Boundless Brothers · Free activities guide</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/nUmhvT4MIUg" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Exploring Sitka on a Cruise</div>
+            <div style="font-size:11px;color:var(--muted);">Jake & Georgia · Totem park, aquarium, seals</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/v12QJ59F8mw" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Best Alaska Glacier Itineraries Compared</div>
+            <div style="font-size:11px;color:var(--muted);">A Cruising Good Time · 21K+ views</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SKAGWAY ═══ -->
+    <div style="margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#e65100,#ff9800);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy);margin:0;">🚂 Skagway — Gold Rush Town</h3>
+          <div style="font-size:12px;color:var(--muted);">Jul 1 · 7 AM – 4 PM · 9 hours in port</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:14px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/iY3A7ZjpVzg" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Skagway Cruise Port Guide 2025</div>
+            <div style="font-size:11px;color:var(--muted);">The Port Lowdown · 40K+ views</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/SZA8Gl8hAjw" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">White Pass Summit Scenic Railway</div>
+            <div style="font-size:11px;color:var(--muted);">Northern Viking Explorer · 10K+ views</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ks-gmeqHJNE" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Most Scenic Train Ride — Best Excursion</div>
+            <div style="font-size:11px;color:var(--muted);">Your Favorite Couple · Full train experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ HUBBARD GLACIER ═══ -->
+    <div style="margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#0a2342,#1976d2);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy);margin:0;">🧊 Hubbard Glacier — Scenic Cruising</h3>
+          <div style="font-size:12px;color:var(--muted);">Jul 2 · ~8 AM – 11 AM · 3 hours viewing · Bucket list!</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:14px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ro8MaYtxr1o" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">ALASKA CRUISE — Glacier Bay & Hubbard</div>
+            <div style="font-size:11px;color:var(--muted);">EECC Travels · 25K+ views</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/lyLaQuQHUaU" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Hubbard Glacier Calving Up Close!</div>
+            <div style="font-size:11px;color:var(--muted);">3rd Orbit Travelers · Thunderous ice crashes</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/QcYE-7KJqZY" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">No Regrets Skipping the $$$ Excursion</div>
+            <div style="font-size:11px;color:var(--muted);">Aging On Your Terms · Balcony views</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:2px;background:linear-gradient(90deg,transparent,#ff9800,transparent);margin:24px 0;"></div>
+    <div style="text-align:center;font-size:16px;font-weight:900;color:var(--navy);margin-bottom:8px;">🏔️ Post-Cruise Destination Videos</div>
+    <div style="text-align:center;font-size:12px;color:var(--muted);margin-bottom:24px;">Seward, Homer & Anchorage — where we'll explore after disembarking</div>
+
+    <!-- ═══ SEWARD ═══ -->
+    <div style="margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#1a237e,#3f51b5);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy);margin:0;">⛰️ Seward — Gateway to Kenai Fjords</h3>
+          <div style="font-size:12px;color:var(--muted);">Jul 3–4 · Disembark + Exit Glacier + Heli Dog Sled</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:14px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/FKdgmG3YlcY" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">The Ultimate Guide to Seward, Alaska</div>
+            <div style="font-size:11px;color:var(--muted);">Complete travel guide · Top things to do</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/uASKSpFqP04" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Exit Glacier + Kenai Fjords Tour + Orcas!</div>
+            <div style="font-size:11px;color:var(--muted);">Full Seward vlog · 6-hour park tour</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/0Pk-3ctiD7Y" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Whales & Glaciers — Kenai Fjords Excursion</div>
+            <div style="font-size:11px;color:var(--muted);">KenTravels360 · 8-hour cruise from Seward</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ HOMER ═══ -->
+    <div style="margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#33691e,#689f38);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy);margin:0;">🌄 Homer — "Halibut Fishing Capital of the World"</h3>
+          <div style="font-size:12px;color:var(--muted);">Jul 5–6 · Kachemak Bay, Homer Spit, Salty Dawg Saloon</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:14px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/KZYyJwhNqyA" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Homer & Kenai Peninsula Travel Guide</div>
+            <div style="font-size:11px;color:var(--muted);">Boozing Abroad · 13K+ views · Spit, breweries</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/ZGWMEElxT5o" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Road Trip to Homer — Kenai Peninsula</div>
+            <div style="font-size:11px;color:var(--muted);">Adventures of A+K · Homer Spit & scenic drive</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/396k73TMfKo" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Whales & Glaciers Up Close in Alaska</div>
+            <div style="font-size:11px;color:var(--muted);">Kenai Fjords boat tour · Unreal wildlife</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ ANCHORAGE ═══ -->
+    <div style="margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <div style="width:6px;height:32px;background:linear-gradient(to bottom,#b71c1c,#e53935);border-radius:3px;"></div>
+        <div>
+          <h3 style="font-size:16px;font-weight:900;color:var(--navy);margin:0;">🏙️ Anchorage — Last Night Before Flying Home</h3>
+          <div style="font-size:12px;color:var(--muted);">Jul 7 · Downtown exploration + return van + fly out Jul 8</div>
+        </div>
+      </div>
+      <div class="grid-3" style="gap:14px;">
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/zFNsttMPZLY" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Top 10 Things to Do in Anchorage (2025)</div>
+            <div style="font-size:11px;color:var(--muted);">Travel Insights · Wildlife center, trails, museums</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/7a0IdMqLWB8" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">TOP 10 Things to Do in Alaska (2025)</div>
+            <div style="font-size:11px;color:var(--muted);">Comprehensive Alaska travel guide</div>
+          </div>
+        </div>
+        <div style="background:white;border-radius:12px;overflow:hidden;box-shadow:var(--card-shadow);">
+          <div style="position:relative;padding-top:56.25%;"><iframe src="https://www.youtube.com/embed/L5tJ4-DbALM" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          <div style="padding:10px 12px;">
+            <div style="font-size:12px;font-weight:700;color:var(--navy);">Top 10 Best Things to Do in Alaska (2024)</div>
+            <div style="font-size:11px;color:var(--muted);">Travel guide · Must-see highlights</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div><!-- end .dashboard-content -->
 
 <!-- ─────────── SCRIPT ─────────── -->
