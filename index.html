@@ -941,38 +941,46 @@
   <div id="tab-overview" class="section active">
     <div class="section-title"><span class="icon">🏠</span> Trip Overview</div>
 
-    <!-- Countdown + Status -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
-      <div class="countdown-card" style="margin-bottom:0;">
-        <h3>⏳ Countdown to Departure</h3>
-        <div class="countdown-numbers" id="countdown-display">
-          <div class="countdown-unit"><div class="countdown-num" id="cd-days">—</div><div class="countdown-label">Days</div></div>
-          <div class="countdown-unit"><div class="countdown-num" id="cd-hours">—</div><div class="countdown-label">Hours</div></div>
-          <div class="countdown-unit"><div class="countdown-num" id="cd-mins">—</div><div class="countdown-label">Minutes</div></div>
-          <div class="countdown-unit"><div class="countdown-num" id="cd-secs">—</div><div class="countdown-label">Seconds</div></div>
-        </div>
-        <p style="margin-top:12px;font-size:13px;opacity:0.7;">Jun 26, 2026 · Vancouver · 11 PM</p>
+    <!-- Countdown -->
+    <div class="countdown-card" style="margin-bottom:20px;">
+      <h3>⏳ Countdown to Departure</h3>
+      <div class="countdown-numbers" id="countdown-display">
+        <div class="countdown-unit"><div class="countdown-num" id="cd-days">—</div><div class="countdown-label">Days</div></div>
+        <div class="countdown-unit"><div class="countdown-num" id="cd-hours">—</div><div class="countdown-label">Hours</div></div>
+        <div class="countdown-unit"><div class="countdown-num" id="cd-mins">—</div><div class="countdown-label">Minutes</div></div>
+        <div class="countdown-unit"><div class="countdown-num" id="cd-secs">—</div><div class="countdown-label">Seconds</div></div>
       </div>
-      <div style="background:linear-gradient(135deg,#1a7a4a,#2e7d32);border-radius:var(--radius);padding:22px 24px;color:white;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-        <div style="font-size:32px;font-weight:900;">✅ CRUISE BOOKED</div>
-        <div style="font-size:13px;margin-top:6px;opacity:0.9;"><strong>MS:</strong> Rm 6148 · <strong>AW:</strong> Rm 6122 · <strong>AK:</strong> Booked — All Balcony, Deck 6</div>
-        <a href="https://www.royalcaribbean.com" target="_blank" style="display:inline-block;margin-top:10px;background:white;color:#1a7a4a;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">Manage on RoyalCaribbean.com →</a>
-      </div>
+      <p style="margin-top:12px;font-size:13px;opacity:0.7;">Jun 26, 2026 · Vancouver · 11 PM</p>
     </div>
 
-    <!-- Booking Status -->
-    <div style="margin-bottom:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <div style="background:#e6f9f0;border:1px solid #2e7d32;border-radius:12px;padding:12px 16px;">
-        <div style="font-size:12px;font-weight:800;color:#2e7d32;margin-bottom:6px;">✅ BOOKED</div>
-        <div style="font-size:12px;color:#1a4a2a;line-height:1.8;">
-          Cruise cabins · Pre-cruise stay (Amit's) · <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Summit Lake</a> · <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">Homer</a> · <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Anchorage</a> · Rental van · Heli + Dog Sled
-        </div>
+    <!-- Trip Progress -->
+    <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--card-shadow);margin-bottom:20px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <div style="font-size:15px;font-weight:800;color:var(--navy);">Trip Planning Progress</div>
+        <div style="font-size:13px;color:var(--muted);">7 of 11 items booked</div>
       </div>
-      <div style="background:#fff8e1;border:1px solid #e67e22;border-radius:12px;padding:12px 16px;">
-        <div style="font-size:12px;font-weight:800;color:#e67e22;margin-bottom:6px;">⏳ NOT BOOKED</div>
-        <div style="font-size:12px;color:#8a5a00;line-height:1.8;">
-          Cruise excursions · Homer activities · Flights · Dining
-        </div>
+      <div style="background:#e8e8e8;border-radius:8px;height:10px;overflow:hidden;margin-bottom:16px;">
+        <div style="background:linear-gradient(90deg,#2e7d32,#4caf50);height:100%;width:64%;border-radius:8px;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12.5px;">
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> Cruise cabins (all 3 families)</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#e67e22;">⏳</span> Cruise port excursions</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> Pre-cruise stay (Amit's home)</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#e67e22;">⏳</span> Homer activities</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Summit Lake Lodge</a></div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#e67e22;">⏳</span> Flights (to YVR + from ANC)</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">Homer "Sense of Place"</a></div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#e67e22;">⏳</span> Dining reservations</div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Anchorage Grand</a></div>
+        <div></div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> Rental van (Jul 4–7)</div>
+        <div></div>
+        <div style="display:flex;align-items:center;gap:6px;"><span style="color:#2e7d32;">✅</span> Heli + Glacier Dog Sled (Jul 4)</div>
+        <div></div>
+      </div>
+      <div style="margin-top:14px;padding-top:12px;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:12px;color:var(--muted);">🛳️ Cabins: <strong>MS</strong> Rm 6148 · <strong>AW</strong> Rm 6122 · <strong>AK</strong> Booked — All Balcony, Deck 6</div>
+        <a href="https://www.royalcaribbean.com" target="_blank" style="font-size:12px;font-weight:700;color:var(--teal);text-decoration:none;">Manage Cruise →</a>
       </div>
     </div>
 
