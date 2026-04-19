@@ -926,9 +926,7 @@
 <nav class="tab-bar">
   <button class="tab-btn active" onclick="showTab('overview')">🏠 Overview</button>
   <button class="tab-btn" onclick="showTab('cruise')">🗓️ Itinerary</button>
-  <button class="tab-btn" onclick="showTab('flights')">✈️ Flights</button>
   <button class="tab-btn" onclick="showTab('reviews')">⭐ Reviews</button>
-  <button class="tab-btn" onclick="showTab('deals')">🎟️ Deals</button>
   <button class="tab-btn" onclick="showTab('budget')">💰 Budget</button>
   <button class="tab-btn" onclick="showTab('packing')">🎒 Packing</button>
   <button class="tab-btn" onclick="showTab('checklist')">✅ Checklist</button>
@@ -943,193 +941,75 @@
   <div id="tab-overview" class="section active">
     <div class="section-title"><span class="icon">🏠</span> Trip Overview</div>
 
-    <!-- Booking Confirmed Banner -->
-    <div style="background:linear-gradient(135deg,#1a7a4a,#2e7d32);border-radius:var(--radius);padding:22px 28px;margin-bottom:20px;color:white;text-align:center;box-shadow:0 4px 20px rgba(30,120,70,0.3);">
-      <div style="font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0.8;margin-bottom:6px;">Cruise Status</div>
-      <div style="font-size:36px;font-weight:900;line-height:1;">✅ ALL BOOKED!</div>
-      <div style="font-size:14px;margin-top:8px;opacity:0.9;">All 3 families confirmed — <strong>MS: Room 6148</strong> · <strong>AW: Room 6122</strong> · <strong>AK: Booked (room TBD)</strong> · All Balcony, Deck 6</div>
-      <a href="https://www.royalcaribbean.com" target="_blank" style="display:inline-block;margin-top:14px;background:white;color:#1a7a4a;padding:10px 28px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;">Manage Booking on RoyalCaribbean.com →</a>
-    </div>
-
-    <!-- Countdown -->
-    <div class="countdown-card" style="margin-bottom:24px;">
-      <h3>⏳ Countdown to Departure</h3>
-      <div class="countdown-numbers" id="countdown-display">
-        <div class="countdown-unit"><div class="countdown-num" id="cd-days">—</div><div class="countdown-label">Days</div></div>
-        <div class="countdown-unit"><div class="countdown-num" id="cd-hours">—</div><div class="countdown-label">Hours</div></div>
-        <div class="countdown-unit"><div class="countdown-num" id="cd-mins">—</div><div class="countdown-label">Minutes</div></div>
-        <div class="countdown-unit"><div class="countdown-num" id="cd-secs">—</div><div class="countdown-label">Seconds</div></div>
+    <!-- Countdown + Status -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+      <div class="countdown-card" style="margin-bottom:0;">
+        <h3>⏳ Countdown to Departure</h3>
+        <div class="countdown-numbers" id="countdown-display">
+          <div class="countdown-unit"><div class="countdown-num" id="cd-days">—</div><div class="countdown-label">Days</div></div>
+          <div class="countdown-unit"><div class="countdown-num" id="cd-hours">—</div><div class="countdown-label">Hours</div></div>
+          <div class="countdown-unit"><div class="countdown-num" id="cd-mins">—</div><div class="countdown-label">Minutes</div></div>
+          <div class="countdown-unit"><div class="countdown-num" id="cd-secs">—</div><div class="countdown-label">Seconds</div></div>
+        </div>
+        <p style="margin-top:12px;font-size:13px;opacity:0.7;">Jun 26, 2026 · Vancouver · 11 PM</p>
       </div>
-      <p style="margin-top:16px;font-size:14px;opacity:0.7;">Departure: Friday, June 26, 2026 · Vancouver, BC · 11:00 PM</p>
+      <div style="background:linear-gradient(135deg,#1a7a4a,#2e7d32);border-radius:var(--radius);padding:22px 24px;color:white;display:flex;flex-direction:column;justify-content:center;text-align:center;">
+        <div style="font-size:32px;font-weight:900;">✅ CRUISE BOOKED</div>
+        <div style="font-size:13px;margin-top:6px;opacity:0.9;"><strong>MS:</strong> Rm 6148 · <strong>AW:</strong> Rm 6122 · <strong>AK:</strong> Booked — All Balcony, Deck 6</div>
+        <a href="https://www.royalcaribbean.com" target="_blank" style="display:inline-block;margin-top:10px;background:white;color:#1a7a4a;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">Manage on RoyalCaribbean.com →</a>
+      </div>
     </div>
 
-    <!-- Booking Status Summary -->
+    <!-- Booking Status -->
     <div style="margin-bottom:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <div style="background:#e6f9f0;border:1px solid #2e7d32;border-radius:12px;padding:14px 18px;">
-        <div style="font-size:13px;font-weight:800;color:#2e7d32;margin-bottom:8px;">✅ BOOKED</div>
+      <div style="background:#e6f9f0;border:1px solid #2e7d32;border-radius:12px;padding:12px 16px;">
+        <div style="font-size:12px;font-weight:800;color:#2e7d32;margin-bottom:6px;">✅ BOOKED</div>
         <div style="font-size:12px;color:#1a4a2a;line-height:1.8;">
-          • Cruise cabins (all 3 families)<br>
-          • Pre-cruise stay (Amit's home)<br>
-          • Alaska stays — <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Summit Lake</a>, <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">Homer</a>, <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Anchorage</a><br>
-          • Rental van (Jul 4–7)<br>
-          • Heli + Glacier Dog Sled (Jul 4, 1 PM)
+          Cruise cabins · Pre-cruise stay (Amit's) · <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Summit Lake</a> · <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">Homer</a> · <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Anchorage</a> · Rental van · Heli + Dog Sled
         </div>
       </div>
-      <div style="background:#fff8e1;border:1px solid #e67e22;border-radius:12px;padding:14px 18px;">
-        <div style="font-size:13px;font-weight:800;color:#e67e22;margin-bottom:8px;">⏳ NOT YET BOOKED</div>
+      <div style="background:#fff8e1;border:1px solid #e67e22;border-radius:12px;padding:12px 16px;">
+        <div style="font-size:12px;font-weight:800;color:#e67e22;margin-bottom:6px;">⏳ NOT BOOKED</div>
         <div style="font-size:12px;color:#8a5a00;line-height:1.8;">
-          • Cruise port excursions (Ketchikan, Icy Strait, Sitka, Skagway)<br>
-          • Homer activities (wildlife cruise / fishing / bear viewing)<br>
-          • Flights to Vancouver & return from Anchorage<br>
-          • Dining reservations
+          Cruise excursions · Homer activities · Flights · Dining
         </div>
       </div>
     </div>
 
-    <!-- Family Cards -->
-    <div class="section-title" style="margin-top:8px;"><span class="icon">👨‍👩‍👧</span> Our Families</div>
-    <div class="grid-3" style="margin-bottom:28px;">
-      <div class="family-card">
-        <div class="family-avatar" style="background:#e3f2fd;">🏙️</div>
-        <h3>Family 1 — MS Family</h3>
-        <div class="city">📍 San Francisco, CA (SFO)</div>
-        <div class="member-list">
-          <div class="member"><span class="emoji">👨</span><div><div class="name">MS</div><div class="details">Age 42 · Lead Organizer</div></div></div>
-          <div class="member"><span class="emoji">👩</span><div><div class="name">HSK</div><div class="details">Age 41</div></div></div>
-          <div class="member"><span class="emoji">👧</span><div><div class="name">AK</div><div class="details">Age 10 · Child (cabin: 2 adults + 1 child)</div></div></div>
-        </div>
-        <div style="margin-top:12px;">
-          <span class="tag green">✅ Balcony Booked</span>
-          <span class="tag">Room 6148 · Balcony · Deck 6</span>
-          <span class="tag">Fly SFO → YVR</span>
-        </div>
+    <!-- Families (compact) -->
+    <div class="grid-3" style="margin-bottom:20px;">
+      <div style="background:white;border-radius:12px;padding:14px 16px;box-shadow:var(--card-shadow);">
+        <div style="font-size:14px;font-weight:800;color:var(--navy);">🏙️ MS Family <span style="font-size:11px;font-weight:400;color:var(--muted);">· SFO · 3 ppl</span></div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">MS, HSK, AK (10) · Rm 6148 Deck 6</div>
       </div>
-      <div class="family-card">
-        <div class="family-avatar" style="background:#e8f5e9;">🍁</div>
-        <h3>Family 2 — AK Family</h3>
-        <div class="city">📍 Vancouver, BC (Local!)</div>
-        <div class="member-list">
-          <div class="member"><span class="emoji">👨</span><div><div class="name">AK</div><div class="details">Age 42</div></div></div>
-          <div class="member"><span class="emoji">👩</span><div><div class="name">NNK</div><div class="details">Age 42</div></div></div>
-          <div class="member"><span class="emoji">👧</span><div><div class="name">AMK</div><div class="details">Age 13</div></div></div>
-          <div class="member"><span class="emoji">👦</span><div><div class="name">AVK</div><div class="details">Age 7</div></div></div>
-        </div>
-        <div style="margin-top:12px;">
-          <span class="tag green">✅ Balcony Booked</span>
-          <span class="tag">Room TBD · Balcony · Deck TBD</span>
-          <span class="tag green">Local — No Flight!</span>
-        </div>
+      <div style="background:white;border-radius:12px;padding:14px 16px;box-shadow:var(--card-shadow);">
+        <div style="font-size:14px;font-weight:800;color:var(--navy);">🍁 AK Family <span style="font-size:11px;font-weight:400;color:var(--muted);">· YVR · 4 ppl</span></div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">AK, NNK, AMK (13), AVK (7) · Rm TBD</div>
       </div>
-      <div class="family-card">
-        <div class="family-avatar" style="background:#fff3e0;">🗽</div>
-        <h3>Family 3 — AW Family</h3>
-        <div class="city">📍 New York, NY (JFK/EWR)</div>
-        <div class="member-list">
-          <div class="member"><span class="emoji">👨</span><div><div class="name">AW</div><div class="details">Age 41</div></div></div>
-          <div class="member"><span class="emoji">👩</span><div><div class="name">NW</div><div class="details">Age 41</div></div></div>
-        </div>
-        <div style="margin-top:12px;">
-          <span class="tag green">✅ Balcony Booked</span>
-          <span class="tag">Room 6122 · Balcony · Deck 6</span>
-          <span class="tag">Fly JFK/EWR → YVR</span>
-        </div>
+      <div style="background:white;border-radius:12px;padding:14px 16px;box-shadow:var(--card-shadow);">
+        <div style="font-size:14px;font-weight:800;color:var(--navy);">🗽 AW Family <span style="font-size:11px;font-weight:400;color:var(--muted);">· NYC · 2 ppl</span></div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px;">AW, NW · Rm 6122 Deck 6</div>
       </div>
     </div>
 
-    <!-- Quick Trip Summary -->
-    <div class="section-title"><span class="icon">📅</span> Full Trip Timeline</div>
-    <div class="card" style="margin-bottom:24px;">
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jun 24/25 — Tue/Wed</div>
-          <div class="timeline-title">✈️ Arrive in Vancouver — Staying at Amit's Home</div>
-          <div class="timeline-desc">All families arrive Jun 24 or 25. Staying at Amit's (AK family) home in Vancouver — no hotel needed!</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot special"></div>
-          <div class="timeline-day">Jun 26 — Fri</div>
-          <div class="timeline-title">🛳️ Embarkation Day — CRUISE DEPARTS!</div>
-          <div class="timeline-desc">Boarding begins around 11 AM. Explore the ship, find your cabins. Ship departs 11:00 PM from Canada Place Cruise Terminal.</div>
-          <div class="timeline-hours">Departure: 11:00 PM</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jun 27 — Sat</div>
-          <div class="timeline-title">🌊 Day at Sea</div>
-          <div class="timeline-desc">Enjoy iFLY indoor skydiving, North Star observation capsule, FlowRider surf simulator, bumper cars, SeaPlex. Perfect day for kids!</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jun 28 — Sun</div>
-          <div class="timeline-title">🦅 Ketchikan, Alaska <span style="font-size:11px;color:#e67e22;font-weight:700;">⏳ EXCURSION NOT BOOKED</span></div>
-          <div class="timeline-desc">Creek Street, Misty Fjords, salmon viewing, zip-lining, and totem pole parks. Alaska's "First City"!</div>
-          <div class="timeline-hours">7:00 AM – 4:00 PM</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jun 29 — Mon</div>
-          <div class="timeline-title">🐋 Icy Strait Point <span style="font-size:11px;color:#e67e22;font-weight:700;">⏳ EXCURSION NOT BOOKED</span></div>
-          <div class="timeline-desc">World's largest ZipRider, whale watching, bear viewing, crab feeds. Very family-friendly destination!</div>
-          <div class="timeline-hours">8:00 AM – 6:00 PM</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jun 30 — Tue</div>
-          <div class="timeline-title">🦦 Sitka, Alaska <span style="font-size:11px;color:#e67e22;font-weight:700;">⏳ EXCURSION NOT BOOKED</span></div>
-          <div class="timeline-desc">Raptor Center, Sitka National Historical Park, kayaking, sea otters, and stunning Russian-era architecture.</div>
-          <div class="timeline-hours">7:00 AM – 5:00 PM</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jul 1 — Wed</div>
-          <div class="timeline-title">🚂 Skagway, Alaska <span style="font-size:11px;color:#e67e22;font-weight:700;">⏳ EXCURSION NOT BOOKED</span></div>
-          <div class="timeline-desc">White Pass Railway, Gold Rush history, Chilkoot Pass hiking. A top family port!</div>
-          <div class="timeline-hours">7:00 AM – 4:00 PM</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot special"></div>
-          <div class="timeline-day">Jul 2 — Thu</div>
-          <div class="timeline-title">🧊 Hubbard Glacier — SCENIC CRUISING</div>
-          <div class="timeline-desc">The highlight of the trip! North America's largest tidewater glacier. Watch massive ice calve into the water. Use the North Star capsule for elevated views. No going ashore — just pure awe!</div>
-          <div class="timeline-hours">8:00 AM – 11:00 AM scenic viewing</div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot special"></div>
-          <div class="timeline-day">Jul 3 — Fri (Day 8)</div>
-          <div class="timeline-title">⚓ Disembark in Seward — Relax & Explore</div>
-          <div class="timeline-desc">Disembark 5 AM. Walk Seward waterfront, SeaLife Center (optional), lunch in town. Drive to Summit Lake Lodge (Moose Pass, 45 min). Easy recovery day.<br><span style="color:#2e7d32;font-weight:600;">✅ Stay: <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:#2e7d32;">Summit Lake Lodge</a> — BOOKED</span> · <span style="color:#e67e22;">⏳ Activities: Nothing booked (all walk-in)</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot special"></div>
-          <div class="timeline-day">Jul 4 — Sat (Day 9)</div>
-          <div class="timeline-title">🚁 Helicopter + Glacier Dog Sled + Exit Glacier + July 4th!</div>
-          <div class="timeline-desc">Morning: Exit Glacier hike (9–11:30 AM). Lunch in Seward. 1:00 PM: Helicopter to Godwin Glacier — dog sled on ice, meet huskies. Afternoon: Mount Marathon Race, July 4th parade & fireworks!<br><span style="color:#2e7d32;font-weight:600;">✅ Heli + Dog Sled: BOOKED (Order #2634861, 1 PM)</span> · <span style="color:#2e7d32;">✅ Van pickup: BOOKED</span> · <span style="color:#2e7d32;">✅ Stay: <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:#2e7d32;">Summit Lake Lodge</a></span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jul 5 — Sun (Day 10)</div>
-          <div class="timeline-title">🚗 Drive to Homer — "End of the Road"</div>
-          <div class="timeline-desc">Check out of Moose Pass. Scenic 3.5-hr drive through Kenai Peninsula to Homer. Stop at Cooper Landing for photos. Arrive Homer, walk the Spit, Baycrest overlook sunset.<br><span style="color:#2e7d32;font-weight:600;">✅ Stay: <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:#2e7d32;">"Unique Sense of Place"</a> Homer — BOOKED</span> · <span style="color:#e67e22;">⏳ Activities: Nothing booked (drive day)</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jul 6 — Mon (Day 11)</div>
-          <div class="timeline-title">🐻 Homer — Full Day Kachemak Bay Adventures</div>
-          <div class="timeline-desc">Full day in Homer. Options: wildlife cruise, halibut fishing, bear viewing (floatplane to Katmai/Lake Clark), water taxi to Kachemak Bay State Park, art galleries, Salty Dawg Saloon.<br><span style="color:#2e7d32;font-weight:600;">✅ Stay: <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:#2e7d32;">"Unique Sense of Place"</a> Homer — BOOKED</span> · <span style="color:#e67e22;">⏳ Activities: Nothing booked — decide as a group</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jul 7 — Tue (Day 12)</div>
-          <div class="timeline-title">🚗 Drive Homer → Anchorage — Scenic Route + City Explore</div>
-          <div class="timeline-desc">Check out Homer 8 AM. 4.5-hr scenic drive along Cook Inlet & Turnagain Arm. Optional: Alaska Wildlife Conservation Center (en route). Explore Anchorage — Tony Knowles Trail, museum, floatplanes. Farewell dinner. Drop van by 8 PM.<br><span style="color:#2e7d32;font-weight:600;">✅ Stay: <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer" style="color:#2e7d32;">Downtown Anchorage Grand</a> — BOOKED</span> · <span style="color:#2e7d32;">✅ Van return: Confirmed</span> · <span style="color:#e67e22;">⏳ Activities & dining: Not booked</span></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-day">Jul 8 — Wed (Day 13)</div>
-          <div class="timeline-title">✈️ Fly Home from Anchorage</div>
-          <div class="timeline-desc">Check out 10 AM. Last morning walk or Lake Hood floatplanes. Uber/taxi to ANC airport (~15 min). Book afternoon flights.<br><span style="color:#e67e22;font-weight:600;">⏳ Flights: NOT BOOKED — book afternoon flights from ANC</span></div>
-        </div>
+    <!-- Timeline (compact) -->
+    <div class="section-title"><span class="icon">📅</span> Trip at a Glance</div>
+    <div class="card" style="margin-bottom:24px;padding:18px 22px;">
+      <div style="display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;font-size:13px;align-items:center;">
+        <span style="font-weight:700;color:var(--navy);">Jun 24–25</span><span>✈️ Arrive Vancouver — stay at Amit's home</span><span></span>
+        <span style="font-weight:700;color:var(--navy);">Jun 26</span><span>🛳️ <strong>Embarkation!</strong> Ship departs 11 PM</span><span style="color:#2e7d32;font-size:11px;">✅</span>
+        <span style="font-weight:700;color:var(--navy);">Jun 27</span><span>🌊 Day at Sea — iFLY, FlowRider, SeaPlex</span><span></span>
+        <span style="font-weight:700;color:var(--navy);">Jun 28</span><span>🦅 Ketchikan (7 AM–4 PM)</span><span style="color:#e67e22;font-size:11px;">⏳</span>
+        <span style="font-weight:700;color:var(--navy);">Jun 29</span><span>🐋 Icy Strait Point (8 AM–6 PM)</span><span style="color:#e67e22;font-size:11px;">⏳</span>
+        <span style="font-weight:700;color:var(--navy);">Jun 30</span><span>🦦 Sitka (7 AM–5 PM)</span><span style="color:#e67e22;font-size:11px;">⏳</span>
+        <span style="font-weight:700;color:var(--navy);">Jul 1</span><span>🚂 Skagway (7 AM–4 PM)</span><span style="color:#e67e22;font-size:11px;">⏳</span>
+        <span style="font-weight:700;color:var(--navy);">Jul 2</span><span>🧊 <strong>Hubbard Glacier</strong> — scenic cruising (8–11 AM)</span><span></span>
+        <span style="font-weight:700;color:var(--navy);border-top:2px solid var(--ice);padding-top:8px;">Jul 3</span><span style="border-top:2px solid var(--ice);padding-top:8px;">⚓ Disembark Seward → <a href="https://www.expedia.com/Moose-Pass-Hotels-Summit-Lake-Lodge.h10240678.Hotel-Information" target="_blank" rel="noopener noreferrer">Summit Lake Lodge</a></span><span style="color:#2e7d32;font-size:11px;border-top:2px solid var(--ice);padding-top:8px;">✅ Stay</span>
+        <span style="font-weight:700;color:var(--navy);">Jul 4</span><span>🚁 Exit Glacier + <strong>Heli Dog Sled 1 PM</strong> + July 4th!</span><span style="color:#2e7d32;font-size:11px;">✅ All</span>
+        <span style="font-weight:700;color:var(--navy);">Jul 5</span><span>🚗 Drive to Homer → <a href="https://www.expedia.com/Homer-Hotels-Unique-Sense-Of-Place-To-Decompress-And-Rejuvenate-Quiet-Stunning-Beauty.h33546649.Hotel-Information" target="_blank" rel="noopener noreferrer">"Sense of Place"</a></span><span style="color:#2e7d32;font-size:11px;">✅ Stay</span>
+        <span style="font-weight:700;color:var(--navy);">Jul 6</span><span>🐻 Homer — Kachemak Bay adventures</span><span style="color:#e67e22;font-size:11px;">⏳</span>
+        <span style="font-weight:700;color:var(--navy);">Jul 7</span><span>🚗 Homer → <a href="https://www.expedia.com/Anchorage-Hotels-The-Downtown-Anchorage-Grand-Four-Bedroom.h88918227.Hotel-Information" target="_blank" rel="noopener noreferrer">Anchorage Grand</a> · Van return</span><span style="color:#2e7d32;font-size:11px;">✅ Stay</span>
+        <span style="font-weight:700;color:var(--navy);">Jul 8</span><span>✈️ Fly home from Anchorage (ANC)</span><span style="color:#e67e22;font-size:11px;">⏳</span>
       </div>
     </div>
   </div>
@@ -2122,128 +2002,6 @@
 
   </div>
 
-  <!-- ══════════════════════════════════
-       TAB: FLIGHTS
-  ══════════════════════════════════ -->
-  <div id="tab-flights" class="section">
-    <div class="section-title"><span class="icon">✈️</span> Flight Planning</div>
-
-    <div class="alert warning"><span class="alert-icon">⚠️</span><div>Fly in the day <strong>before</strong> embarkation (June 25) to avoid any risk of missing the ship. Flights should target arrival in Vancouver <strong>by 6 PM on June 25</strong>. Book flights <strong>ASAP</strong> — summer 2026 fares are rising!</div></div>
-
-    <!-- SFO Family -->
-    <div class="flight-card">
-      <div class="flight-header">
-        <div>
-          <h3>MS Family (San Francisco)</h3>
-          <div class="route">SFO → YVR</div>
-        </div>
-        <div style="text-align:right;font-size:13px;opacity:0.8;">Jun 25, 2026 outbound<br/>Jul 6 return from ANC</div>
-      </div>
-      <div class="flight-body">
-        <div class="flight-option">
-          <div>
-            <div class="airline">✈️ Air Canada (Best Overall)</div>
-            <div class="timing">~1h 50min direct · Multiple daily departures</div>
-            <div class="timing">Recommend: 8 AM or 10 AM departure → arrive by noon</div>
-          </div>
-          <span class="price-tag">~$150–$250/pp</span>
-        </div>
-        <div class="flight-option">
-          <div>
-            <div class="airline">✈️ United Airlines</div>
-            <div class="timing">~1h 55min direct · Via SFO hub</div>
-            <div class="timing">Good if you have United miles</div>
-          </div>
-          <span class="price-tag">~$180–$280/pp</span>
-        </div>
-        <div class="flight-option">
-          <div>
-            <div class="airline">✈️ Alaska Airlines</div>
-            <div class="timing">~1h 55min direct</div>
-            <div class="timing">Often good fares + mileage plan</div>
-          </div>
-          <span class="price-tag">~$120–$200/pp</span>
-        </div>
-        <div class="flight-tip">
-          💡 <strong>Pro Tip:</strong> Check both SFO→YVR and SFO→SEA (Seattle). If SFO→SEA is cheaper, take Amtrak Cascades or a shuttle from Seattle to Vancouver (3h). The drive from Seattle to Vancouver is ~2.5 hrs. Factor in US/Canada border crossing time (+1–2 hrs).
-          <br/><br/>📍 <strong>Return:</strong> Fly Anchorage (ANC) → SFO on July 6. Alaska Airlines flies this route direct. Budget ~$250–$400 per person.
-        </div>
-      </div>
-    </div>
-
-    <!-- AK Vancouver Family -->
-    <div class="flight-card">
-      <div class="flight-header">
-        <div>
-          <h3>AK Family (Vancouver — Local!) 🍁</h3>
-          <div class="route">No Flight Needed!</div>
-        </div>
-        <div style="text-align:right;font-size:13px;opacity:0.8;">Just drive to Canada Place!</div>
-      </div>
-      <div class="flight-body">
-        <div class="flight-option">
-          <div>
-            <div class="airline">🚗 Drive to Canada Place Cruise Terminal</div>
-            <div class="timing">Terminal: 999 Canada Pl, Vancouver, BC</div>
-            <div class="timing">Arrive 3–4 hours before 11 PM departure</div>
-          </div>
-          <span class="price-tag" style="background:#1a7a4a;">$0 Flight!</span>
-        </div>
-        <div class="flight-tip">
-          💡 <strong>Tip:</strong> AK family hosting everyone at their home before the cruise — no hotel needed! 
-          <br/><br/>📍 <strong>Return from Alaska:</strong> Fly Anchorage (ANC) → Vancouver (YVR) on Jul 8. Air Canada or WestJet direct. Budget ~$300–$450 per person (family of 4: ~$1,200–$1,800).
-        </div>
-      </div>
-    </div>
-
-    <!-- AW New York Family -->
-    <div class="flight-card">
-      <div class="flight-header">
-        <div>
-          <h3>AW Family (New York)</h3>
-          <div class="route">JFK/EWR → YVR</div>
-        </div>
-        <div style="text-align:right;font-size:13px;opacity:0.8;">Jun 25, 2026 outbound<br/>Jul 6 return from ANC</div>
-      </div>
-      <div class="flight-body">
-        <div class="flight-option">
-          <div>
-            <div class="airline">✈️ Air Canada (Best Option)</div>
-            <div class="timing">~6h non-stop from JFK · Daily flights</div>
-            <div class="timing">Recommend morning flight: depart 7–9 AM, arrive early afternoon</div>
-          </div>
-          <span class="price-tag">~$300–$450/pp</span>
-        </div>
-        <div class="flight-option">
-          <div>
-            <div class="airline">✈️ WestJet</div>
-            <div class="timing">~6h non-stop from JFK</div>
-            <div class="timing">Often competitive pricing</div>
-          </div>
-          <span class="price-tag">~$280–$400/pp</span>
-        </div>
-        <div class="flight-option">
-          <div>
-            <div class="airline">✈️ Delta / United (connecting)</div>
-            <div class="timing">1-stop via hub · 9–11h total</div>
-            <div class="timing">Use miles if available</div>
-          </div>
-          <span class="price-tag">~$250–$380/pp</span>
-        </div>
-        <div class="flight-tip">
-          💡 <strong>Pro Tip:</strong> Book at least 3 months out for June travel. Use <a href="https://www.google.com/flights" target="_blank">Google Flights</a>, <a href="https://www.kayak.com" target="_blank">KAYAK</a>, or <a href="https://www.momondo.com" target="_blank">Momondo</a> and set fare alerts.
-          <br/><br/>📍 <strong>Return:</strong> Fly Anchorage (ANC) → JFK/EWR on July 6. Delta has good options. Budget ~$350–$500 per person.
-        </div>
-      </div>
-    </div>
-
-    <!-- Pre-Cruise Stay -->
-    <div class="section-title" style="margin-top:8px;"><span class="icon">🏠</span> Pre-Cruise Stay (Jun 24–26, Vancouver)</div>
-    <div class="card">
-      <span class="tag green" style="margin-bottom:8px;">✅ SORTED — Staying at Amit's Home</span>
-      <p style="margin-top:8px;">All families arrive Jun 24 or 25 and stay at the AK family (Amit's) home in Vancouver. No hotel needed! Cruise terminal at Canada Place is a short drive from there on embarkation day (Jun 26).</p>
-    </div>
-  </div>
 
   <!-- ══════════════════════════════════
        TAB: REVIEWS
@@ -2399,77 +2157,6 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════
-       TAB: DEALS & PROMO CODES
-  ══════════════════════════════════ -->
-  <div id="tab-deals" class="section">
-    <div class="section-title"><span class="icon">🎟️</span> Deals, Promo Codes & Savings</div>
-
-    <div class="alert success"><span class="alert-icon">✅</span><div>The Royal Caribbean booking already shows <strong>$1,379 in savings</strong> applied via "All-In Sale." Below are additional codes and strategies to save even more!</div></div>
-
-    <div class="grid-2" style="margin-bottom:24px;">
-      <div class="promo-card">
-        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Already Applied</div>
-        <div class="promo-value">$1,379 Saved</div>
-        <div class="promo-code">ALL-IN SALE</div>
-        <p style="font-size:13px;color:var(--muted);margin-top:8px;">60% off second guest fare + All 2026 Sailings Kicker. Currently displayed on your booking page. Best active deal!</p>
-        <span class="tag green">✅ Active Now</span>
-      </div>
-      <div class="promo-card">
-        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Try This Code</div>
-        <div class="promo-value">Up to $300 Off</div>
-        <div class="promo-code">BOGO60</div>
-        <p style="font-size:13px;color:var(--muted);margin-top:8px;">60% off second guest fare. May already be part of the All-In Sale. Try entering at checkout to see if it stacks or offers a better rate.</p>
-        <span class="tag gold">⚠️ Try at Checkout</span>
-      </div>
-      <div class="promo-card">
-        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Alaska Kicker Bonus</div>
-        <div class="promo-value">$50–$100 Off</div>
-        <div class="promo-code">ALASKA KICKER</div>
-        <p style="font-size:13px;color:var(--muted);margin-top:8px;">Applied automatically on Alaska sailings departing May–Sept 2026. Check if it's already included in your estimate on royalcaribbean.com.</p>
-        <span class="tag green">✅ Auto-Applied</span>
-      </div>
-      <div class="promo-card">
-        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;">Loyalty Discount</div>
-        <div class="promo-value">Up to $350 Off</div>
-        <div class="promo-code">Crown & Anchor</div>
-        <p style="font-size:13px;color:var(--muted);margin-top:8px;">If any family has cruised Royal Caribbean before, check your Crown & Anchor loyalty account under "My Account" → Loyalty tab for targeted discount codes. Can be up to $250–$350 off!</p>
-        <span class="tag">Check Your Account</span>
-      </div>
-    </div>
-
-    <!-- Money-saving tips -->
-    <div class="section-title"><span class="icon">💡</span> Money-Saving Strategies</div>
-    <div class="card" style="margin-bottom:20px;">
-      <div class="card-header"><span class="icon">🍹</span><h3>Drink Package Deals</h3></div>
-      <ul style="font-size:14px;color:var(--muted);padding-left:18px;line-height:2.2;">
-        <li><strong>Book onboard packages before sailing</strong> — Drink packages are 20–25% cheaper when pre-purchased vs. buying on the ship</li>
-        <li><strong>Deluxe Beverage Package:</strong> ~$69–$89/person/day if pre-purchased. Includes all cocktails, beer, wine, specialty coffees, sodas, and water. Calculate: 7 days × $80 × 2 adults = $1,120. Worth it if you drink 5+ beverages/day each.</li>
-        <li><strong>Refreshment Package:</strong> ~$29/person/day — sodas, juices, specialty coffees, mocktails. Great for kids!</li>
-        <li><strong>Classic Soda Package:</strong> ~$12–$14/person/day for unlimited sodas</li>
-      </ul>
-    </div>
-
-    <div class="card" style="margin-bottom:20px;">
-      <div class="card-header"><span class="icon">📸</span><h3>Photo & Internet Tips</h3></div>
-      <ul style="font-size:14px;color:var(--muted);padding-left:18px;line-height:2.2;">
-        <li><strong>Unlimited Photo Package:</strong> Pre-purchase for ~$150–$200 (vs. $30+ per printed photo onboard). 3 families = lots of photos!</li>
-        <li><strong>Internet:</strong> Buy "Surf + Stream" package before sailing (~$20–$25/device/day). Share updates from glaciers!</li>
-        <li><strong>Use WhatsApp on ship's Wi-Fi</strong> to stay connected between families during shore excursions</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-header"><span class="icon">🏖️</span><h3>Shore Excursion Savings</h3></div>
-      <ul style="font-size:14px;color:var(--muted);padding-left:18px;line-height:2.2;">
-        <li><strong>Book private/third-party tours:</strong> Often 30–40% cheaper than Royal Caribbean's official excursions for the same activity. Use Viator or local operators directly.</li>
-        <li><strong>Group discount:</strong> With 8 people, many tour operators offer group pricing. Always ask!</li>
-        <li><strong>Skagway White Pass Railway:</strong> Book directly at wpyr.com — often same price but more availability</li>
-        <li><strong>Kenai Fjords Tours (post-cruise):</strong> Book through their website — they sometimes have July 4th weekend specials</li>
-        <li><strong>Kids pricing:</strong> Most Alaska tours offer 50%+ discounts for children under 12</li>
-      </ul>
-    </div>
-  </div>
 
   <!-- ══════════════════════════════════
        TAB: BUDGET
