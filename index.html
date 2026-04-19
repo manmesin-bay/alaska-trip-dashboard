@@ -482,6 +482,9 @@
       .review-pros-cons { grid-template-columns: 1fr; }
       .countdown-num { font-size: 36px; }
       .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .crew-grid { grid-template-columns: 1fr !important; }
+      .crew-grid > div { border-right: none !important; border-bottom: 1px solid rgba(0,0,0,0.06); }
+      .crew-grid > div:last-child { border-bottom: none !important; }
       #gallery-grid { grid-template-columns: 1fr !important; }
     }
 
@@ -789,6 +792,60 @@
       <p style="margin-top:12px;font-size:13px;opacity:0.7;">Jun 26, 2026 · Vancouver · 11 PM</p>
     </div>
 
+    <!-- ═══ FAMILIES ═══ -->
+    <div style="background:white;border-radius:16px;box-shadow:var(--card-shadow);margin-bottom:20px;overflow:hidden;">
+      <div style="background:linear-gradient(135deg,#0a2342,#1a5f7a);padding:14px 20px;">
+        <div style="font-size:14px;font-weight:800;color:white;letter-spacing:0.5px;">👨‍👩‍👧‍👦 The Crew — 9 Travelers, 3 Families</div>
+      </div>
+      <div class="crew-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;">
+        <div style="padding:18px 20px;border-right:1px solid rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#e65100,#ff9800);display:flex;align-items:center;justify-content:center;color:white;font-size:16px;font-weight:900;flex-shrink:0;">K</div>
+            <div>
+              <div style="font-size:15px;font-weight:800;color:var(--navy);">Khanujas</div>
+              <div style="font-size:11px;color:var(--muted);">Flying from SFO</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#fff3e0;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👨</span><span style="font-weight:600;color:var(--navy);">Manmeet</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#fff3e0;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👩</span><span style="font-weight:600;color:var(--navy);">Simran</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#fff3e0;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👧</span><span style="font-weight:600;color:var(--navy);">Anaiya</span></div>
+          </div>
+          <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.06);font-size:11px;color:var(--muted);">🚪 Rm 6148 · Deck 6 · Balcony</div>
+        </div>
+        <div style="padding:18px 20px;border-right:1px solid rgba(0,0,0,0.06);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#1565c0,#42a5f5);display:flex;align-items:center;justify-content:center;color:white;font-size:16px;font-weight:900;flex-shrink:0;">K</div>
+            <div>
+              <div style="font-size:15px;font-weight:800;color:var(--navy);">Koshals</div>
+              <div style="font-size:11px;color:var(--muted);">Flying from YVR</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#e3f2fd;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👨</span><span style="font-weight:600;color:var(--navy);">Amit</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#e3f2fd;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👩</span><span style="font-weight:600;color:var(--navy);">Nidhi</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#e3f2fd;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👦</span><span style="font-weight:600;color:var(--navy);">Aemaira</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#e3f2fd;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👦</span><span style="font-weight:600;color:var(--navy);">Avraaj</span></div>
+          </div>
+          <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.06);font-size:11px;color:var(--muted);">🚪 Rm TBD · Deck 6 · Balcony</div>
+        </div>
+        <div style="padding:18px 20px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#6a1b9a,#ab47bc);display:flex;align-items:center;justify-content:center;color:white;font-size:16px;font-weight:900;flex-shrink:0;">W</div>
+            <div>
+              <div style="font-size:15px;font-weight:800;color:var(--navy);">Walias</div>
+              <div style="font-size:11px;color:var(--muted);">Flying from NYC</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#f3e5f5;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👨</span><span style="font-weight:600;color:var(--navy);">Aman</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:12px;"><span style="width:22px;height:22px;border-radius:50%;background:#f3e5f5;display:inline-flex;align-items:center;justify-content:center;font-size:10px;">👩</span><span style="font-weight:600;color:var(--navy);">Niki</span></div>
+          </div>
+          <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.06);font-size:11px;color:var(--muted);">🚪 Rm 6122 · Deck 6 · Balcony</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Trip Progress -->
     <div style="background:white;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--card-shadow);margin-bottom:20px;">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
@@ -815,26 +872,11 @@
         <div></div>
       </div>
       <div style="margin-top:14px;padding-top:12px;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:center;">
-        <div style="font-size:12px;color:var(--muted);">🛳️ Cabins: <strong>MS</strong> Rm 6148 · <strong>AW</strong> Rm 6122 · <strong>AK</strong> Booked — All Balcony, Deck 6</div>
+        <div style="font-size:12px;color:var(--muted);">🛳️ Cabins: <strong>Khanujas</strong> Rm 6148 · <strong>Walias</strong> Rm 6122 · <strong>Koshals</strong> Booked — All Balcony, Deck 6</div>
         <a href="https://www.royalcaribbean.com/account/cruise-planner" target="_blank" rel="noopener noreferrer" style="font-size:12px;font-weight:700;color:white;text-decoration:none;background:var(--teal);padding:6px 14px;border-radius:8px;">🛳️ Manage My Cruise →</a>
       </div>
     </div>
 
-    <!-- Families (compact) -->
-    <div class="grid-3" style="margin-bottom:20px;">
-      <div style="background:white;border-radius:12px;padding:14px 16px;box-shadow:var(--card-shadow);">
-        <div style="font-size:14px;font-weight:800;color:var(--navy);">🏙️ MS Family <span style="font-size:11px;font-weight:400;color:var(--muted);">· SFO · 3 ppl</span></div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px;">MS, HSK, AK (10) · Rm 6148 Deck 6</div>
-      </div>
-      <div style="background:white;border-radius:12px;padding:14px 16px;box-shadow:var(--card-shadow);">
-        <div style="font-size:14px;font-weight:800;color:var(--navy);">🍁 AK Family <span style="font-size:11px;font-weight:400;color:var(--muted);">· YVR · 4 ppl</span></div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px;">AK, NNK, AMK (13), AVK (7) · Rm TBD</div>
-      </div>
-      <div style="background:white;border-radius:12px;padding:14px 16px;box-shadow:var(--card-shadow);">
-        <div style="font-size:14px;font-weight:800;color:var(--navy);">🗽 AW Family <span style="font-size:11px;font-weight:400;color:var(--muted);">· NYC · 2 ppl</span></div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px;">AW, NW · Rm 6122 Deck 6</div>
-      </div>
-    </div>
 
     <!-- Timeline (compact) -->
     <div class="section-title"><span class="icon">📅</span> Trip at a Glance</div>
