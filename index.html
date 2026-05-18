@@ -758,59 +758,8 @@
       .section { display: block !important; }
     }
   </style>
-  <style id="lock-styles">
-    .lock-overlay {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(135deg, #0a2342 0%, #1a5f7a 50%, #22a39f 100%);
-      display: flex; align-items: center; justify-content: center;
-      z-index: 99999; font-family: 'Inter', system-ui, sans-serif;
-    }
-    .lock-box {
-      background: rgba(255,255,255,0.07); backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.15); border-radius: 24px;
-      padding: 48px 40px; text-align: center; max-width: 400px; width: 90%;
-    }
-    .lock-box h2 { color: white; font-size: 28px; font-weight: 800; margin-bottom: 6px; }
-    .lock-box p { color: rgba(255,255,255,0.6); font-size: 14px; margin-bottom: 28px; }
-    .lock-input {
-      width: 100%; padding: 14px 18px; font-size: 16px; border: 2px solid rgba(255,255,255,0.2);
-      border-radius: 12px; background: rgba(255,255,255,0.08); color: white;
-      outline: none; box-sizing: border-box; transition: border-color 0.2s;
-    }
-    .lock-input::placeholder { color: rgba(255,255,255,0.35); }
-    .lock-input:focus { border-color: #f0a500; }
-    .lock-input.error { border-color: #e74c3c; animation: shake 0.4s ease; }
-    .lock-btn {
-      width: 100%; padding: 14px; font-size: 16px; font-weight: 700;
-      background: linear-gradient(135deg, #f0a500, #e6950a); color: #0a2342;
-      border: none; border-radius: 12px; cursor: pointer; margin-top: 14px;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .lock-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(240,165,0,0.4); }
-    .lock-error { color: #e74c3c; font-size: 13px; margin-top: 10px; min-height: 20px; }
-    @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-8px)} 75%{transform:translateX(8px)} }
-    body.locked .dashboard-content { display: none !important; }
-    body.locked .lock-overlay { display: flex; }
-    body:not(.locked) .lock-overlay { display: none; }
-  </style>
 </head>
-<body class="locked">
-
-<!-- ─────────── PASSWORD GATE ─────────── -->
-<div class="lock-overlay" id="lockOverlay">
-  <div class="lock-box">
-    <div style="font-size:48px;margin-bottom:12px;">🔒</div>
-    <h2>Family Access Only</h2>
-    <p>Enter the trip password to view the dashboard</p>
-    <form onsubmit="return unlockDashboard(event)">
-      <input type="password" class="lock-input" id="lockPassword" placeholder="Enter password" autocomplete="off" autofocus />
-      <button type="submit" class="lock-btn">Unlock Dashboard 🚢</button>
-    </form>
-    <div class="lock-error" id="lockError"></div>
-  </div>
-</div>
-
-<div class="dashboard-content">
+<body>
 <!-- ─────────── HERO ─────────── -->
 <div class="hero" style="padding:0;overflow:hidden;position:relative;min-height:600px;">
   <img id="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Ovation_of_the_Seas_%2826417060696%29_%28cropped%29.jpg/1280px-Ovation_of_the_Seas_%2826417060696%29_%28cropped%29.jpg" fetchpriority="high" decoding="async" style="width:100%;height:600px;display:block;object-fit:cover;object-position:center 30%;transition:opacity 0.4s ease;" alt="Ovation of the Seas">
@@ -3073,7 +3022,6 @@
   </div>
 
 </div><!-- end .main -->
-</div><!-- end .dashboard-content -->
 
 <!-- ─────────── FOOTER ─────────── -->
 <div style="text-align:center;padding:28px;color:rgba(255,255,255,0.5);font-size:13px;">
@@ -3083,35 +3031,6 @@
 
 <!-- ─────────── SCRIPT ─────────── -->
 <script>
-  var PASS_HASH = '128b6c7b49b4070a721cff10aaf0cc5f93ad624762b8c6dd2772f7411cb72da7';
-
-  (function checkSession() {
-    if (sessionStorage.getItem('dashboard_unlocked') === 'true') {
-      document.body.classList.remove('locked');
-    }
-  })();
-
-  async function sha256(str) {
-    var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
-    return Array.from(new Uint8Array(buf)).map(function(b) { return b.toString(16).padStart(2,'0'); }).join('');
-  }
-
-  async function unlockDashboard(e) {
-    e.preventDefault();
-    var input = document.getElementById('lockPassword');
-    var error = document.getElementById('lockError');
-    var hash = await sha256(input.value);
-    if (hash === PASS_HASH) {
-      document.body.classList.remove('locked');
-      sessionStorage.setItem('dashboard_unlocked', 'true');
-      return false;
-    }
-    input.classList.add('error');
-    error.textContent = 'Wrong password. Ask the trip organizer for access.';
-    setTimeout(function() { input.classList.remove('error'); }, 600);
-    return false;
-  }
-
   /* ═══ GALLERY DATA & LOGIC ═══ */
   var rcCdn = 'https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/';
   var galleryPhotos = [
